@@ -1,4 +1,4 @@
-# Architecture
+# Architectuur
 
 ![architectuur](./architectuur.png)
 
