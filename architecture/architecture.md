@@ -1,6 +1,6 @@
 # Architecture
 
-![architectuur](architectuur.png.jpg)
+![architectuur](./architectuur.png)
 
 
 ## 1. Angular Applicatie
