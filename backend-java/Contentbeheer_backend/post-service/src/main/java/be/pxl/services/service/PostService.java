@@ -1,5 +1,7 @@
 package be.pxl.services.service;
 
+import be.pxl.services.client.NotificationClient;
+import be.pxl.services.domain.NotificationRequest;
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
@@ -13,6 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PostService implements IPostService{
     private final PostRepository postRepository;
+    private final NotificationClient notificationClient;
     @Override
     public List<PostResponse> getAllPosts() {
         List<Post> posts = postRepository.findAll();
@@ -37,5 +40,11 @@ public class PostService implements IPostService{
                 .date(postRequest.getDate())
                 .build();
         postRepository.save(post);
+
+        NotificationRequest notificationRequest = NotificationRequest.builder()
+                .message("Post created")
+                .sender(post.getAuthor())
+                .build();
+        notificationClient.sendNotification(notificationRequest);
     }
 }
