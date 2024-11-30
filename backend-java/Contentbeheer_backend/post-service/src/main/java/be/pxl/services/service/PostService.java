@@ -41,10 +41,10 @@ public class PostService implements IPostService{
                 .build();
         postRepository.save(post);
 
-        NotificationRequest notificationRequest = NotificationRequest.builder()
-                .message("Post created")
-                .sender(post.getAuthor())
-                .build();
-        notificationClient.sendNotification(notificationRequest);
+//        NotificationRequest notificationRequest = NotificationRequest.builder()
+//                .message("Post created")
+//                .sender(post.getAuthor())
+//                .build();
+//        notificationClient.sendNotification(notificationRequest);
     }
 }
