@@ -13,17 +13,19 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class PostService implements IPostService{
+public class PostService implements IPostService {
     private final PostRepository postRepository;
     private final NotificationClient notificationClient;
+
     @Override
     public List<PostResponse> getAllPosts() {
         List<Post> posts = postRepository.findAll();
-        return posts.stream().map(post -> mapToPostResponse(post)).toList();
+        return posts.stream().map(this::mapToPostResponse).toList();
     }
 
     private PostResponse mapToPostResponse(Post post) {
         return PostResponse.builder()
+                .id(post.getId())
                 .title(post.getTitle())
                 .content(post.getContent())
                 .author(post.getAuthor())
@@ -33,6 +35,7 @@ public class PostService implements IPostService{
 
     @Override
     public void addPost(PostRequest postRequest) {
+        // Bouw de Post zonder het expliciet zetten van de 'id'
         Post post = Post.builder()
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
@@ -41,10 +44,13 @@ public class PostService implements IPostService{
                 .build();
         postRepository.save(post);
 
-//        NotificationRequest notificationRequest = NotificationRequest.builder()
-//                .message("Post created")
-//                .sender(post.getAuthor())
-//                .build();
-//        notificationClient.sendNotification(notificationRequest);
+        // Uncomment als notificaties nodig zijn
+        /*
+        NotificationRequest notificationRequest = NotificationRequest.builder()
+                .message("Post created")
+                .sender(post.getAuthor())
+                .build();
+        notificationClient.sendNotification(notificationRequest);
+        */
     }
 }
