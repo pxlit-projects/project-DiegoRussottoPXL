@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from '../models/post.model';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../enviroments/enviroment.development';
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,9 @@ export class PostService {
 
     private api: string = environment.apiUrl + 'post/api/post';
     private http: HttpClient = inject(HttpClient);
+
+    private postUpdatedSource = new BehaviorSubject<null>(null);
+  postUpdated$ = this.postUpdatedSource.asObservable();
        createPost(post: Post): Observable<Post> {
      return this.http.post<Post>(this.api, post);
  }
@@ -44,6 +47,9 @@ export class PostService {
     filterUrl = filterUrl.endsWith('&') ? filterUrl.slice(0, -1) : filterUrl;
 
     return this.http.get<Post[]>(filterUrl);
+  }
+  notifyPostUpdate(): void {
+    this.postUpdatedSource.next(null);
   }
 
 }

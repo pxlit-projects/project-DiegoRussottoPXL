@@ -1,19 +1,155 @@
+/* Algemeen formulierstijl */
+form {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  justify-content: space-between;
+}
+
+/* Labelstijl */
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Invoerveld stijl */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Textarea stijl */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Knopstijl */
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Post weergave stijl */
 .post {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.post h2 {
+  margin-top: 0;
+  font-size: 30px;
+  color: #333;
+}
+
+.post p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.post strong {
+  color: #333;
+}
+
+.post button {
+  margin-right: 10px;
+}
+
+/* Geen posts gevonden */
+.no-posts {
+  font-size: 18px;
+  color: #ff0000;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Bewerken formulier */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.edit-form h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.edit-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.edit-form input,
+.edit-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.edit-form button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-form button:hover {
+  background-color: #218838;
+}
+
+.edit-form button[type="button"] {
+  background-color: #dc3545;
+}
+
+.edit-form button[type="button"]:hover {
+  background-color: #c82333;
+}

@@ -1,52 +1,50 @@
 <form [formGroup]="filterForm" (ngSubmit)="onFilterChange()">
-  <label for="author">Auteur:</label>
-  <input id="author" formControlName="author" />
-
-  <label for="content">Inhoud:</label>
-  <input id="content" formControlName="content" />
-
-  <label for="date">Datum (YYYY-MM-DD):</label>
-  <input id="date" formControlName="date" type="date" />
-
+  <div>
+    <label for="author">Auteur:</label>
+    <input id="author" formControlName="author" />
+  </div>
+  <div>
+    <label for="content">Inhoud:</label>
+    <input id="content" formControlName="content" />
+  </div>
+  <div>
+    <label for="date">Datum (YYYY-MM-DD):</label>
+    <input id="date" formControlName="date" type="date" />
+  </div>
   <button type="submit">Filteren</button>
 </form>
+
 @if (posts.length === 0) { 
-    <div>Geen posts gevonden.</div>
-  }
-  
-  @for (post of posts; track post) {
-    <div>
-      <div class="post">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.content }}</p>
-        <p><strong>Author:</strong> {{ post.author }}</p>
-        <p><strong>Date:</strong> {{ post.dateCreated }}</p>
-        
-        @if (post.status === 'DRAFT') {
-          <div>
-            <button (click)="publishPost(post.id)">Publiceer Post</button>
-          </div>
-        }
-  
-        <button (click)="editPost(post)">Bewerk</button>
-      </div>
-    </div>
-  }
-  
-  <!-- Bewerken formulier -->
-  @if (isEditing) {
-    <div>
+  <div class="no-posts">Geen posts gevonden.</div>
+}
+
+@for (post of posts; track post) {
+  <div class="post">
+    @if (isEditing && selectedPostId === post.id) {
       <h2>Bewerk Post</h2>
       <form [formGroup]="postForm" (ngSubmit)="savePost()">
         <label for="title">Titel</label>
         <input id="title" formControlName="title" required />
-  
+
         <label for="content">Content</label>
         <textarea id="content" formControlName="content" required></textarea>
-  
+
         <button type="submit" [disabled]="postForm.invalid">Opslaan</button>
         <button type="button" (click)="cancelEdit()">Annuleren</button>
       </form>
-    </div>
-  }
-  
+    }
+
+    @if (!isEditing || selectedPostId !== post.id) {
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.content }}</p>
+      <p><strong>Author:</strong> {{ post.author }}</p>
+      <p><strong>Date:</strong> {{ post.date }}</p>
+      @if (post.status === 'DRAFT') {
+        <div>
+          <button (click)="publishPost(post.id)">Publiceer Post</button>
+        </div>
+      }
+      <button (click)="editPost(post)">Bewerk</button>
+    }
+  </div>
+}

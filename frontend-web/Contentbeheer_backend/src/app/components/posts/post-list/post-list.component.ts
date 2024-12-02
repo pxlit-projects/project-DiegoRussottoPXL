@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../../../models/post.model';
 import { PostService } from '../../../services/post.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-post-list',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './post-list.component.html',
-  styleUrl: './post-list.component.css'
+  styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent implements OnInit {
   posts: Post[] = [];
@@ -16,7 +17,6 @@ export class PostListComponent implements OnInit {
   selectedPostId: number | null = null;
   postForm: FormGroup;
   filterForm: FormGroup;
-
 
   constructor(private postService: PostService, private fb: FormBuilder) {
     this.postForm = this.fb.group({
@@ -31,34 +31,33 @@ export class PostListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.filterForm = this.fb.group({
-      author: [''],
-      content: [''],
-      date: ['']
-    });
-
     this.loadPosts();
+    this.postService.postUpdated$.subscribe(() => {
+      this.loadPosts();
+    });
   }
 
   loadPosts(): void {
     const filters = this.filterForm.value;
     this.postService.getFilteredPosts(filters.author, filters.content, filters.date).subscribe((data: Post[]) => {
+      console.log(data);
       this.posts = data;
     });
   }
 
   onFilterChange(): void {
-    this.loadPosts(); // Reload posts when filter changes
+    this.loadPosts();
   }
 
   publishPost(postId: number): void {
     this.postService.publishPost(postId).subscribe(() => {
-      this.loadPosts(); // Herlaad de posts nadat de post is gepubliceerd
+      this.loadPosts();
     });
   }
+
   editPost(post: Post): void {
     this.selectedPostId = post.id;
-    const postToEdit = this.posts.find(post => post.id === this.selectedPostId);
+    const postToEdit = this.posts.find(p => p.id === this.selectedPostId);
     if (postToEdit) {
       this.postForm.patchValue({
         title: postToEdit.title,
@@ -67,6 +66,7 @@ export class PostListComponent implements OnInit {
     }
     this.isEditing = true;
   }
+
   savePost(): void {
     if (this.postForm.valid && this.selectedPostId) {
       const updatedPost = {
@@ -74,9 +74,9 @@ export class PostListComponent implements OnInit {
         ...this.postForm.value
       };
       this.postService.updatePost(updatedPost).subscribe(() => {
-        this.loadPosts();  // Herlaad de posts na het opslaan
-        this.isEditing = false; // Stop met bewerken
-        this.selectedPostId = null; // Reset de geselecteerde post
+        this.loadPosts();
+        this.isEditing = false;
+        this.selectedPostId = null;
       });
     }
   }
@@ -85,5 +85,4 @@ export class PostListComponent implements OnInit {
     this.isEditing = false;
     this.selectedPostId = null;
   }
-
 }
