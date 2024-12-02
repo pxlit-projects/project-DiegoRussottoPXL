@@ -24,4 +24,26 @@ export class PostService {
   updatePost(updatedPost: Post): Observable<Post> {
     return this.http.put<Post>(`${this.api}/${updatedPost.id}`, updatedPost);
   }
+  // post.service.ts
+
+  getFilteredPosts(author: string, content: string, date: string): Observable<Post[]> {
+    // Bouw de query parameters direct in de URL
+    let filterUrl = `${this.api}?`;
+
+    if (author) {
+      filterUrl += `author=${author}&`;
+    }
+    if (content) {
+      filterUrl += `content=${content}&`;
+    }
+    if (date) {
+      filterUrl += `date=${date}&`;
+    }
+
+    // Verwijder de laatste '&' als er filters zijn toegevoegd
+    filterUrl = filterUrl.endsWith('&') ? filterUrl.slice(0, -1) : filterUrl;
+
+    return this.http.get<Post[]>(filterUrl);
+  }
+
 }

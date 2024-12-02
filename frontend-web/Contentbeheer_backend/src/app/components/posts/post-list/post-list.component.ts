@@ -15,22 +15,40 @@ export class PostListComponent implements OnInit {
   isEditing: boolean = false;
   selectedPostId: number | null = null;
   postForm: FormGroup;
+  filterForm: FormGroup;
+
 
   constructor(private postService: PostService, private fb: FormBuilder) {
     this.postForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required]
     });
+    this.filterForm = this.fb.group({
+      author: [''],
+      content: [''],
+      date: ['']
+    });
   }
 
   ngOnInit(): void {
+    this.filterForm = this.fb.group({
+      author: [''],
+      content: [''],
+      date: ['']
+    });
+
     this.loadPosts();
   }
 
   loadPosts(): void {
-    this.postService.getAllPosts().subscribe(posts => {
-      this.posts = posts;
+    const filters = this.filterForm.value;
+    this.postService.getFilteredPosts(filters.author, filters.content, filters.date).subscribe((data: Post[]) => {
+      this.posts = data;
     });
+  }
+
+  onFilterChange(): void {
+    this.loadPosts(); // Reload posts when filter changes
   }
 
   publishPost(postId: number): void {

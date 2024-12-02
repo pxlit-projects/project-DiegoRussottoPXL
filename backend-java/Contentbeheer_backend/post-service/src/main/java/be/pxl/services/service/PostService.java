@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -22,8 +23,37 @@ public class PostService implements IPostService {
     @Override
     public List<PostResponse> getAllPosts() {
         List<Post> posts = postRepository.findAll();
-        return posts.stream().map(this::mapToPostResponse).toList();
+        return posts.stream().map(this::mapToPostResponse).collect(Collectors.toList());
     }
+
+    @Override
+    public List<PostResponse> getFilteredPosts(String author, String content, String date) {
+        List<Post> posts = postRepository.findAll();
+
+        if (author != null) {
+            posts = posts.stream()
+                    .filter(post -> post.getAuthor() != null && post.getAuthor().contains(author)) // Check for null
+                    .collect(Collectors.toList());
+        }
+
+        if (content != null) {
+            posts = posts.stream()
+                    .filter(post -> post.getContent() != null && post.getContent().contains(content)) // Check for null
+                    .collect(Collectors.toList());
+        }
+
+        if (date != null) {
+            LocalDate filterDate = LocalDate.parse(date);
+            posts = posts.stream()
+                    .filter(post -> post.getDate() != null && post.getDate().equals(filterDate)) // Check for null
+                    .collect(Collectors.toList());
+        }
+
+        return posts.stream().map(this::mapToPostResponse).collect(Collectors.toList());
+    }
+
+
+
 
     private PostResponse mapToPostResponse(Post post) {
         return PostResponse.builder()
@@ -73,6 +103,6 @@ public class PostService implements IPostService {
         post.setStatus(postRequest.getStatus() != null ? postRequest.getStatus() : post.getStatus());
 
         postRepository.save(post);
-    }   
+    }
 
 }

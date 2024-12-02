@@ -1,3 +1,15 @@
+<form [formGroup]="filterForm" (ngSubmit)="onFilterChange()">
+  <label for="author">Auteur:</label>
+  <input id="author" formControlName="author" />
+
+  <label for="content">Inhoud:</label>
+  <input id="content" formControlName="content" />
+
+  <label for="date">Datum (YYYY-MM-DD):</label>
+  <input id="date" formControlName="date" type="date" />
+
+  <button type="submit">Filteren</button>
+</form>
 @if (posts.length === 0) { 
     <div>Geen posts gevonden.</div>
   }

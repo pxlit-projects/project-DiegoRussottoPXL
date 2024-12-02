@@ -21,9 +21,12 @@ public class PostController {
     private final IPostService postService;
 
     @GetMapping
-    public ResponseEntity<List<PostResponse>> getAllPosts() {
-        log.info("Fetching all posts");
-        return new ResponseEntity<>(postService.getAllPosts(), HttpStatus.OK);
+    public ResponseEntity<List<PostResponse>> getAllPosts(
+            @RequestParam(required = false) String author,
+            @RequestParam(required = false) String content,
+            @RequestParam(required = false) String date) {
+        log.info("Fetching posts with filters: author = {}, content = {}, date = {}", author, content, date);
+        return new ResponseEntity<>(postService.getFilteredPosts(author, content, date), HttpStatus.OK);
     }
 
     @PostMapping
