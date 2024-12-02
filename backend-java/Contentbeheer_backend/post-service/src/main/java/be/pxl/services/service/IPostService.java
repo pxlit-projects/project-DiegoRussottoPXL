@@ -10,4 +10,6 @@ public interface IPostService {
     List<PostResponse> getAllPosts();
 
     void addPost(PostRequest postRequest);
+    void publishPost(Long id);
+    void updatePost(Long id, PostRequest postRequest);
 }

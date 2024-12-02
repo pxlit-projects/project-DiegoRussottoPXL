@@ -1,5 +1,6 @@
 package be.pxl.services.domain.dto;
 
+import be.pxl.services.domain.PostStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,4 +18,5 @@ public class PostRequest {
     private String content;
     private String author;
     private LocalDate date;
+    private PostStatus status;
 }

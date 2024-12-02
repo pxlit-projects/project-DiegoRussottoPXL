@@ -22,4 +22,7 @@ public class Post {
     private String content;
     private String author;
     private LocalDate date;
+
+    @Enumerated(EnumType.STRING)
+    private PostStatus status;
 }

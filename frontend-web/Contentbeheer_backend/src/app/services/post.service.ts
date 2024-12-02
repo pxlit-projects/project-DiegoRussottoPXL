@@ -14,4 +14,14 @@ export class PostService {
        createPost(post: Post): Observable<Post> {
      return this.http.post<Post>(this.api, post);
  }
+ publishPost(postId: number): Observable<void> {
+  return this.http.put<void>(`${this.api}/${postId}/publish`, {});
+
+  }
+  getAllPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.api);
+  }
+  updatePost(updatedPost: Post): Observable<Post> {
+    return this.http.put<Post>(`${this.api}/${updatedPost.id}`, updatedPost);
+  }
 }

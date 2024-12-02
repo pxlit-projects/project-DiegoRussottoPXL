@@ -1,0 +1,40 @@
+@if (posts.length === 0) { 
+    <div>Geen posts gevonden.</div>
+  }
+  
+  @for (post of posts; track post) {
+    <div>
+      <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p><strong>Author:</strong> {{ post.author }}</p>
+        <p><strong>Date:</strong> {{ post.dateCreated }}</p>
+        
+        @if (post.status === 'DRAFT') {
+          <div>
+            <button (click)="publishPost(post.id)">Publiceer Post</button>
+          </div>
+        }
+  
+        <button (click)="editPost(post)">Bewerk</button>
+      </div>
+    </div>
+  }
+  
+  <!-- Bewerken formulier -->
+  @if (isEditing) {
+    <div>
+      <h2>Bewerk Post</h2>
+      <form [formGroup]="postForm" (ngSubmit)="savePost()">
+        <label for="title">Titel</label>
+        <input id="title" formControlName="title" required />
+  
+        <label for="content">Content</label>
+        <textarea id="content" formControlName="content" required></textarea>
+  
+        <button type="submit" [disabled]="postForm.invalid">Opslaan</button>
+        <button type="button" (click)="cancelEdit()">Annuleren</button>
+      </form>
+    </div>
+  }
+  

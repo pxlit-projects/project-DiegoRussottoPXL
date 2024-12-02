@@ -32,4 +32,14 @@ public class PostController {
         log.info("Creating new post with title: {}", postRequest.getTitle());
         postService.addPost(postRequest);
     }
+    @PutMapping("/{id}/publish")
+    public void publishPost(@PathVariable Long id) {
+        log.info("Publishing post with ID: {}", id);
+        postService.publishPost(id);
+    }
+    @PutMapping("/{id}")
+    public void updatePost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
+        log.info("Updating post with ID: {}", id);
+        postService.updatePost(id, postRequest);
+    }
 }

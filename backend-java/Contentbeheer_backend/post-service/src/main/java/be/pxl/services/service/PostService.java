@@ -3,12 +3,14 @@ package be.pxl.services.service;
 import be.pxl.services.client.NotificationClient;
 import be.pxl.services.domain.NotificationRequest;
 import be.pxl.services.domain.Post;
+import be.pxl.services.domain.PostStatus;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -30,17 +32,18 @@ public class PostService implements IPostService {
                 .content(post.getContent())
                 .author(post.getAuthor())
                 .date(post.getDate())
+                .status(post.getStatus())
                 .build();
     }
 
     @Override
     public void addPost(PostRequest postRequest) {
-        // Bouw de Post zonder het expliciet zetten van de 'id'
         Post post = Post.builder()
                 .title(postRequest.getTitle())
                 .content(postRequest.getContent())
                 .author(postRequest.getAuthor())
-                .date(postRequest.getDate())
+                .date(LocalDate.now())
+                .status(postRequest.getStatus() != null ? postRequest.getStatus() : PostStatus.DRAFT) // Standaard naar concept
                 .build();
         postRepository.save(post);
 
@@ -53,4 +56,23 @@ public class PostService implements IPostService {
         notificationClient.sendNotification(notificationRequest);
         */
     }
+    public void publishPost(Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
+
+        post.setStatus(PostStatus.PUBLISHED);  // Verander de status naar PUBLISHED
+        postRepository.save(post);
+    }
+    public void updatePost(Long postId, PostRequest postRequest) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
+
+        post.setTitle(postRequest.getTitle());
+        post.setContent(postRequest.getContent());
+        post.setAuthor(postRequest.getAuthor());
+        post.setStatus(postRequest.getStatus() != null ? postRequest.getStatus() : post.getStatus());
+
+        postRepository.save(post);
+    }   
+
 }
