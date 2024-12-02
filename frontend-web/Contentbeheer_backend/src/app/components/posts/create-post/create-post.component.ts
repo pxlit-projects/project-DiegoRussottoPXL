@@ -34,10 +34,10 @@ export class CreatePostComponent {
       });
     }
   }
-  publishPost() {
-    // Stuur een request naar de backend om de post te publiceren
-    const postId = 52; // Vervang dit door het werkelijke postId
-    this.postService.publishPost(postId).subscribe();
-  }
+  // publishPost() {
+  //   // Stuur een request naar de backend om de post te publiceren
+  //   const postId = 52; // Vervang dit door het werkelijke postId
+  //   this.postService.publishPost(postId).subscribe();
+  // }
   
 }
