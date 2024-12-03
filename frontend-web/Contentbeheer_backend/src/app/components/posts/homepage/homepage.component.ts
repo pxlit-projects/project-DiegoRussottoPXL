@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RoleService } from '../../../services/role.service';
 
 @Component({
   selector: 'app-homepage',
@@ -8,9 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent {
-  onRoleChange(event: any) {
-    const selectedRole = event.target.value;
-    console.log(`Geselecteerde rol: ${selectedRole}`);
-    localStorage.setItem('role', selectedRole);
+  constructor(private roleService: RoleService) {}
+
+  onRoleChange(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    const selectedRole = selectElement.value;
+    console.log('Role selectcccccccced:', selectedRole);  // Log toevoegen voor debugging
+
+    this.roleService.setRole(selectedRole);
   }
 }
