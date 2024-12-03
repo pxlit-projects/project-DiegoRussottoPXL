@@ -1,0 +1,77 @@
+
+.homepage {
+    background-image: url('../../../../../public/CordaCampus.jpg'); /* Vervang dit met je eigen achtergrondfoto */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparante overlay voor tekst en dropdown */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .dropdown {
+    font-size: 1.2em;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  button {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Lichte semi-transparante achtergrond */
+    color: black; /* Contrasterende tekstkleur */
+    border: none; /* Geen rand */
+    padding: 12px 20px; /* Ruime padding voor een comfortabele klikzone */
+    font-size: 1em; /* Vergelijkbare grootte als de dropdown */
+    border-radius: 5px; /* Zachte afgeronde hoeken */
+    cursor: pointer; /* Wijzig cursor bij hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaties voor een soepele hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+  }
+  
+  button:hover {
+    background: rgba(255, 255, 255, 1); /* Volledige witte achtergrond bij hover */
+    transform: scale(1.05); /* Lichte vergroting bij hover */
+  }
+  
+  button:focus {
+    outline: none; /* Verwijder standaard focusring */
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.6); /* Accentueer focus */
+  }
+  
+  button:disabled {
+    background: rgba(255, 255, 255, 0.5); /* Doffere kleur voor uitgeschakelde staat */
+    cursor: not-allowed; /* Niet-klikbare cursor */
+  }
+  
