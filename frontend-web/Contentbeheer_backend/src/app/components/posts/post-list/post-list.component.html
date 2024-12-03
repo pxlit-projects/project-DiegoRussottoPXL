@@ -11,8 +11,12 @@
     <label for="date">Datum:</label>
     <input id="date" formControlName="date" type="date" />
   </div>
-  <button type="submit">Filteren</button>
+  <div>
+  <button class="filter-button" type="submit">Filteren</button>
+</div>
 </form>
+
+
 
 @if (posts.length === 0) { 
   <div class="no-posts">Geen posts gevonden.</div>

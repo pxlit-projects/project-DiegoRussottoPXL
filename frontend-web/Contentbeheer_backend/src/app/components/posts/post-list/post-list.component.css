@@ -1,24 +1,35 @@
 /* Algemeen formulierstijl */
 :host {
   margin-top: auto;
+  width: 50rem;
 }
+
 form {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100%;
-  margin: 20px auto;
+  margin: 4rem auto 20px;
   padding: 20px;
+  gap: 20px; /* Ruimte tussen velden */
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  justify-content: space-between;
-  margin-top: 4rem;
+  align-items: flex-start;
 }
+
+/* Formulier veld container */
+form > div {
+  flex: 1 1 calc(50% - 20px); /* Twee kolommen */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Ruimte tussen label en invoer */
+}
+
+
 
 /* Labelstijl */
 label {
   font-size: 16px;
-  margin-bottom: 8px;
   font-weight: bold;
   color: black;
 }
@@ -26,12 +37,12 @@ label {
 /* Invoerveld stijl */
 input,
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+  background-color: #fff;
 }
 
 input:focus,
@@ -39,6 +50,10 @@ textarea:focus {
   border-color: #007BFF;
   outline: none;
 }
+.filter-button {
+  margin: 1.6rem;
+}
+
 
 /* Textarea stijl */
 textarea {
@@ -74,11 +89,12 @@ button:hover:not(:disabled) {
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #fff;
+  text-align: left; /* Align content to the left */
 }
 
 .post h2 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 24px;
   color: #333;
 }
 
@@ -92,8 +108,11 @@ button:hover:not(:disabled) {
   color: #333;
 }
 
-.post button {
-  margin-right: 10px;
+.post .author,
+.post .date {
+  display: block;
+  font-size: 14px;
+  color: #777;
 }
 
 /* Geen posts gevonden */
@@ -108,6 +127,7 @@ button:hover:not(:disabled) {
 .edit-form {
   display: flex;
   flex-direction: column;
+  gap: 15px; /* Ruimte tussen velden */
   margin-top: 20px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -118,25 +138,24 @@ button:hover:not(:disabled) {
 .edit-form h2 {
   font-size: 22px;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .edit-form label {
   font-size: 16px;
-  margin-bottom: 8px;
   font-weight: bold;
 }
 
 .edit-form input,
 .edit-form textarea {
   padding: 10px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
 }
 
 .edit-form button {
+  align-self: flex-start; /* Knoppen links uitlijnen */
   padding: 10px 15px;
   border: none;
   background-color: #28a745;
