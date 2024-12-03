@@ -17,6 +17,7 @@ export class PostListComponent implements OnInit {
   selectedPostId: number | null = null;
   postForm: FormGroup;
   filterForm: FormGroup;
+  userRole: string | null = null; // Variabele voor de rol van de gebruiker
 
   constructor(private postService: PostService, private fb: FormBuilder) {
     this.postForm = this.fb.group({
@@ -31,6 +32,7 @@ export class PostListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.userRole = localStorage.getItem('role'); // Haal de rol op bij het laden van de component
     this.loadPosts();
     this.postService.postUpdated$.subscribe(() => {
       this.loadPosts();
@@ -39,11 +41,18 @@ export class PostListComponent implements OnInit {
 
   loadPosts(): void {
     const filters = this.filterForm.value;
+  
     this.postService.getFilteredPosts(filters.author, filters.content, filters.date).subscribe((data: Post[]) => {
-      console.log(data);
-      this.posts = data;
+      if (this.userRole === 'gebruiker') {
+        // Filter alleen de gepubliceerde posts
+        this.posts = data.filter(post => post.status === 'PUBLISHED');
+      } else {
+        // Toon alle posts voor andere rollen
+        this.posts = data;
+      }
     });
   }
+  
 
   onFilterChange(): void {
     this.loadPosts();

@@ -48,7 +48,9 @@
           <button (click)="publishPost(post.id)">Publiceer Post</button>
         </div>
       }
-      <button (click)="editPost(post)">Bewerk</button>
+      @if (userRole !== 'gebruiker'){
+        <button (click)="editPost(post)">Bewerk</button>
+      }
     }
   </div>
 }
