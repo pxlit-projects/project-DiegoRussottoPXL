@@ -1,4 +1,7 @@
 /* Algemeen formulierstijl */
+:host {
+  margin-top: auto;
+}
 form {
   display: flex;
   flex-direction: row;
@@ -9,6 +12,7 @@ form {
   border-radius: 8px;
   background-color: #f9f9f9;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 
 /* Labelstijl */
@@ -16,6 +20,7 @@ label {
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: bold;
+  color: black;
 }
 
 /* Invoerveld stijl */

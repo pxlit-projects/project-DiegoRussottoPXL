@@ -1,8 +1,5 @@
 
 .homepage {
-    background-image: url('../../../../../public/CordaCampus.jpg'); /* Vervang dit met je eigen achtergrondfoto */
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;

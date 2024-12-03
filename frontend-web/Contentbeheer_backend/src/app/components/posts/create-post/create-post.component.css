@@ -2,7 +2,7 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50rem;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -15,6 +15,7 @@ form {
     font-size: 16px;
     margin-bottom: 5px;
     font-weight: bold;
+    color: black;
   }
   
   /* Invoerveld stijl */
