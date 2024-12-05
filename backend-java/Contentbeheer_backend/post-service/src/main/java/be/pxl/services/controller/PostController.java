@@ -1,5 +1,6 @@
 package be.pxl.services.controller;
 
+import be.pxl.services.domain.PostStatus;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.service.IPostService;
@@ -28,6 +29,13 @@ public class PostController {
         log.info("Fetching posts with filters: author = {}, content = {}, date = {}", author, content, date);
         return new ResponseEntity<>(postService.getFilteredPosts(author, content, date), HttpStatus.OK);
     }
+
+    @GetMapping("/drafts")
+    public ResponseEntity<List<PostResponse>> getDraftPosts() {
+        log.info("Fetching posts with status DRAFT");
+        return new ResponseEntity<>(postService.getPostsByStatus(PostStatus.DRAFT), HttpStatus.OK);
+    }
+
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

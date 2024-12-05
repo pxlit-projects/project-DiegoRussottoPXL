@@ -2,6 +2,8 @@ package be.pxl.services.controller;
 
 import be.pxl.services.service.IReviewService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,4 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ReviewController {
     private final IReviewService reviewService;
+
+    @GetMapping("/drafts")
+    public ResponseEntity<String> getDraftPosts() {
+        // Haal drafts op via ReviewService
+        System.out.println("kanucdcdcdcsss");
+        return reviewService.getDrafts();
+    }
 }

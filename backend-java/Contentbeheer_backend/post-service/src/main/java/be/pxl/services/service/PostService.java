@@ -52,6 +52,22 @@ public class PostService implements IPostService {
         return posts.stream().map(this::mapToPostResponse).collect(Collectors.toList());
     }
 
+    @Override
+    public List<PostResponse> getPostsByStatus(PostStatus status) {
+        return postRepository.findByStatus(status)
+                .stream()
+                .map(post -> PostResponse.builder()
+                        .id(post.getId())
+                        .title(post.getTitle())
+                        .content(post.getContent())
+                        .author(post.getAuthor())
+                        .date(post.getDate())
+                        .status(post.getStatus())
+                        .build())
+                .toList();
+    }
+
+
 
 
 

@@ -1,4 +1,3 @@
-# This file will contain a script in orde to start up the system (all microservices) 
 version: '3.8'
 
 services:
@@ -15,5 +14,19 @@ services:
     volumes:
       - mysql-data-1:/var/lib/mysql
 
+  mysql-db-review:
+    image: mysql:8.0
+    container_name: mysql-db-review
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reviewservice_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3307:3306"  # Gebruik een andere poort om conflicten te voorkomen
+    volumes:
+      - mysql-data-2:/var/lib/mysql
+
 volumes:
   mysql-data-1:
+  mysql-data-2:
