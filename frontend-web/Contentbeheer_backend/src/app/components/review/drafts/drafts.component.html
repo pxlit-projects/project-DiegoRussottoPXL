@@ -1,0 +1,30 @@
+@if (errorMessage) {
+    <div class="error-message">
+        {{ errorMessage }}
+    </div>
+}
+  
+  @if (posts.length === 0 && !errorMessage) {
+    <div>
+      Geen posts gevonden.
+    </div>
+  }
+  @if (posts.length > 0) {
+    <ul>
+
+        @for (post of posts; track post) {
+          <li class="post-item">
+            <h2>{{ post.title }}</h2>
+            <p><strong>Auteur:</strong> {{ post.author }}</p>
+            <p><strong>Datum:</strong> {{ post.date }}</p>
+            <p><strong>Inhoud:</strong> {{ post.content }}</p>
+            <p><strong>Status:</strong> {{ post.status }}</p>
+            <div class="button-group">
+                <button class="approve-button" (click)="approvePost(post.id)">Goedkeuren</button>
+                <button class="reject-button" (click)="rejectPost(post.id)">Afwijzen</button>
+            </div>
+          </li>
+        }
+    </ul>
+  }
+  

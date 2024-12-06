@@ -21,7 +21,7 @@ public class ReviewService implements IReviewService {
     @Autowired
     ReviewInterface reviewInterface;
 
-    public ResponseEntity<String> getDrafts() {
+    public ResponseEntity<List<DraftedPost>> getDrafts() {
         System.out.println("Calling Feign client to get drafts...");
         List<PostResponse> drafts = reviewInterface.getDraftPosts().getBody();
         System.out.println("Received drafts: " + drafts);
@@ -42,6 +42,7 @@ public class ReviewService implements IReviewService {
         review.setDraftedPosts(draftedPosts);
         reviewRepository.save(review);
 
-        return new ResponseEntity<>("Success", HttpStatus.CREATED);
+        // Return drafted posts as JSON
+        return new ResponseEntity<>(draftedPosts, HttpStatus.CREATED);
     }
 }

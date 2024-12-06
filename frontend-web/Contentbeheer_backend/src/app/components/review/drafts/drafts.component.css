@@ -1,0 +1,93 @@
+/* Stijl voor foutmeldingen */
+:host {
+    margin-top: auto;
+    width: 50rem;
+  }
+.error-message {
+    color: #d9534f; /* Rode kleur voor fouten */
+    background-color: #f8d7da; /* Lichtrode achtergrondkleur */
+    border: 1px solid #f5c6cb; /* Rand in dezelfde kleurtoon */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  /* Stijl voor de melding als er geen posts zijn */
+  div {
+    color: #6c757d; /* Grijze kleur voor neutrale tekst */
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Stijl voor de lijst met posts */
+  ul {
+    list-style-type: none; /* Verwijder standaard lijststijlen */
+    padding: 0;
+    margin: 0;
+    margin-top: 4rem;
+  }
+  
+  .post-item {
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+    
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: left;
+  }
+  
+  .post-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw bij hover */
+  }
+  
+  .post-item h2 {
+    color: #007bff; /* Blauwe kleur voor de titel */
+    margin-bottom: 10px;
+  }
+  
+  .post-item p {
+    margin: 5px 0; /* Verminder ruimte tussen paragrafen */
+    font-size: 14px;
+    color: #333; /* Donkere tekstkleur */
+  }
+  
+  .post-item strong {
+    color: #555; /* Iets lichtere kleur voor labels */
+  }
+  .button-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* Ruimte tussen knoppen */
+}
+
+.approve-button, .reject-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.approve-button {
+    background-color: #28a745; /* Groen voor goedkeuren */
+    color: white;
+}
+
+.approve-button:hover {
+    background-color: #218838; /* Donkerder groen bij hover */
+}
+
+.reject-button {
+    background-color: #dc3545; /* Rood voor afwijzen */
+    color: white;
+}
+
+.reject-button:hover {
+    background-color: #c82333; /* Donkerder rood bij hover */
+}
