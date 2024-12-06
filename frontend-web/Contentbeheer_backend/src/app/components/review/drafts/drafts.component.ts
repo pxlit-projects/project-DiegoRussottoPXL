@@ -34,14 +34,31 @@ export class DraftsComponent implements OnInit {
     });
   }
   approvePost(postId: number): void {
-    console.log(`Post met ID ${postId} goedgekeurd.`);
-    // Voeg hier je goedkeur-logica toe
+    this.reviewService.publishPost(postId).subscribe({
+      next: () => {
+        console.log(`Post met ID ${postId} goedgekeurd.`);
+        this.fetchPosts(); // Vernieuw de postlijst na goedkeuren
+      },
+      error: (error) => {
+        this.errorMessage = `Er is iets misgegaan bij het goedkeuren van de post met ID ${postId}.`;
+        console.error(error);
+      }
+    });
   }
   
   rejectPost(postId: number): void {
-    console.log(`Post met ID ${postId} afgewezen.`);
-    // Voeg hier je afwijzing-logica toe
+    this.reviewService.rejectPost(postId).subscribe({
+      next: () => {
+        console.log(`Post met ID ${postId} afgewezen.`);
+        this.fetchPosts(); // Vernieuw de postlijst na afwijzen
+      },
+      error: (error) => {
+        this.errorMessage = `Er is iets misgegaan bij het afwijzen van de post met ID ${postId}.`;
+        console.error(error);
+      }
+    });
   }
+  
   
 
 }

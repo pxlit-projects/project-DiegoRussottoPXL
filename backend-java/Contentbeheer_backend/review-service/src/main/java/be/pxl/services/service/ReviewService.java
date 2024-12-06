@@ -45,4 +45,10 @@ public class ReviewService implements IReviewService {
         // Return drafted posts as JSON
         return new ResponseEntity<>(draftedPosts, HttpStatus.CREATED);
     }
+    public ResponseEntity<Void> publishPost(Long postId) {
+        System.out.println("Calling Feign client to publish post...");
+        ResponseEntity<Void> response = reviewInterface.publishPost(postId);
+        System.out.println("Post with ID " + postId + " published successfully.");
+        return response;
+    }
 }

@@ -14,4 +14,11 @@ export class ReviewService {
   getAllDraftedPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.api + "/drafts");
   }
+  publishPost(postId: number): Observable<void> {
+    return this.http.put<void>(`${this.api}/post/${postId}/publish`, {});  
+    }
+    rejectPost(postId: number): Observable<void> {
+      return this.http.put<void>(`/api/review/${postId}/reject`, {}); // Pas de endpoint aan naar jouw backend
+    }
+    
 }
