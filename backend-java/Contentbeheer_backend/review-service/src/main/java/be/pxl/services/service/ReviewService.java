@@ -51,4 +51,10 @@ public class ReviewService implements IReviewService {
         System.out.println("Post with ID " + postId + " published successfully.");
         return response;
     }
+    public ResponseEntity<Void> rejectPost(Long postId) {
+        System.out.println("Calling Feign client to publish post...");
+        ResponseEntity<Void> response = reviewInterface.rejectPost(postId);
+        System.out.println("Post with ID " + postId + " published successfully.");
+        return response;
+    }
 }

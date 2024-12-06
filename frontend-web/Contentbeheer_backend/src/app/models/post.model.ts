@@ -4,6 +4,6 @@ export interface Post {
     content: string;
     author: string;
     date: string;
-    status: 'DRAFT' | 'PUBLISHED';
+    status: 'DRAFT' | 'PUBLISHED' | 'PENDING';
   }
   

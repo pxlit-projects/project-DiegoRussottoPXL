@@ -22,4 +22,8 @@ public class ReviewController {
     public ResponseEntity<Void> publishPost(@PathVariable Long id) {
         return reviewService.publishPost(id);
     }
+    @PutMapping("/post/{id}/reject")
+    public ResponseEntity<Void> rejectPost(@PathVariable Long id) {
+        return reviewService.rejectPost(id);
+    }
 }

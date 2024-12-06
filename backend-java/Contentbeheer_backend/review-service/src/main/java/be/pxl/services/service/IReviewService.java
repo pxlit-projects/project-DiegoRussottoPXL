@@ -9,5 +9,6 @@ public interface IReviewService {
     // Methode om de posts met status 'DRAFT' op te halen
     ResponseEntity<List<DraftedPost>> getDrafts();
     ResponseEntity<Void> publishPost(Long postId);
+    ResponseEntity<Void> rejectPost(Long postId);
 
 }

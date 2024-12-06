@@ -105,10 +105,18 @@ public class PostService implements IPostService {
     public void publishPost(Long postId) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
-
-        post.setStatus(PostStatus.PUBLISHED);  // Verander de status naar PUBLISHED
+        post.setStatus(PostStatus.PUBLISHED);
         postRepository.save(post);
     }
+
+
+    public void rejectPost(Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
+        post.setStatus(PostStatus.PUBLISHED);
+        postRepository.save(post);
+    }
+
     public void updatePost(Long postId, PostRequest postRequest) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));

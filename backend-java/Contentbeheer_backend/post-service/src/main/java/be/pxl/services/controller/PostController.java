@@ -48,6 +48,11 @@ public class PostController {
         log.info("Publishing post with ID: {}", id);
         postService.publishPost(id);
     }
+    @PutMapping("/{id}/reject")
+    public void rejectPost(@PathVariable Long id){
+        log.info("Rejecting post with id" + id);
+        postService.rejectPost(id);
+    }
     @PutMapping("/{id}")
     public void updatePost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
         log.info("Updating post with ID: {}", id);
