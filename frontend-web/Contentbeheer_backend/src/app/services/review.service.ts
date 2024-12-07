@@ -20,5 +20,8 @@ export class ReviewService {
     rejectPost(postId: number): Observable<void> {
       return this.http.put<void>(`${this.api}/post/${postId}/reject`, {}); // Pas de endpoint aan naar jouw backend
     }
+    rejectPostWithReason(postId: number, reason: string): Observable<void> {
+      return this.http.post<void>(`${this.api}/post/${postId}/reject`, { reason });
+    }
     
 }

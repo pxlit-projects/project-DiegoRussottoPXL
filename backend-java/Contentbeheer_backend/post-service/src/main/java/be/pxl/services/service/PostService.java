@@ -113,7 +113,7 @@ public class PostService implements IPostService {
     public void rejectPost(Long postId) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
-        post.setStatus(PostStatus.PUBLISHED);
+        post.setStatus(PostStatus.PENDING);
         postRepository.save(post);
     }
 

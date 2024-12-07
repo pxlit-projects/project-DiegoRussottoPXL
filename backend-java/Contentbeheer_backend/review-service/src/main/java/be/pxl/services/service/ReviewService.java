@@ -6,6 +6,7 @@ import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.feign.ReviewInterface;
 import be.pxl.services.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReviewService implements IReviewService {
     private final ReviewRepository reviewRepository;
+    private final RabbitTemplate rabbitTemplate;
+    private static final String QUEUE_NAME = "post-approval-queue";
+
 
     @Autowired
     ReviewInterface reviewInterface;
@@ -49,6 +53,11 @@ public class ReviewService implements IReviewService {
         System.out.println("Calling Feign client to publish post...");
         ResponseEntity<Void> response = reviewInterface.publishPost(postId);
         System.out.println("Post with ID " + postId + " published successfully.");
+
+        // Send a message to RabbitMQ
+        String message = "Post " + postId + " is goedgekeurd.";
+        rabbitTemplate.convertAndSend(QUEUE_NAME, message);
+
         return response;
     }
     public ResponseEntity<Void> rejectPost(Long postId) {
