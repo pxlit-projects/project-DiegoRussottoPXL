@@ -79,6 +79,7 @@ public class PostService implements IPostService {
                 .author(post.getAuthor())
                 .date(post.getDate())
                 .status(post.getStatus())
+                .rejectionReason(post.getRejectionReason())
                 .build();
     }
 
@@ -110,9 +111,10 @@ public class PostService implements IPostService {
     }
 
 
-    public void rejectPost(Long postId) {
+    public void rejectPost(Long postId, String rejectReason) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
+        post.setRejectionReason(rejectReason);
         post.setStatus(PostStatus.PENDING);
         postRepository.save(post);
     }

@@ -49,18 +49,18 @@ export class DraftsComponent implements OnInit {
     });
   }
   
-  rejectPost(postId: number): void {
-    this.reviewService.rejectPost(postId).subscribe({
-      next: () => {
-        console.log(`Post met ID ${postId} afgewezen.`);
-        this.fetchPosts(); // Vernieuw de postlijst na afwijzen
-      },
-      error: (error) => {
-        this.errorMessage = `Er is iets misgegaan bij het afwijzen van de post met ID ${postId}.`;
-        console.error(error);
-      }
-    });
-  }
+  // rejectPost(postId: number): void {
+  //   this.reviewService.rejectPost(postId).subscribe({
+  //     next: () => {
+  //       console.log(`Post met ID ${postId} afgewezen.`);
+  //       this.fetchPosts(); // Vernieuw de postlijst na afwijzen
+  //     },
+  //     error: (error) => {
+  //       this.errorMessage = `Er is iets misgegaan bij het afwijzen van de post met ID ${postId}.`;
+  //       console.error(error);
+  //     }
+  //   });
+  // }
   
   
 // Toon het inputveld voor afwijzingsreden
@@ -75,7 +75,7 @@ submitRejection(postId: number): void {
     this.errorMessage = 'De reden voor afwijzing mag niet leeg zijn.';
     return;
   }
-
+  console.log(`Post met ID ${postId} afgewezen met reden: ${this.rejectReason}`);
   this.reviewService.rejectPostWithReason(postId, this.rejectReason).subscribe({
     next: () => {
       console.log(`Post met ID ${postId} afgewezen met reden: ${this.rejectReason}`);

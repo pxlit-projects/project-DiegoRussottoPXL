@@ -25,4 +25,5 @@ public class DraftedPost {
 
     @Enumerated(EnumType.STRING)
     private PostStatus status; // Zorg ervoor dat PostStatus een enum is
+    private String rejectReason;
 }

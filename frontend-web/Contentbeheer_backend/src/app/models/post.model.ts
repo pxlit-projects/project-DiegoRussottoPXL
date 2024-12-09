@@ -5,5 +5,6 @@ export interface Post {
     author: string;
     date: string;
     status: 'DRAFT' | 'PUBLISHED' | 'PENDING';
+    rejectReason: string | null;
   }
   

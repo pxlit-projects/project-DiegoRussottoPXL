@@ -1,6 +1,7 @@
 package be.pxl.services.controller;
 
 import be.pxl.services.domain.dto.DraftedPost;
+import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.service.IReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,7 @@ public class ReviewController {
         return reviewService.publishPost(id);
     }
     @PutMapping("/post/{id}/reject")
-    public ResponseEntity<Void> rejectPost(@PathVariable Long id) {
-        return reviewService.rejectPost(id);
+    public ResponseEntity<Void> rejectPost(@PathVariable Long id,  @RequestBody String rejectReason) {
+        return reviewService.rejectPost(id, rejectReason);
     }
 }

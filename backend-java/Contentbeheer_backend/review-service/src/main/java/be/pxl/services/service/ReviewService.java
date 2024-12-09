@@ -2,6 +2,7 @@ package be.pxl.services.service;
 
 import be.pxl.services.domain.Review;
 import be.pxl.services.domain.dto.DraftedPost;
+import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.feign.ReviewInterface;
 import be.pxl.services.repository.ReviewRepository;
@@ -60,9 +61,9 @@ public class ReviewService implements IReviewService {
 
         return response;
     }
-    public ResponseEntity<Void> rejectPost(Long postId) {
-        System.out.println("Calling Feign client to publish post...");
-        ResponseEntity<Void> response = reviewInterface.rejectPost(postId);
+    public ResponseEntity<Void> rejectPost(Long postId, String rejectReason) {
+        System.out.println("Calling Feign client to reject post...");
+        ResponseEntity<Void> response = reviewInterface.rejectPost(postId, rejectReason);
         System.out.println("Post with ID " + postId + " published successfully.");
         return response;
     }

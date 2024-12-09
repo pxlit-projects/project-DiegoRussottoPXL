@@ -19,4 +19,6 @@ public class PostRequest {
     private String author;
     private LocalDate date;
     private PostStatus status;
+    private String rejectionReason;
+
 }
