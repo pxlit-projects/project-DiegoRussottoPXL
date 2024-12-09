@@ -30,11 +30,24 @@ public class PostController {
         return new ResponseEntity<>(postService.getFilteredPosts(author, content, date), HttpStatus.OK);
     }
 
+
     @GetMapping("/drafts")
     public ResponseEntity<List<PostResponse>> getDraftPosts() {
         log.info("Fetching posts with status DRAFT");
         return new ResponseEntity<>(postService.getPostsByStatus(PostStatus.DRAFT), HttpStatus.OK);
     }
+
+    @GetMapping("/rejected")
+    public ResponseEntity<List<PostResponse>> getRejectedPosts() {
+        log.info("Fetching posts with status REJECTED");
+        return new ResponseEntity<>(postService.getPostsByStatus(PostStatus.PENDING), HttpStatus.OK);
+    }
+    @PutMapping("/{id}/resubmit")
+    public void resubmitPost(@PathVariable Long id) {
+        log.info("Resubmitting post with ID: {}", id);
+        postService.resubmitPost(id);
+    }
+
 
 
     @PostMapping

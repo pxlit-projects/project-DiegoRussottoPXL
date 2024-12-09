@@ -63,10 +63,20 @@ public class PostService implements IPostService {
                         .author(post.getAuthor())
                         .date(post.getDate())
                         .status(post.getStatus())
+                        .rejectionReason(post.getRejectionReason())
                         .build())
                 .toList();
     }
-
+    @Override
+    public void resubmitPost(Long id) {
+        Post post = postRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Post not found"));
+        if (!post.getStatus().equals(PostStatus.PENDING)) {
+            throw new IllegalStateException("Only rejected posts can be resubmitted");
+        }
+        post.setStatus(PostStatus.DRAFT); // Of een andere gewenste status
+        post.setRejectionReason(null);   // Rejection reason wissen indien nodig
+        postRepository.save(post);
+    }
 
 
 

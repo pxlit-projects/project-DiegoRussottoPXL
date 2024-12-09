@@ -18,5 +18,8 @@ public interface ReviewInterface {
     ResponseEntity<Void> publishPost(@PathVariable Long id);
     @PutMapping("/api/post/{id}/reject")
     ResponseEntity<Void> rejectPost(@PathVariable Long id, String rejectReason);
+    @GetMapping("/api/post/rejected")
+    ResponseEntity<List<PostResponse>> getRejectedPosts();
+
 
 }

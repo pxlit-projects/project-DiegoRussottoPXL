@@ -27,4 +27,9 @@ public class ReviewController {
     public ResponseEntity<Void> rejectPost(@PathVariable Long id,  @RequestBody String rejectReason) {
         return reviewService.rejectPost(id, rejectReason);
     }
+    @GetMapping("/rejected")
+    public ResponseEntity<List<DraftedPost>> getRejectedPosts() {
+        return reviewService.getRejectedPosts();
+    }
+
 }

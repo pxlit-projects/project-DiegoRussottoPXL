@@ -67,4 +67,29 @@ public class ReviewService implements IReviewService {
         System.out.println("Post with ID " + postId + " published successfully.");
         return response;
     }
+    @Override
+    public ResponseEntity<List<DraftedPost>> getRejectedPosts() {
+        System.out.println("Calling Feign client to get rejected posts...");
+        List<PostResponse> rejectedPosts = reviewInterface.getRejectedPosts().getBody();
+        System.out.println("Received rejected posts: " + rejectedPosts);
+
+        // Map naar DraftedPost
+        List<DraftedPost> draftedPosts = rejectedPosts.stream()
+                .map(post -> DraftedPost.builder()
+                        .id(post.getId())
+                        .title(post.getTitle())
+                        .content(post.getContent())
+                        .author(post.getAuthor())
+                        .date(post.getDate())
+                        .status(post.getStatus())
+                        .rejectReason(post.getRejectionReason()) // Zorg dat je dit veld toevoegt aan DraftedPost
+                        .build())
+                .toList();
+
+        System.out.println("Mapped rejected posts: " + draftedPosts);
+
+        // Optioneel: sla rejected posts op in een repository
+        return new ResponseEntity<>(draftedPosts, HttpStatus.OK);
+    }
+
 }

@@ -269,3 +269,224 @@
 2024-12-09T16:40:20.331+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Rejecting post with id553
 2024-12-09T16:40:20.376+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
 2024-12-09T16:40:27.298+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-09T22:04:21.941+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Starting ConfigServiceApplication using Java 17.0.13 with PID 27256 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\config-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:04:21.944+0100 DEBUG              [main]                         be.pxl.services.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:04:21.946+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - The following 1 profile is active: "native"
+2024-12-09T22:04:24.756+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Started ConfigServiceApplication in 3.775 seconds (process running for 8.389)
+2024-12-09T22:04:39.995+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 17.0.13 with PID 18496 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\discovery-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:04:39.997+0100 DEBUG              [main]                         be.pxl.services.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:04:39.998+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:04:47.730+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 9.291 seconds (process running for 15.547)
+2024-12-09T22:04:49.759+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Starting GatewayServiceApplication using Java 17.0.13 with PID 16708 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\gateway-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:04:49.761+0100 DEBUG              [main]                         be.pxl.services.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:04:49.763+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:04:56.763+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Started GatewayServiceApplication in 8.986 seconds (process running for 13.203)
+2024-12-09T22:05:03.983+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 16964 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:05:03.985+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:05:03.986+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:05:14.362+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 12.883 seconds (process running for 14.401)
+2024-12-09T22:06:18.070+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:09:39.303+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 10428 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:09:39.305+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:09:39.306+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:09:46.368+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 8.549 seconds (process running for 9.627)
+2024-12-09T22:10:12.447+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Creating new post with title: dag
+2024-12-09T22:10:26.714+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:10:53.789+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Rejecting post with id602
+2024-12-09T22:10:53.904+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:11:00.486+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:13:13.481+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 24108 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:13:13.484+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:13:13.486+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:13:15.580+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 15072 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:13:15.581+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:13:15.582+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:13:23.817+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 10.203 seconds (process running for 11.566)
+2024-12-09T22:13:25.581+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 14.547 seconds (process running for 16.764)
+2024-12-09T22:14:07.954+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:14:13.589+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Creating new post with title: lol
+2024-12-09T22:14:15.268+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:15:14.640+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Rejecting post with id652
+2024-12-09T22:15:41.526+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:15:53.550+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:16:06.660+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-09T22:16:45.013+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:18:08.673+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:19:19.892+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:19:27.357+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-09T22:19:59.234+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T22:20:27.115+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-09T22:20:42.137+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:22:57.512+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:23:13.286+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 26572 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:23:13.289+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:23:13.290+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:23:19.914+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 8.245 seconds (process running for 9.015)
+2024-12-09T22:23:40.501+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T22:46:03.661+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Starting ConfigServiceApplication using Java 17.0.13 with PID 29120 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\config-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:46:03.664+0100 DEBUG              [main]                         be.pxl.services.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:46:03.665+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - The following 1 profile is active: "native"
+2024-12-09T22:46:06.479+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Started ConfigServiceApplication in 3.847 seconds (process running for 4.659)
+2024-12-09T22:46:12.023+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 17.0.13 with PID 14764 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\discovery-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:46:12.025+0100 DEBUG              [main]                         be.pxl.services.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:46:12.025+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:46:16.451+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 6.241 seconds (process running for 7.165)
+2024-12-09T22:46:20.869+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Starting GatewayServiceApplication using Java 17.0.13 with PID 3992 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\gateway-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:46:20.870+0100 DEBUG              [main]                         be.pxl.services.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:46:20.871+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:46:24.794+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Started GatewayServiceApplication in 5.551 seconds (process running for 6.334)
+2024-12-09T22:46:31.413+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 9556 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:46:31.414+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:46:31.415+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:46:38.798+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 9.57 seconds (process running for 10.372)
+2024-12-09T22:46:45.595+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 27524 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-09T22:46:45.596+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-09T22:46:45.597+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09T22:46:52.350+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 8.295 seconds (process running for 9.16)
+2024-12-09T22:47:45.158+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:04:11.288+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:04:11.584+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:04:56.011+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:04:56.094+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:07:03.376+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:07:03.441+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:08:52.938+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:08:53.076+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:09:01.678+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:09:01.755+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:09:19.581+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:09:19.713+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:16.216+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:16.263+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:19.134+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:19.194+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:21.553+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:21.609+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:26.103+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:26.173+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:36.561+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:36.632+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:43.749+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:43.804+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:48.253+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:48.334+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:51.058+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:51.149+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:54.193+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:54.316+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:57.508+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:10:57.572+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:00.556+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:00.598+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:06.570+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:06.621+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:09.595+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:09.688+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:12.624+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:12.707+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:18.855+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:19.051+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:22.023+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:22.104+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:23.623+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:23.699+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:33.628+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:33.892+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:37.242+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:37.328+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:40.673+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:40.861+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:41.635+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:41.675+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:52.314+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:52.404+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:56.561+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:11:56.600+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:44.033+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:44.092+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:51.777+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:51.843+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:57.673+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:13:57.738+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:00.555+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:00.597+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:08.880+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:09.019+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:11.580+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:11.656+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:19.202+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:19.384+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:26.635+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:26.684+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:36.753+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:36.957+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:48.609+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:48.664+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:50.709+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:50.752+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:52.773+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:52.835+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:58.971+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:14:59.013+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:03.969+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:04.013+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:22.946+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:23.197+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:28.805+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:28.919+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:51.318+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:15:56.064+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:15:56.767+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:16:08.435+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:16:08.568+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:16:08.651+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:16:14.297+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:39:35.555+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:39:35.854+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:39:36.858+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:39:39.107+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:39:39.149+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-09T23:39:39.822+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:41:59.531+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:45:26.923+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:46:24.348+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:46:37.698+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:46:39.457+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:46:43.608+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:46:58.971+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:47:27.376+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:47:30.548+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:47:55.536+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:47:57.049+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:48:06.561+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:48:09.369+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:48:12.306+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:48:48.421+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:54:34.893+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:13.227+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:23.436+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:27.477+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:29.353+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:33.427+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:36.382+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:39.326+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:46.645+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:55:49.720+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:57:29.088+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:01.753+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:04.172+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:09.515+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:15.346+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:20.612+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:24.883+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:28.774+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:37.082+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:40.339+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:48.477+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:58:58.535+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:59:08.397+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:59:21.355+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-09T23:59:26.189+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-10T00:04:55.651+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-10T00:05:00.536+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-10T00:05:09.667+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED

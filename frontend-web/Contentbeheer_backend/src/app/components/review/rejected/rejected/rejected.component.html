@@ -1,0 +1,59 @@
+@if (errorMessage) {
+    <div class="error">
+        {{ errorMessage }}
+    </div>
+}
+
+@if (rejectedPosts.length === 0 && !errorMessage) {
+    <p>Er zijn geen afgewezen posts om weer te geven.</p>
+}
+
+@if (rejectedPosts.length > 0) {
+    <table>
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Titel</th>
+                <th>Content</th>
+                <th>Reden van Afwijzing</th>
+                <th>Actie</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (post of rejectedPosts; track post) {
+                @if (currentPost.id !== post.id) {
+                    <tr>
+                        <td>{{ post.date }}</td>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.content }}</td>
+                        <td>{{ post.rejectReason }}</td>
+                        <td>
+                            <button (click)="editPost(post)">Opnieuw indienen</button>
+                        </td>
+                    </tr>
+                }
+
+                <!-- Formulier voor het bewerken van de geselecteerde post -->
+                 @if (currentPost.id === post.id && isEditing) {
+                    <tr>
+                        <td colspan="5">
+                            <div class="edit-form">
+                                <h3>Wijzig post</h3>
+                                <h4>{{ currentPost.rejectReason }}</h4>
+                                <label for="newTitle">Nieuwe Titel:</label>
+                                <input type="text" id="newTitle" [(ngModel)]="currentPost.title" />
+    
+                                <label for="newContent">Nieuwe Content:</label>
+                                <textarea id="newContent" [(ngModel)]="currentPost.content"></textarea>
+    
+                                <button (click)="submitResubmission()">Indienen</button>
+                                <button (click)="cancelEdit()">Annuleren</button>
+                            </div>
+                        </td>
+                    </tr>
+                 }
+               
+            }
+        </tbody>
+    </table>
+}

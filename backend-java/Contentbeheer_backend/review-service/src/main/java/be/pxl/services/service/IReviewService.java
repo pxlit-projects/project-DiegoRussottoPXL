@@ -11,5 +11,7 @@ public interface IReviewService {
     ResponseEntity<List<DraftedPost>> getDrafts();
     ResponseEntity<Void> publishPost(Long postId);
     ResponseEntity<Void> rejectPost(Long postId, String rejectReason);
+    ResponseEntity<List<DraftedPost>> getRejectedPosts();
+
 
 }

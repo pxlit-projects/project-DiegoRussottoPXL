@@ -23,5 +23,10 @@ export class ReviewService {
     rejectPostWithReason(postId: number, reason: string): Observable<void> {
       return this.http.put<void>(`${this.api}/post/${postId}/reject`, reason );
     }
+    getAllRejectedPosts(): Observable<Post[]> {
+      return this.http.get<Post[]>(this.api + "/rejected");
+    }
+    
+    
     
 }
