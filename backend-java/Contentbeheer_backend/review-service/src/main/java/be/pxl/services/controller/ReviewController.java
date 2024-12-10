@@ -31,5 +31,9 @@ public class ReviewController {
     public ResponseEntity<List<DraftedPost>> getRejectedPosts() {
         return reviewService.getRejectedPosts();
     }
+    @PutMapping("/post/{id}/resubmit")
+    public ResponseEntity<Void> resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
+        return reviewService.resubmitPost(id, postRequest);
+    }
 
 }

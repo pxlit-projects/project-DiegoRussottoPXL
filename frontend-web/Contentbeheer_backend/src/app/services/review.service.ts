@@ -17,14 +17,17 @@ export class ReviewService {
   publishPost(postId: number): Observable<void> {
     return this.http.put<void>(`${this.api}/post/${postId}/publish`, {});  
     }
-    // rejectPost(postId: number): Observable<void> {
-    //   return this.http.put<void>(`${this.api}/post/${postId}/reject`, {}); // Pas de endpoint aan naar jouw backend
-    // }
     rejectPostWithReason(postId: number, reason: string): Observable<void> {
       return this.http.put<void>(`${this.api}/post/${postId}/reject`, reason );
     }
     getAllRejectedPosts(): Observable<Post[]> {
       return this.http.get<Post[]>(this.api + "/rejected");
+    }
+    resubmitPost(post: Post): Observable<void> {
+      return this.http.put<void>(`${this.api}/post/${post.id}/resubmit`, {
+        title: post.title,
+        content: post.content
+      });
     }
     
     

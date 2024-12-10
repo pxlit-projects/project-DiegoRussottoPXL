@@ -46,16 +46,16 @@ export class RejectedComponent implements OnInit {
 
   // Verzend de gewijzigde gegevens naar de backend
    submitResubmission(): void {
-    //  this.reviewService.resubmitPost(this.currentPost).subscribe({
-    //    next: () => {
-    //      alert('Post opnieuw ingediend!');
-    //      this.isEditing = false;
-    //      this.fetchRejectedPosts(); // Update de lijst met posts na herindiening
-    //    },
-    //    error: (err) => {
-    //      this.errorMessage = `Er is iets misgegaan bij het opnieuw indienen van de post: ${err}`;
-    //    }
-    //  });
+      this.reviewService.resubmitPost(this.currentPost).subscribe({
+        next: () => {
+          alert('Post opnieuw ingediend!');
+          this.isEditing = false;
+          this.fetchRejectedPosts(); // Update de lijst met posts na herindiening
+        },
+        error: (err) => {
+          this.errorMessage = `Er is iets misgegaan bij het opnieuw indienen van de post: ${err}`;
+        }
+      });
    }
 
   // Annuleer de bewerkingsmodus zonder iets op te slaan

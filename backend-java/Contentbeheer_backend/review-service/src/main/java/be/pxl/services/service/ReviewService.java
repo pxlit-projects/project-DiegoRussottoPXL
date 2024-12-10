@@ -92,4 +92,17 @@ public class ReviewService implements IReviewService {
         return new ResponseEntity<>(draftedPosts, HttpStatus.OK);
     }
 
+    @Override
+    public ResponseEntity<Void> resubmitPost(Long postId, PostRequest postRequest) {
+        System.out.println("Calling Feign client to resubmit post...");
+        ResponseEntity<Void> response = reviewInterface.resubmitPost(postId, postRequest);
+        System.out.println("Post with ID " + postId + " resubmitted successfully.");
+
+        // Stuur een bericht naar RabbitMQ
+        String message = "Post " + postId + " is opnieuw ingediend.";
+        rabbitTemplate.convertAndSend(QUEUE_NAME, message);
+
+        return response;
+    }
+
 }

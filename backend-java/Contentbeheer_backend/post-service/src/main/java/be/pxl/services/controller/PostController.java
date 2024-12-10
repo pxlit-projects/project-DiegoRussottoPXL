@@ -43,9 +43,9 @@ public class PostController {
         return new ResponseEntity<>(postService.getPostsByStatus(PostStatus.PENDING), HttpStatus.OK);
     }
     @PutMapping("/{id}/resubmit")
-    public void resubmitPost(@PathVariable Long id) {
-        log.info("Resubmitting post with ID: {}", id);
-        postService.resubmitPost(id);
+    public void resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
+        log.info("Resubmitting post with ID: {} and new title: {}, content: {}", id, postRequest.getTitle(), postRequest.getContent());
+        postService.resubmitPost(id, postRequest);
     }
 
 

@@ -1,5 +1,6 @@
 package be.pxl.services.feign;
 
+import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
@@ -7,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -20,6 +22,9 @@ public interface ReviewInterface {
     ResponseEntity<Void> rejectPost(@PathVariable Long id, String rejectReason);
     @GetMapping("/api/post/rejected")
     ResponseEntity<List<PostResponse>> getRejectedPosts();
+
+    @PutMapping("/api/post/{id}/resubmit")
+    ResponseEntity<Void> resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest);
 
 
 }

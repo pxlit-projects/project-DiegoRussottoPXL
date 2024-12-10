@@ -15,7 +15,7 @@ public interface IPostService {
     void publishPost(Long id);
     void rejectPost(Long id, String reason);
     void updatePost(Long id, PostRequest postRequest);
-    void resubmitPost(Long id);
+    void resubmitPost(Long id, PostRequest postRequest);
 
     List<PostResponse> getFilteredPosts(String author, String content, String date);
 }
