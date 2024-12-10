@@ -22,7 +22,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ElementCollection
-    @CollectionTable(name = "drafted_posts", joinColumns = @JoinColumn(name = "review_id"))
-    private List<DraftedPost> draftedPosts;
+//    @ElementCollection
+//    @CollectionTable(name = "drafted_posts", joinColumns = @JoinColumn(name = "review_id"))
+//    private List<DraftedPost> draftedPosts;
 }

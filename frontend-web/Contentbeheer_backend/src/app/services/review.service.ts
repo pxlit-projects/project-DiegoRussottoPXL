@@ -22,7 +22,7 @@ export class ReviewService {
     }
     getAllRejectedPosts(): Observable<Post[]> {
       return this.http.get<Post[]>(this.api + "/rejected");
-    }
+    } 
     resubmitPost(post: Post): Observable<void> {
       return this.http.put<void>(`${this.api}/post/${post.id}/resubmit`, {
         title: post.title,

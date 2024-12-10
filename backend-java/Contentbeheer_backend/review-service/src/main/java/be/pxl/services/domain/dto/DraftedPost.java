@@ -11,19 +11,19 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Embeddable
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
+//@Embeddable
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@Builder
 public class DraftedPost {
-    private long id;
-    private String title;
-    private String content;
-    private String author;
-    private LocalDate date;
-
-    @Enumerated(EnumType.STRING)
-    private PostStatus status; // Zorg ervoor dat PostStatus een enum is
-    private String rejectReason;
+//    private long id;
+//    private String title;
+//    private String content;
+//    private String author;
+//    private LocalDate date;
+//
+//    @Enumerated(EnumType.STRING)
+//    private PostStatus status;
+//    private String rejectReason;
 }

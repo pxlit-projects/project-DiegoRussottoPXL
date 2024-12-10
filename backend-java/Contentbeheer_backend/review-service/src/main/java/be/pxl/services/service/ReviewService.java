@@ -1,7 +1,6 @@
 package be.pxl.services.service;
 
 import be.pxl.services.domain.Review;
-import be.pxl.services.domain.dto.DraftedPost;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.feign.ReviewInterface;
@@ -26,26 +25,27 @@ public class ReviewService implements IReviewService {
     @Autowired
     ReviewInterface reviewInterface;
 
-    public ResponseEntity<List<DraftedPost>> getDrafts() {
+    public ResponseEntity<List<PostResponse>> getDrafts() {
         System.out.println("Calling Feign client to get drafts...");
         List<PostResponse> drafts = reviewInterface.getDraftPosts().getBody();
         System.out.println("Received drafts: " + drafts);
 
         Review review = new Review();
-        List<DraftedPost> draftedPosts = drafts.stream()
-                .map(draft -> DraftedPost.builder()
+        List<PostResponse> draftedPosts = drafts.stream()
+                .map(draft -> PostResponse.builder()
                         .id(draft.getId())
                         .title(draft.getTitle())
                         .content(draft.getContent())
                         .author(draft.getAuthor())
                         .date(draft.getDate())
                         .status(draft.getStatus())
+                        .rejectionReason(draft.getRejectionReason())
                         .build())
                 .toList();
         System.out.println("Mapped drafted posts: " + draftedPosts);
 
-        review.setDraftedPosts(draftedPosts);
-        reviewRepository.save(review);
+        //review.setDraftedPosts(draftedPosts);
+        //reviewRepository.save(review);
 
         // Return drafted posts as JSON
         return new ResponseEntity<>(draftedPosts, HttpStatus.CREATED);
@@ -68,21 +68,21 @@ public class ReviewService implements IReviewService {
         return response;
     }
     @Override
-    public ResponseEntity<List<DraftedPost>> getRejectedPosts() {
+    public ResponseEntity<List<PostRequest>> getRejectedPosts() {
         System.out.println("Calling Feign client to get rejected posts...");
         List<PostResponse> rejectedPosts = reviewInterface.getRejectedPosts().getBody();
         System.out.println("Received rejected posts: " + rejectedPosts);
 
         // Map naar DraftedPost
-        List<DraftedPost> draftedPosts = rejectedPosts.stream()
-                .map(post -> DraftedPost.builder()
+        List<PostRequest> draftedPosts = rejectedPosts.stream()
+                .map(post -> PostRequest.builder()
                         .id(post.getId())
                         .title(post.getTitle())
                         .content(post.getContent())
                         .author(post.getAuthor())
                         .date(post.getDate())
                         .status(post.getStatus())
-                        .rejectReason(post.getRejectionReason()) // Zorg dat je dit veld toevoegt aan DraftedPost
+                        .rejectionReason(post.getRejectionReason()) // Zorg dat je dit veld toevoegt aan DraftedPost
                         .build())
                 .toList();
 

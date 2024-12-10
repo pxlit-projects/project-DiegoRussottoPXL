@@ -3,9 +3,9 @@
       <li><a [routerLink]="['/']">Home</a></li>
       @if (isRedacteur) {
         <li><a [routerLink]="['/add']">Add post</a></li>
+        <li><a [routerLink]="['/drafts']">Drafts</a></li>
+        <li><a [routerLink]="['/rejected']">Rejected posts</a></li>
       }
       <li><a [routerLink]="['/posts']">All posts</a></li>
-      <li><a [routerLink]="['/drafts']">Drafts</a></li>
-      <li><a [routerLink]="['/rejected']">Rejected posts</a></li>
     </ul>
   </nav>

@@ -11,7 +11,7 @@ export const routes: Routes = [
     {path: 'home', component : HomepageComponent},
     {path: 'add', component : CreatePostComponent, canActivate: [authGuard]},
     {path: 'posts', component : PostListComponent},
-    {path: 'drafts', component : DraftsComponent},
-    {path: 'rejected', component : RejectedComponent},
+    {path: 'drafts', component : DraftsComponent, canActivate: [authGuard]},
+    {path: 'rejected', component : RejectedComponent, canActivate: [authGuard]},
     { path: '**', component: HomepageComponent }
 ];
