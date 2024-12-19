@@ -1,6 +1,7 @@
 package be.pxl.services.controller;
 
 import be.pxl.services.domain.PostStatus;
+import be.pxl.services.domain.dto.CommentResponse;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.service.IPostService;
@@ -28,6 +29,11 @@ public class PostController {
             @RequestParam(required = false) String date) {
         log.info("Fetching posts with filters: author = {}, content = {}, date = {}", author, content, date);
         return new ResponseEntity<>(postService.getFilteredPosts(author, content, date), HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}/comments")
+    public List<CommentResponse> getCommentsById(@PathVariable Long id){
+        return postService.getCommentsById(id);
     }
 
 

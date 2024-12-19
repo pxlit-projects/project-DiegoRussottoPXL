@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface IReviewService {
-    // Methode om de posts met status 'DRAFT' op te halen
     ResponseEntity<List<PostResponse>> getDrafts();
     ResponseEntity<Void> publishPost(Long postId);
     ResponseEntity<Void> rejectPost(Long postId, String rejectReason);

@@ -1,14 +1,18 @@
 package be.pxl.services.service;
 
-import be.pxl.services.client.NotificationClient;
 import be.pxl.services.domain.NotificationRequest;
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.PostStatus;
+import be.pxl.services.domain.dto.CommentResponse;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
+import be.pxl.services.feign.PostInterface;
 import be.pxl.services.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -18,7 +22,16 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PostService implements IPostService {
     private final PostRepository postRepository;
-    private final NotificationClient notificationClient;
+    //private final NotificationClient notificationClient;
+
+    @Autowired
+    PostInterface postInterface;
+
+    public List<CommentResponse> getCommentsById(@PathVariable Long postId){
+        List<CommentResponse> comments = postInterface.getCommentsById(postId).getBody();
+        List<CommentResponse> d = comments;
+        return comments;
+    }
 
     @Override
     public List<PostResponse> getAllPosts() {
