@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Post } from '../models/post.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../enviroments/enviroment.development';
+import { Comment } from '../models/comment.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -51,5 +52,9 @@ export class PostService {
   notifyPostUpdate(): void {
     this.postUpdatedSource.next(null);
   }
-
+  getCommentsByPostId(postId: number): Observable<Comment[]> {
+    const commentsApi = `${this.api}/${postId}/comments`;
+    return this.http.get<Comment[]>(commentsApi);
+  }
+  
 }

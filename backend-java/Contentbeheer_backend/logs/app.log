@@ -189,3 +189,28 @@
 2024-12-19T16:25:26.664+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
 2024-12-19T16:25:26.665+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
 2024-12-19T16:25:33.999+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 8.819 seconds (process running for 9.917)
+2024-12-19T16:37:38.127+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:37:38.625+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:37:51.022+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:37:51.099+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:37:57.995+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:37:58.046+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:04.018+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:04.056+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:06.047+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:06.076+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:17.022+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:17.050+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:19.397+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:19.433+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:22.011+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:38:22.045+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:41:19.087+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:41:19.111+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:44:26.555+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T16:44:26.578+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T17:08:36.029+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T17:08:36.062+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T17:08:45.929+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T17:08:46.020+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-19T17:12:00.564+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null

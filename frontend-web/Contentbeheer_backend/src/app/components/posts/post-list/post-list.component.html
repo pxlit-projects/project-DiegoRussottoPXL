@@ -43,6 +43,7 @@
       <p>{{ post.content }}</p>
       <p><strong>Author:</strong> {{ post.author }}</p>
       <p><strong>Date:</strong> {{ post.date }}</p>
+      <button (click)="viewComments(post.id)">Comments bekijken</button>
       @if (post.status === 'DRAFT') {
         <div>
           <button (click)="publishPost(post.id)">Publiceer Post</button>
@@ -53,4 +54,19 @@
       }
     }
   </div>
+  <div *ngIf="selectedPostCommentsId === post.id">
+    <h3>Comments:</h3>
+    <ul>
+        @for (comment of comments; track comment) {
+          <li>
+            <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+            <p><small>{{ comment.timestamp }}</small></p>
+          </li>
+
+        }
+        
+    </ul>
+    <button (click)="clearComments()">Verberg comments</button>
+  </div>
+  
 }

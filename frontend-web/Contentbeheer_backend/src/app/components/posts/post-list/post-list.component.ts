@@ -3,6 +3,7 @@ import { Post } from '../../../models/post.model';
 import { PostService } from '../../../services/post.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Comment } from '../../../models/comment.model';
 
 @Component({
   selector: 'app-post-list',
@@ -17,7 +18,10 @@ export class PostListComponent implements OnInit {
   selectedPostId: number | null = null;
   postForm: FormGroup;
   filterForm: FormGroup;
-  userRole: string | null = null; // Variabele voor de rol van de gebruiker
+  userRole: string | null = null; 
+  comments: Comment[] = [];
+  selectedPostCommentsId: number | null = null; // Houdt bij voor welke post de comments worden bekeken
+
 
   constructor(private postService: PostService, private fb: FormBuilder) {
     this.postForm = this.fb.group({
@@ -94,4 +98,15 @@ export class PostListComponent implements OnInit {
     this.isEditing = false;
     this.selectedPostId = null;
   }
+  viewComments(postId: number): void {
+    this.selectedPostCommentsId = postId; // Houd bij welke post geselecteerd is
+    this.postService.getCommentsByPostId(postId).subscribe((data: Comment[]) => {
+      this.comments = data;
+    });
+  }
+  clearComments(): void {
+    this.selectedPostCommentsId = null;
+    this.comments = [];
+  }
+  
 }
