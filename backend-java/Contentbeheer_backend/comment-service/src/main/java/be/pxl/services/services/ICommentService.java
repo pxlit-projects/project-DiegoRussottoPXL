@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ICommentService {
     List<CommentResponse> getCommentsByPostId(Long postId);
-    CommentResponse addComment(CommentRequest commentRequest);
+    CommentResponse addComment(Long postId, CommentRequest commentRequest);
     void updateComment(Long commentId, CommentRequest commentRequest);
     void deleteComment(Long commentId);
 }

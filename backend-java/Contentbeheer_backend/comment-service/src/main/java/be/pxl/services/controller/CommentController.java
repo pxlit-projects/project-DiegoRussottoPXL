@@ -22,10 +22,10 @@ public class CommentController {
         return new ResponseEntity<>(commentService.getCommentsByPostId(postId), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/{postId}")
     @ResponseStatus(HttpStatus.CREATED)
-    public CommentResponse addComment(@RequestBody CommentRequest commentRequest) {
-        return commentService.addComment(commentRequest);
+    public CommentResponse addComment(@PathVariable Long postId, @RequestBody CommentRequest commentRequest) {
+        return commentService.addComment(postId, commentRequest);
     }
 
     @PutMapping("/{commentId}")

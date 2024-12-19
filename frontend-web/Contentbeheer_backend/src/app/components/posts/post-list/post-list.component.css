@@ -25,8 +25,6 @@ form > div {
   gap: 8px; /* Ruimte tussen label en invoer */
 }
 
-
-
 /* Labelstijl */
 label {
   font-size: 16px;
@@ -50,10 +48,10 @@ textarea:focus {
   border-color: #007BFF;
   outline: none;
 }
+
 .filter-button {
   margin: 1.6rem;
 }
-
 
 /* Textarea stijl */
 textarea {
@@ -77,7 +75,6 @@ button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
-
 
 /* Post weergave stijl */
 .post {
@@ -174,6 +171,7 @@ button:disabled {
 .edit-form button[type="button"]:hover {
   background-color: #c82333;
 }
+
 /* Commentaar sectie */
 .comments-section {
   margin-top: 20px;
@@ -241,9 +239,14 @@ button:disabled {
   text-align: center;
   margin-top: 20px;
 }
+
 .hide-comments {
   background-color: #dc3545; /* Rode kleur */
   color: white;
   transition: background-color 0.3s; /* Voor een vloeiende overgang */
 }
 
+.comment-item{
+  display: flex;
+  justify-content: space-between;
+}

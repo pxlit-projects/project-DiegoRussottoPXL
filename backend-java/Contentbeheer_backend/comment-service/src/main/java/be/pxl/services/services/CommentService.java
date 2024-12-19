@@ -27,9 +27,9 @@ public class CommentService implements ICommentService {
     }
 
     @Override
-    public CommentResponse addComment(CommentRequest commentRequest) {
+    public CommentResponse addComment(Long postId, CommentRequest commentRequest) {
         Comment comment = Comment.builder()
-                .postId(commentRequest.getPostId())
+                .postId(postId)
                 .user(commentRequest.getAuthor())
                 .content(commentRequest.getContent())
                 .createdDate(LocalDate.now())

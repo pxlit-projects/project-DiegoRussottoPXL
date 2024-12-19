@@ -1,17 +1,21 @@
 <div class="homepage">
-    
-    <div class="overlay">
-      <h1>Welkom op de Homepage</h1>
-      <p>Kies een rol om verder te gaan</p>
-  
-      <div class="dropdown">
-        <label for="role">Kies een rol:</label> 
-        <select id="role" (change)="onRoleChange($event)">
-          <option value="gebruiker">Gebruiker</option>
-          <option value="redacteur">Redacteur</option>
-        </select>
-      </div>
-  
+  <div class="overlay">
+    <h1>Welkom op de Homepage</h1>
+    <p>Vul je gebruikersnaam in en kies een rol om verder te gaan:</p>
+
+    <div class="input-group">
+      <label for="username">Gebruikersnaam:</label>
+      <input id="username" type="text" [(ngModel)]="username" placeholder="Voer je naam in" />
     </div>
+
+    <div class="dropdown">
+      <label for="role">Kies een rol:</label>
+      <select id="role" (change)="onRoleChange($event)">
+        <option value="gebruiker">Gebruiker</option>
+        <option value="redacteur">Redacteur</option>
+      </select>
+    </div>
+
+    <button (click)="saveUserData()">Ga verder</button>
   </div>
-  
+</div>
