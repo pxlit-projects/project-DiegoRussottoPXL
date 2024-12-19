@@ -16,7 +16,7 @@ export class RejectedComponent implements OnInit {
   errorMessage: string = '';
   isEditing: boolean = false; // Controleert of we in de bewerkingsmodus zijn
   currentPost: Post = {
-    id: 0, title: '', content: '', date: '', rejectReason: '',
+    id: 0, title: '', content: '', date: '', rejectionReason: '',
     author: '',
     status: 'DRAFT'
   }; // Huidige post die wordt bewerkt
@@ -25,11 +25,14 @@ export class RejectedComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchRejectedPosts();
-  }fetchRejectedPosts(): void {
+  }
+
+  fetchRejectedPosts(): void {
     this.reviewService.getAllRejectedPosts().subscribe({
       next: (posts) => {
         console.log('Ophalen van rejected posts succesvol:', posts);
         this.rejectedPosts = posts;
+        console.log(this.rejectedPosts);
       },
       error: (err) => {
         console.error('Fout bij het ophalen van rejected posts:', err);

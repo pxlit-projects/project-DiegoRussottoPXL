@@ -1,6 +1,6 @@
 package be.pxl.services.domain.dto;
 
-import be.pxl.services.domain.PostStatus;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,14 +12,11 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PostResponse {
+public class CommentResponse {
     private Long id;
-    private String title;
-    private String content;
+    private Long postId;
     private String author;
-    private LocalDate date;
-    private PostStatus status;
-    private String rejectionReason;
-
-
+    private String content;
+    private LocalDate timestamp;
 }
+

@@ -27,6 +27,20 @@ services:
     volumes:
       - mysql-data-2:/var/lib/mysql
 
+  mysql-db-comment:
+    image: mysql:8.0
+    container_name: mysql-db-comment
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: commentservice_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    ports:
+      - "3308:3306"  # Gebruik een andere poort om conflicten te voorkomen
+    volumes:
+      - mysql-data-3:/var/lib/mysql
+
 volumes:
   mysql-data-1:
   mysql-data-2:
+  mysql-data-3:
