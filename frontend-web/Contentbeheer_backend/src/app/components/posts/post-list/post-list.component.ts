@@ -4,6 +4,7 @@ import { PostService } from '../../../services/post.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Comment } from '../../../models/comment.model';
+import { CommentService } from '../../../services/comment.service';
 
 @Component({
   selector: 'app-post-list',
@@ -18,12 +19,13 @@ export class PostListComponent implements OnInit {
   selectedPostId: number | null = null;
   postForm: FormGroup;
   filterForm: FormGroup;
+  commentForm: FormGroup; // Formulier voor nieuwe comments
   userRole: string | null = null; 
   comments: Comment[] = [];
   selectedPostCommentsId: number | null = null; // Houdt bij voor welke post de comments worden bekeken
 
 
-  constructor(private postService: PostService, private fb: FormBuilder) {
+  constructor(private postService: PostService, private commentService: CommentService,private fb: FormBuilder) {
     this.postForm = this.fb.group({
       title: ['', Validators.required],
       content: ['', Validators.required]
@@ -32,6 +34,10 @@ export class PostListComponent implements OnInit {
       author: [''],
       content: [''],
       date: ['']
+    });
+    this.commentForm = this.fb.group({
+      author: ['', Validators.required],
+      content: ['', Validators.required],
     });
   }
 
@@ -107,6 +113,27 @@ export class PostListComponent implements OnInit {
   clearComments(): void {
     this.selectedPostCommentsId = null;
     this.comments = [];
+  }
+  toggleComments(postId: number): void {
+    if (this.selectedPostCommentsId === postId) {
+      this.clearComments(); // Verberg comments als ze al zichtbaar zijn
+    } else {
+      this.viewComments(postId); // Toon comments als ze nog niet zichtbaar zijn
+    }
+  }
+  addComment(postId: number): void {
+    if (this.commentForm.valid) {
+      const newComment = this.commentForm.value;
+      this.commentService.createComment(postId, newComment).subscribe({
+        next: () => {
+          this.viewComments(postId); // Refresh comments
+          this.commentForm.reset();
+        },
+        error: (err) => {
+          console.error('Error adding comment:', err);
+        },
+      });
+    }
   }
   
 }

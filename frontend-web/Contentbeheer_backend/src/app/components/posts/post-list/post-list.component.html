@@ -43,7 +43,10 @@
       <p>{{ post.content }}</p>
       <p><strong>Author:</strong> {{ post.author }}</p>
       <p><strong>Date:</strong> {{ post.date }}</p>
-      <button (click)="viewComments(post.id)">Comments bekijken</button>
+      <button (click)="toggleComments(post.id)" [ngClass]="{ 'hide-comments': selectedPostCommentsId === post.id }">
+        {{ selectedPostCommentsId === post.id ? 'Verberg comments' : 'Comments bekijken' }}
+      </button>
+      
       @if (post.status === 'DRAFT') {
         <div>
           <button (click)="publishPost(post.id)">Publiceer Post</button>
@@ -54,19 +57,26 @@
       }
     }
   </div>
-  <div *ngIf="selectedPostCommentsId === post.id">
-    <h3>Comments:</h3>
-    <ul>
-        @for (comment of comments; track comment) {
-          <li>
-            <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
-            <p><small>{{ comment.timestamp }}</small></p>
-          </li>
-
-        }
-        
-    </ul>
-    <button (click)="clearComments()">Verberg comments</button>
-  </div>
+    @if (selectedPostCommentsId === post.id) {
+      <div class="comments-section">
+        <ul>
+            @for (comment of comments; track comment) {
+              <li>
+                <p><small>{{ comment.timestamp }}</small></p>
+                <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+              </li>    
+            }            
+        </ul>
+        <form [formGroup]="commentForm" (ngSubmit)="addComment(post.id)">
+          <label for="comment-author">Auteur:</label>
+          <input id="comment-author" formControlName="author" placeholder="Jouw naam" required />
+  
+          <label for="comment-content">Comment:</label>
+          <textarea id="comment-content" formControlName="content" placeholder="Schrijf een comment..." required></textarea>
+  
+          <button type="submit" [disabled]="commentForm.invalid">Voeg Comment Toe</button>
+        </form>
+      </div>
+    }
   
 }

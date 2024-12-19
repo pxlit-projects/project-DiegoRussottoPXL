@@ -78,9 +78,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-button:hover:not(:disabled) {
-  background-color: #0056b3;
-}
 
 /* Post weergave stijl */
 .post {
@@ -177,3 +174,76 @@ button:hover:not(:disabled) {
 .edit-form button[type="button"]:hover {
   background-color: #c82333;
 }
+/* Commentaar sectie */
+.comments-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Commentaar lijst */
+.comments-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comments-section li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Commentaar auteur */
+.comments-section strong {
+  color: #333;
+  font-size: 14px;
+}
+
+/* Commentaar inhoud */
+.comments-section p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  text-align: left;
+}
+
+/* Commentaar timestamp */
+.comments-section small {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Knop om comments te verbergen */
+.comments-section button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #f44336; /* Rood voor verbergen */
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comments-section button:hover {
+  background-color: #d32f2f;
+}
+
+/* Stijl voor de "Geen comments" tekst */
+.no-comments {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+.hide-comments {
+  background-color: #dc3545; /* Rode kleur */
+  color: white;
+  transition: background-color 0.3s; /* Voor een vloeiende overgang */
+}
+
