@@ -77,11 +77,18 @@
         </div>
       </li>
     </ul>
+
+    @if (currentUser) {
+      <form [formGroup]="commentForm" (ngSubmit)="addComment(post.id)">
+        <p id="comment-author">Je bent ingelogd als: {{ currentUser }}</p>
+        <textarea id="comment-content" formControlName="content" placeholder="Schrijf een comment..." required></textarea>
+        <button type="submit" [disabled]="commentForm.invalid">Voeg Comment Toe</button>
+      </form>
+    }
+    @else {
+      <p>Je moet ingelogd zijn om een comment toe te voegen.</p>
+    }
     
-    <form [formGroup]="commentForm" (ngSubmit)="addComment(post.id)">
-      <p id="comment-author">Je bent ingelogd als: {{ currentUser }}</p>
-      <textarea id="comment-content" formControlName="content" placeholder="Schrijf een comment..." required></textarea>
-      <button type="submit" [disabled]="commentForm.invalid">Voeg Comment Toe</button>
-    </form>
+    
   </div>
 </div>

@@ -140,6 +140,12 @@ export class PostListComponent implements OnInit {
   }
 
   addComment(postId: number): void {
+    if (!this.currentUser) {
+      console.error('U moet ingelogd zijn om een reactie toe te voegen.');
+      alert('U moet eerst inloggen om een reactie toe te voegen.');
+      return;
+    }
+  
     if (this.commentForm.valid) {
       const newComment = {
         ...this.commentForm.value,
@@ -157,6 +163,7 @@ export class PostListComponent implements OnInit {
       });
     }
   }
+  
 
   // Bewerk een comment
   editComment(comment: Comment): void {
