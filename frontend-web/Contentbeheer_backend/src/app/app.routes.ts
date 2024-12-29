@@ -4,7 +4,7 @@ import { HomepageComponent } from './components/posts/homepage/homepage.componen
 import { PostListComponent } from './components/posts/post-list/post-list.component';
 import { authGuard } from './auth.guard';
 import { DraftsComponent } from './components/review/drafts/drafts.component';
-import { RejectedComponent } from './components/review/rejected/rejected/rejected.component';
+import { RejectedComponent } from './components/review/rejected/rejected.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'Home', pathMatch: 'full' },

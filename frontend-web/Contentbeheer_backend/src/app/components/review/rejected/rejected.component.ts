@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../../../../models/post.model';
-import { ReviewService } from '../../../../services/review.service';
+import { Post } from '../../../models/post.model';
+import { ReviewService } from '../../../services/review.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
