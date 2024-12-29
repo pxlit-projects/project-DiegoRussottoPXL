@@ -19,12 +19,15 @@ public interface ReviewInterface {
     @PutMapping("/api/post/{id}/publish")
     ResponseEntity<Void> publishPost(@PathVariable Long id);
     @PutMapping("/api/post/{id}/reject")
-    ResponseEntity<Void> rejectPost(@PathVariable Long id, String rejectReason);
+    ResponseEntity<Void> rejectPost(@PathVariable Long id);//, String rejectReason);
     @GetMapping("/api/post/rejected")
     ResponseEntity<List<PostResponse>> getRejectedPosts();
 
     @PutMapping("/api/post/{id}/resubmit")
     ResponseEntity<Void> resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest);
+    @GetMapping("/api/post/{id}")
+    ResponseEntity<PostResponse> getPostById(@PathVariable Long id);
+
 
 
 }

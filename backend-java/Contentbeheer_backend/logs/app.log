@@ -1,67 +1,231 @@
-2024-12-27T19:53:15.267+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Starting ConfigServiceApplication using Java 17.0.13 with PID 14352 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\config-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:53:15.273+0100 DEBUG              [main]                         be.pxl.services.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:53:15.274+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - The following 1 profile is active: "native"
-2024-12-27T19:53:17.971+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Started ConfigServiceApplication in 3.659 seconds (process running for 7.965)
-2024-12-27T19:53:27.725+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 17.0.13 with PID 16376 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\discovery-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:53:27.727+0100 DEBUG              [main]                         be.pxl.services.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:53:27.728+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:53:32.479+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 6.275 seconds (process running for 12.157)
-2024-12-27T19:54:03.787+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Starting GatewayServiceApplication using Java 17.0.13 with PID 18208 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\gateway-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:54:03.790+0100 DEBUG              [main]                         be.pxl.services.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:54:03.791+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:54:08.471+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Started GatewayServiceApplication in 5.964 seconds (process running for 8.007)
-2024-12-27T19:54:11.511+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 3140 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:54:11.512+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:54:11.513+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:54:16.772+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Starting CommentServiceApplication using Java 17.0.13 with PID 6016 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:54:16.774+0100 DEBUG              [main]                         be.pxl.services.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:54:16.775+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:54:27.926+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 15332 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:54:27.927+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:54:27.928+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:59:43.935+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 18612 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:59:43.937+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:59:43.939+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:59:45.655+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Starting CommentServiceApplication using Java 17.0.13 with PID 20732 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T19:59:45.658+0100 DEBUG              [main]                         be.pxl.services.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T19:59:45.670+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T19:59:52.106+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 10.028 seconds (process running for 19.23)
-2024-12-27T19:59:52.188+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Started CommentServiceApplication in 8.479 seconds (process running for 9.449)
-2024-12-27T20:00:00.647+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 5888 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
-2024-12-27T20:00:00.649+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-27T20:00:00.650+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2024-12-27T20:00:08.893+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 9.9 seconds (process running for 10.956)
-2024-12-27T20:00:40.276+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:00:40.821+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:00:52.360+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:00:52.413+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:01:11.652+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:01:11.721+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:33.481+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:33.511+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:42.016+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:42.055+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:43.090+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:03:43.120+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:04:19.129+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:04:19.255+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:04:20.403+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:04:20.437+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:16.605+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:16.644+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:22.961+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:22.990+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:26.123+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:26.150+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:37.555+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:37.600+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:39.248+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:39.276+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:43.014+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:43.040+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:46.135+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:07:46.159+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:08:03.827+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:08:03.862+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:09:59.998+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-27T20:10:00.059+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T15:55:44.557+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Starting ConfigServiceApplication using Java 17.0.13 with PID 9448 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\config-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:55:44.563+0100 DEBUG              [main]                         be.pxl.services.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:55:44.566+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - The following 1 profile is active: "native"
+2024-12-29T15:55:47.503+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Started ConfigServiceApplication in 3.967 seconds (process running for 8.669)
+2024-12-29T15:55:55.922+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 17.0.13 with PID 18164 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\discovery-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:55:55.924+0100 DEBUG              [main]                         be.pxl.services.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:55:55.926+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T15:55:59.967+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Starting GatewayServiceApplication using Java 17.0.13 with PID 25308 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\gateway-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:55:59.971+0100 DEBUG              [main]                         be.pxl.services.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:55:59.973+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T15:56:01.568+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 7.386 seconds (process running for 13.946)
+2024-12-29T15:56:04.593+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Started GatewayServiceApplication in 6.074 seconds (process running for 8.628)
+2024-12-29T15:56:10.027+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 18328 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:56:10.029+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:56:10.030+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T15:56:17.629+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 8.915 seconds (process running for 11.448)
+2024-12-29T15:56:26.390+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 16696 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:56:26.391+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:56:26.392+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T15:56:34.157+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 9.253 seconds (process running for 10.013)
+2024-12-29T15:56:43.407+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Starting CommentServiceApplication using Java 17.0.13 with PID 21980 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T15:56:43.408+0100 DEBUG              [main]                         be.pxl.services.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T15:56:43.409+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T15:56:49.273+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Started CommentServiceApplication in 7.465 seconds (process running for 8.388)
+2024-12-29T15:57:59.110+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status REJECTED
+2024-12-29T16:01:33.934+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Creating new post with title: karel
+2024-12-29T16:01:43.982+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:02:32.064+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:04:01.243+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Rejecting post with id252
+2024-12-29T16:04:01.403+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:04:06.926+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:09:13.153+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 22688 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:09:13.155+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:09:13.156+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:09:22.998+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 12.023 seconds (process running for 13.393)
+2024-12-29T16:12:52.594+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 25568 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:12:52.596+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:12:52.598+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:12:59.320+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 8.457 seconds (process running for 9.549)
+2024-12-29T16:19:08.611+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 22240 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:19:08.612+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:19:08.613+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:19:17.246+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 10.011 seconds (process running for 20.688)
+2024-12-29T16:25:31.542+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 7868 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:25:31.546+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:25:31.547+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:25:40.209+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 10.394 seconds (process running for 11.328)
+2024-12-29T16:29:20.571+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Resubmitting post with ID: 652 and new title: Nieuwe titefffffffffffffl, content: Bijgewerkte content
+2024-12-29T16:29:32.792+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 23184 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:29:32.793+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:29:32.794+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:29:39.038+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.651 seconds (process running for 8.339)
+2024-12-29T16:37:20.820+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 9556 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:37:20.822+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:37:20.823+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:37:27.243+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 8.104 seconds (process running for 8.822)
+2024-12-29T16:37:46.628+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:37:51.555+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:37:53.986+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:37:55.821+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:38:49.162+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:38:49.190+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:38:49.215+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:38:49.245+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:39:21.324+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Resubmitting post with ID: 252 and new title: kareli, content: ,are;.
+2024-12-29T16:39:23.208+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:39:23.228+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:39:23.245+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:39:23.272+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:39:28.763+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:39:28.788+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:39:28.838+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:39:28.900+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:21.760+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:40:27.923+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Rejecting post with id252
+2024-12-29T16:40:28.118+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:40:37.766+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:40:37.811+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:40:38.354+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:38.373+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:40:38.388+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:40:38.404+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:38.419+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:54.074+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Resubmitting post with ID: 252 and new title: kareli, content: ,are;cczczcz
+2024-12-29T16:40:55.901+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:55.924+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:40:55.940+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:40:55.954+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:40:55.968+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:41:12.717+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:41:12.741+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:41:12.773+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:41:12.805+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:41:12.838+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:43:57.286+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 376 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:43:57.287+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:43:57.288+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:44:03.647+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.649 seconds (process running for 8.335)
+2024-12-29T16:44:48.225+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Creating new post with title: Face
+2024-12-29T16:44:50.318+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:44:57.950+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Creating new post with title: Twit
+2024-12-29T16:44:59.338+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:45:03.703+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Publishing post with ID: 302
+2024-12-29T16:45:03.751+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:45:07.180+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:45:07.214+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:45:13.016+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:45:20.588+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:45:20.617+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:45:31.573+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:31.597+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:45:31.612+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:45:31.624+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:31.636+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:33.386+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:45:39.000+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Rejecting post with id303
+2024-12-29T16:45:39.149+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:45:41.205+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:41.233+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:45:41.250+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:45:41.264+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:41.279+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:41.293+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:45:47.504+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Resubmitting post with ID: 303 and new title: Twit, content: ter x
+2024-12-29T16:45:49.568+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:49.588+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:45:49.604+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:45:49.619+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:49.633+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:49.647+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:45:51.851+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:51.921+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:45:51.941+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:45:51.960+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:51.978+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:45:51.997+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:46:07.457+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:07.537+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:46:07.551+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:46:07.602+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:07.629+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:07.644+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:46:11.121+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:46:11.162+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T16:46:26.918+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:26.941+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:46:26.962+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:46:26.981+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:26.997+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:27.010+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:46:41.380+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Resubmitting post with ID: 303 and new title: Twit, content: ter xxxxx
+2024-12-29T16:46:43.056+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:43.075+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:46:43.091+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:46:43.105+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:43.119+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:43.135+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:46:53.053+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:53.116+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:46:53.133+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:46:53.150+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:53.167+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:46:53.182+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:51:47.499+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 21716 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T16:51:47.501+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T16:51:47.503+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T16:51:53.714+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.498 seconds (process running for 8.219)
+2024-12-29T16:58:02.227+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Creating new post with title: tw
+2024-12-29T16:58:03.573+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:58:09.980+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Rejecting post with id304
+2024-12-29T16:58:10.127+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T16:58:11.966+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:58:11.996+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T16:58:12.022+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T16:58:12.044+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:58:12.068+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T16:58:12.091+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T16:58:12.106+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 304
+2024-12-29T16:58:28.569+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Resubmitting post with ID: 304 and new title: tw, content: tddd
+2024-12-29T16:58:47.771+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Resubmitting post with ID: 304 and new title: tw, content: tddd
+2024-12-29T17:01:39.028+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 28248 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2024-12-29T17:01:39.030+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-12-29T17:01:39.031+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-29T17:01:45.248+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 7.488 seconds (process running for 8.173)
+2024-12-29T17:02:24.431+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:24.473+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:02:24.490+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:02:24.504+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:24.517+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:24.529+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:02:24.543+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 304
+2024-12-29T17:02:32.423+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Resubmitting post with ID: 304 and new title: tw, content: tddda
+2024-12-29T17:02:34.092+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:34.107+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:02:34.123+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:02:34.137+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:34.151+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:34.164+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:02:36.389+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:36.431+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:02:36.476+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:02:36.498+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:36.527+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:02:36.545+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:02:59.167+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Creating new post with title: Makeup
+2024-12-29T17:03:06.703+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Creating new post with title: Maceo
+2024-12-29T17:03:08.436+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:03:15.028+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Publishing post with ID: 306
+2024-12-29T17:03:15.083+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:03:21.163+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Rejecting post with id305
+2024-12-29T17:03:21.372+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:03:26.897+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:03:26.917+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:03:26.932+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:03:26.946+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:03:26.962+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:03:26.973+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:03:26.984+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:03:32.047+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:03:32.098+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:03:40.992+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:03:41.021+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:04:08.937+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:04:08.953+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:04:08.966+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:04:08.980+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:04:08.992+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:04:09.003+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:04:09.013+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:09:50.685+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:09:50.711+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null

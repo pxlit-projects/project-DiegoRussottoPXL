@@ -21,6 +21,11 @@ public class PostController {
     private static final Logger log = LoggerFactory.getLogger(PostController.class);
 
     private final IPostService postService;
+    @GetMapping("/{id}")
+    public ResponseEntity<PostResponse> getPostById(@PathVariable Long id) {
+        log.info("Fetching post with ID: {}", id);
+        return new ResponseEntity<>(postService.getPostById(id), HttpStatus.OK);
+    }
 
     @GetMapping
     public ResponseEntity<List<PostResponse>> getAllPosts(
@@ -68,9 +73,9 @@ public class PostController {
         postService.publishPost(id);
     }
     @PutMapping("/{id}/reject")
-    public void rejectPost(@PathVariable Long id, @RequestBody String rejectReason){
+    public void rejectPost(@PathVariable Long id){
         log.info("Rejecting post with id" + id);
-        postService.rejectPost(id, rejectReason);
+        postService.rejectPost(id);
     }
     @PutMapping("/{id}")
     public void updatePost(@PathVariable Long id, @RequestBody PostRequest postRequest) {

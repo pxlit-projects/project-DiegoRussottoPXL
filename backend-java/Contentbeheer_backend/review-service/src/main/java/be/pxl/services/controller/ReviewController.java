@@ -1,8 +1,8 @@
 package be.pxl.services.controller;
 
-import be.pxl.services.domain.dto.DraftedPost;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
+import be.pxl.services.domain.dto.RejectedPost;
 import be.pxl.services.service.IReviewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class ReviewController {
         return reviewService.rejectPost(id, rejectReason);
     }
     @GetMapping("/rejected")
-    public ResponseEntity<List<PostRequest>> getRejectedPosts() {
+    public ResponseEntity<List<RejectedPost>> getRejectedPosts() {
         return reviewService.getRejectedPosts();
     }
     @PutMapping("/post/{id}/resubmit")

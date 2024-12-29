@@ -22,7 +22,7 @@ public class Post {
     private String content;
     private String author;
     private LocalDate date;
-    private String rejectionReason;
+
 
 
     @Enumerated(EnumType.STRING)

@@ -76,7 +76,7 @@ public class PostService implements IPostService {
                         .author(post.getAuthor())
                         .date(post.getDate())
                         .status(post.getStatus())
-                        .rejectionReason(post.getRejectionReason())
+                        //.rejectionReason(post.getRejectionReason())
                         .build())
                 .toList();
     }
@@ -106,7 +106,7 @@ public class PostService implements IPostService {
                 .author(post.getAuthor())
                 .date(post.getDate())
                 .status(post.getStatus())
-                .rejectionReason(post.getRejectionReason())
+                //.rejectionReason(post.getRejectionReason())
                 .build();
     }
 
@@ -134,15 +134,21 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
         post.setStatus(PostStatus.PUBLISHED);
-        post.setRejectionReason(null);
+        //post.setRejectionReason(null);
         postRepository.save(post);
+    }
+    @Override
+    public PostResponse getPostById(Long id) {
+        Post post = postRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Post not found with id: " + id));
+        return mapToPostResponse(post);
     }
 
 
-    public void rejectPost(Long postId, String rejectReason) {
+    public void rejectPost(Long postId) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
-        post.setRejectionReason(rejectReason);
+        //post.setRejectionReason(rejectReason);
         post.setStatus(PostStatus.PENDING);
         postRepository.save(post);
     }
