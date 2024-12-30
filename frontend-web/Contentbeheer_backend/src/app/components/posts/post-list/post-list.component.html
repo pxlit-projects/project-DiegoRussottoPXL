@@ -1,4 +1,4 @@
-<form [formGroup]="filterForm" (ngSubmit)="onFilterChange()"> 
+<form [formGroup]="filterForm" (ngSubmit)="onFilterChange()">
   <div>
     <label for="author">Auteur:</label>
     <input id="author" formControlName="author" />
@@ -16,79 +16,92 @@
   </div>
 </form>
 
-<div *ngIf="posts.length === 0" class="no-posts">Geen posts gevonden.</div>
+@if (posts.length === 0) {
+  <div class="no-posts">Geen posts gevonden.</div>
+}
 
-<div *ngFor="let post of posts">
-  <div class="post">
-    <div *ngIf="isEditing && selectedPostId === post.id">
-      <h2>Bewerk Post</h2>
-      <form [formGroup]="postForm" (ngSubmit)="savePost()">
-        <label for="title">Titel</label>
-        <input id="title" formControlName="title" required />
-        
-        <label for="content">Content</label>
-        <textarea id="content" formControlName="content" required></textarea>
-
-        <button type="submit" [disabled]="postForm.invalid">Opslaan</button>
-        <button type="button" (click)="cancelEdit()">Annuleren</button>
-      </form>
-    </div>
-
-    <div *ngIf="!isEditing || selectedPostId !== post.id">
-      <h2>{{ post.title }}</h2>
-      <p>{{ post.content }}</p>
-      <p><strong>Author:</strong> {{ post.author }}</p>
-      <p><strong>Date:</strong> {{ post.date }}</p>
-      <button (click)="toggleComments(post.id)" [ngClass]="{ 'hide-comments': selectedPostCommentsId === post.id }">
-        {{ selectedPostCommentsId === post.id ? 'Verberg comments' : 'Comments bekijken' }}
-      </button>
-      
-      <div *ngIf="post.status === 'DRAFT'">
-        <button (click)="publishPost(post.id)">Publiceer Post</button>
-      </div>
-
-      <div *ngIf="userRole !== 'gebruiker'">
-        <button (click)="editPost(post)">Bewerk</button>
-      </div>
-    </div>
-  </div>
-
-  <div *ngIf="selectedPostCommentsId === post.id" class="comments-section">
-    <ul>
-      <li *ngFor="let comment of comments" class="comment-item">
+@for (post of posts; track post) {
+  <div>
+    <div class="post">
+      @if (isEditing && selectedPostId === post.id) {
         <div>
-          <p><small>{{ comment.timestamp }}</small></p> 
-          <div *ngIf="isEditingComment && selectedCommentId === comment.id">
-            <form [formGroup]="editCommentForm">
-            <!-- Als je de comment aan het bewerken bent, toon een input/textarea -->
-            <textarea id="comment-content" formControlName="content" required></textarea>
-            <button (click)="saveComment(comment.id)">Opslaan</button>
-            <button (click)="cancelEditComment()">Annuleren</button>
-            <button (click)="deleteComment(comment.id)">Verwijder</button>
+          <h2>Bewerk Post</h2>
+          <form [formGroup]="postForm" (ngSubmit)="savePost()">
+            <label for="title">Titel</label>
+            <input id="title" formControlName="title" required />
+            <label for="content">Content</label>
+            <textarea id="content" formControlName="content" required></textarea>
+            <button type="submit" [disabled]="postForm.invalid">Opslaan</button>
+            <button type="button" (click)="cancelEdit()">Annuleren</button>
           </form>
-          </div>
-          <div *ngIf="!(isEditingComment && selectedCommentId === comment.id)">
-            <!-- Anders, toon de comment als tekst -->
-            <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
-          </div>
         </div>
-        <div *ngIf="comment.author === currentUser">
-          <button (click)="editComment(comment)">Bewerk</button>
+      }
+      @if (!isEditing || selectedPostId !== post.id) {
+        <div>
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.content }}</p>
+          <p><strong>Author:</strong> {{ post.author }}</p>
+          <p><strong>Date:</strong> {{ post.date }}</p>
+          <button (click)="toggleComments(post.id)" [ngClass]="{ 'hide-comments': selectedPostCommentsId === post.id }">
+            {{ selectedPostCommentsId === post.id ? 'Verberg comments' : 'Comments bekijken' }}
+          </button>
+          @if (post.status === 'DRAFT') {
+            <div>
+              <button (click)="publishPost(post.id)">Publiceer Post</button>
+            </div>
+          }
+          @if (userRole !== 'gebruiker' && post.author === currentUser) {
+            <div>
+              <button (click)="editPost(post)">Bewerk</button>
+            </div>
+          }
         </div>
-      </li>
-    </ul>
-
-    @if (currentUser) {
-      <form [formGroup]="commentForm" (ngSubmit)="addComment(post.id)">
-        <p id="comment-author">Je bent ingelogd als: {{ currentUser }}</p>
-        <textarea id="comment-content" formControlName="content" placeholder="Schrijf een comment..." required></textarea>
-        <button type="submit" [disabled]="commentForm.invalid">Voeg Comment Toe</button>
-      </form>
-    }
-    @else {
-      <p>Je moet ingelogd zijn om een comment toe te voegen.</p>
-    }
-    
-    
-  </div>
+      }
+    </div>
+    @if (selectedPostCommentsId === post.id) {
+      <div class="comments-section">
+        <ul>
+          @for (comment of comments; track comment) {
+            <li class="comment-item">
+              <div>
+                <p><small>{{ comment.timestamp }}</small></p>
+                @if (isEditingComment && selectedCommentId === comment.id) {
+                  <div>
+                    <form [formGroup]="editCommentForm">
+                      <!-- Als je de comment aan het bewerken bent, toon een input/textarea -->
+                      <textarea id="comment-content" formControlName="content" required></textarea>
+                      <button (click)="saveComment(comment.id)">Opslaan</button>
+                      <button (click)="cancelEditComment()">Annuleren</button>
+                      <button (click)="deleteComment(comment.id)">Verwijder</button>
+                    </form>
+                  </div>
+                }
+                @if (!(isEditingComment && selectedCommentId === comment.id)) {
+                  <div>
+                    <!-- Anders, toon de comment als tekst -->
+                    <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+                  </div>
+                }
+              </div>
+              @if (comment.author === currentUser) {
+                <div>
+                  <button (click)="editComment(comment)">Bewerk</button>
+                </div>
+              }
+            </li>
+          }
+        </ul>
+        @if (currentUser) {
+          <form [formGroup]="commentForm" (ngSubmit)="addComment(post.id)">
+            <p id="comment-author">Je bent ingelogd als: {{ currentUser }}</p>
+            <textarea id="comment-content" formControlName="content" placeholder="Schrijf een comment..." required></textarea>
+            <button type="submit" [disabled]="commentForm.invalid">Voeg Comment Toe</button>
+          </form>
+        }
+        @else {
+        <p>Je moet ingelogd zijn om een comment toe te voegen.</p>
+      }
+    </div>
+  }
 </div>
+}

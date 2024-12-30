@@ -229,3 +229,119 @@
 2024-12-29T17:04:09.013+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 305
 2024-12-29T17:09:50.685+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
 2024-12-29T17:09:50.711+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:15:25.013+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:15:25.032+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:15:25.045+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:15:25.059+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:15:25.074+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:15:25.093+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:15:25.111+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:15:26.601+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:21:06.464+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:21:06.498+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:21:06.521+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:21:06.545+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:21:06.564+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:21:06.584+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:21:06.605+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:27:41.760+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:27:41.787+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:31:15.950+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:31:15.974+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:31:43.615+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:31:43.645+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:32:56.875+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:32:56.905+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:00.858+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:00.888+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:04.063+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:04.087+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:07.420+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:33:07.444+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:37:23.389+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Creating new post with title: skeer
+2024-12-29T17:37:27.671+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:37:27.713+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:42:23.885+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:42:26.239+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:26.280+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:42:26.300+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:42:26.321+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:26.342+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:26.360+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:42:26.379+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:42:33.859+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Resubmitting post with ID: 305 and new title: Makeup, content: lol jaaa
+2024-12-29T17:42:35.294+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:35.317+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:42:35.339+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:42:35.363+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:35.390+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:35.414+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:42:37.585+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:37.620+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:42:37.641+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:42:37.661+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:37.680+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:37.700+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:42:38.564+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:38.590+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:42:38.614+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:42:38.639+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:38.663+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:38.686+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:42:41.267+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:42:48.486+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:42:48.526+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:42:50.572+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:50.609+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:42:50.641+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:42:50.662+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:50.680+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:42:50.702+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:42:57.934+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:43:03.480+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:43:03.504+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:43:03.525+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:43:03.544+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:43:03.562+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:43:03.580+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:43:04.175+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:43:06.098+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:43:06.171+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:43:08.010+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:45:19.378+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:45:34.247+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:45:35.236+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:45:51.704+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:11.556+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:20.025+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Rejecting post with id303
+2024-12-29T17:46:20.082+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:23.724+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Rejecting post with id304
+2024-12-29T17:46:23.771+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:27.308+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Rejecting post with id305
+2024-12-29T17:46:27.362+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:32.138+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Rejecting post with id307
+2024-12-29T17:46:32.199+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2024-12-29T17:46:35.213+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:35.227+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:46:35.240+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:46:35.253+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:35.269+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:35.285+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:46:35.303+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:46:35.317+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 304
+2024-12-29T17:46:35.332+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:46:35.345+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 307
+2024-12-29T17:46:42.942+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:42.976+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2024-12-29T17:46:42.993+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching post with ID: 202
+2024-12-29T17:46:43.010+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:43.031+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching post with ID: 252
+2024-12-29T17:46:43.045+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:46:43.060+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 303
+2024-12-29T17:46:43.110+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 304
+2024-12-29T17:46:43.132+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching post with ID: 305
+2024-12-29T17:46:43.148+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching post with ID: 307
+2024-12-29T17:46:44.795+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T17:46:44.818+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T18:14:34.348+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2024-12-29T18:14:34.374+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null

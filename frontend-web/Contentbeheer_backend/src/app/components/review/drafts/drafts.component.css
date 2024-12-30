@@ -1,6 +1,8 @@
 /* Stijl voor foutmeldingen */
 :host {
     width: 50rem;
+    margin-top: 8rem;
+
   }
 .error-message {
     color: #d9534f; /* Rode kleur voor fouten */

@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../../../models/post.model';
 import { ReviewService } from '../../../services/review.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-drafts',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, FormsModule],
+  imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './drafts.component.html',
   styleUrl: './drafts.component.css'
 })
