@@ -1,5 +1,6 @@
 package be.pxl.services.service;
 
+import be.pxl.services.controller.ReviewController;
 import be.pxl.services.domain.Review;
 import be.pxl.services.domain.dto.PostRequest;
 import be.pxl.services.domain.dto.PostResponse;
@@ -7,6 +8,8 @@ import be.pxl.services.domain.dto.RejectedPost;
 import be.pxl.services.feign.ReviewInterface;
 import be.pxl.services.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,17 +23,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReviewService implements IReviewService {
     private final ReviewRepository reviewRepository;
-
-
+    private static final Logger log = LoggerFactory.getLogger(ReviewController.class);
     @Autowired
     ReviewInterface reviewInterface;
-
     public ResponseEntity<List<PostResponse>> getDrafts() {
-        System.out.println("Calling Feign client to get drafts...");
+        log.info("Calling Feign client to get drafts...");
         List<PostResponse> drafts = reviewInterface.getDraftPosts().getBody();
-        System.out.println("Received drafts: " + drafts);
-
-        Review review = new Review();
+        log.info("Received drafts: " + drafts);
         List<PostResponse> draftedPosts = drafts.stream()
                 .map(draft -> PostResponse.builder()
                         .id(draft.getId())
@@ -39,53 +38,42 @@ public class ReviewService implements IReviewService {
                         .author(draft.getAuthor())
                         .date(draft.getDate())
                         .status(draft.getStatus())
-                        //.rejectionReason(draft.getRejectionReason())
                         .build())
                 .toList();
-        System.out.println("Mapped drafted posts: " + draftedPosts);
-
-        //review.setDraftedPosts(draftedPosts);
-        //reviewRepository.save(review);
-
-        // Return drafted posts as JSON
         return new ResponseEntity<>(draftedPosts, HttpStatus.CREATED);
     }
     public ResponseEntity<Void> publishPost(Long postId) {
-        System.out.println("Calling Feign client to publish post...");
+        log.info("Calling Feign client to publish post with id: {}", postId);
         ResponseEntity<Void> response = reviewInterface.publishPost(postId);
-        System.out.println("Post with ID " + postId + " published successfully.");
-
-
         return response;
     }
     public ResponseEntity<Void> rejectPost(Long postId, String rejectReason) {
-        System.out.println("Calling Feign client to reject post...");
-        ResponseEntity<Void> response = reviewInterface.rejectPost(postId);//, rejectReason);
+        log.info("Calling Feign client to reject post with id: {}", postId);
+        ResponseEntity<Void> response = reviewInterface.rejectPost(postId);
         Review reject = new Review();
         reject.setPostId(postId);
         reject.setRejectReason(rejectReason);
         reviewRepository.save(reject);
-        System.out.println("Post with ID " + postId + " published successfully.");
         return response;
     }
     @Override
     public ResponseEntity<List<RejectedPost>> getRejectedPosts() {
-        // Haal alle afgewezen reviews uit de database
+        log.info("Fetching all rejected posts from the database...");
         List<Review> rejectedReviews = reviewRepository.findAll();
 
         if (rejectedReviews.isEmpty()) {
-            return new ResponseEntity<>(List.of(), HttpStatus.OK); // Geen afgewezen berichten gevonden
+            log.info("No rejected posts found in the database.");
+            return new ResponseEntity<>(List.of(), HttpStatus.OK);
         }
-        PostResponse postResponsee = reviewInterface.getPostById(252L).getBody();
 
-        // Zoek bijbehorende berichten aan de hand van postId
+        log.info("Found {} rejected reviews in the database. Mapping to RejectedPost objects...", rejectedReviews.size());
         List<RejectedPost> rejectedPosts = rejectedReviews.stream()
                 .map(review -> {
-                    // Haal de post op via de Feign client
+                    log.info("Fetching post details for post ID: {}", review.getPostId());
                     PostResponse postResponse = reviewInterface.getPostById(review.getPostId()).getBody();
 
                     if (postResponse != null) {
-                        // Bouw een RejectedPost DTO
+                        log.info("Post details found for post ID: {}. Adding rejection reason.", review.getPostId());
                         return RejectedPost.builder()
                                 .id(postResponse.getId())
                                 .title(postResponse.getTitle())
@@ -96,7 +84,7 @@ public class ReviewService implements IReviewService {
                                 .rejectionReason(review.getRejectReason())
                                 .build();
                     } else {
-                        // Als de post niet gevonden is, retourner een lege DTO met alleen de rejectReason
+                        log.warn("Post details not found for post ID: {}. Adding rejection reason without post details.", review.getPostId());
                         return RejectedPost.builder()
                                 .id(review.getPostId())
                                 .rejectionReason(review.getRejectReason())
@@ -105,20 +93,15 @@ public class ReviewService implements IReviewService {
                 })
                 .toList();
 
-        // Retourneer de lijst van afgewezen posts
+        log.info("Successfully mapped rejected reviews to {} RejectedPost objects.", rejectedPosts.size());
         return new ResponseEntity<>(rejectedPosts, HttpStatus.OK);
     }
-
-
     @Override
     @Transactional
     public ResponseEntity<Void> resubmitPost(Long postId, PostRequest postRequest) {
-        System.out.println("Calling Feign client to resubmit post...");
+        log.info("Calling Feign client to resubmit post with id: {}", postId);
         ResponseEntity<Void> response = reviewInterface.resubmitPost(postId, postRequest);
         reviewRepository.deleteByPostId(postId);
-        System.out.println("Post with ID " + postId + " resubmitted successfully.");
-
         return response;
     }
-
 }

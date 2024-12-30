@@ -1,5 +1,6 @@
 package be.pxl.services.service;
 
+import be.pxl.services.controller.PostController;
 import be.pxl.services.domain.NotificationRequest;
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.PostStatus;
@@ -9,6 +10,8 @@ import be.pxl.services.domain.dto.PostResponse;
 import be.pxl.services.feign.PostInterface;
 import be.pxl.services.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -22,6 +25,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class PostService implements IPostService {
     private final PostRepository postRepository;
+    private static final Logger log = LoggerFactory.getLogger(PostService.class);
+
     //private final NotificationClient notificationClient;
 
     @Autowired
@@ -29,13 +34,14 @@ public class PostService implements IPostService {
 
     public List<CommentResponse> getCommentsById(@PathVariable Long postId){
         List<CommentResponse> comments = postInterface.getCommentsById(postId).getBody();
-        List<CommentResponse> d = comments;
+        log.info("Retrieved {} comments for post ID: {}", comments.size(), postId);
         return comments;
     }
 
     @Override
     public List<PostResponse> getAllPosts() {
         List<Post> posts = postRepository.findAll();
+        log.info("Retrieved {} posts", posts.size());
         return posts.stream().map(this::mapToPostResponse).collect(Collectors.toList());
     }
 
@@ -61,7 +67,7 @@ public class PostService implements IPostService {
                     .filter(post -> post.getDate() != null && post.getDate().equals(filterDate)) // Check for null
                     .collect(Collectors.toList());
         }
-
+        log.info("Filtered posts count: {}", posts.size());
         return posts.stream().map(this::mapToPostResponse).collect(Collectors.toList());
     }
 
@@ -84,21 +90,15 @@ public class PostService implements IPostService {
     public void resubmitPost(Long id, PostRequest postRequest) {
         Post post = postRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Post with ID " + id + " not found"));
-
-
         post.setTitle(postRequest.getTitle());
         post.setContent(postRequest.getContent());
         post.setDate(LocalDate.now());
         post.setStatus(PostStatus.DRAFT);
-
         postRepository.save(post);
+        log.info("Post with ID: {} resubmitted successfully", id);
     }
-
-
-
-
-
     private PostResponse mapToPostResponse(Post post) {
+        log.debug("Mapping post ID: {} to PostResponse", post.getId());
         return PostResponse.builder()
                 .id(post.getId())
                 .title(post.getTitle())
@@ -120,6 +120,8 @@ public class PostService implements IPostService {
                 .status(postRequest.getStatus() != null ? postRequest.getStatus() : PostStatus.DRAFT) // Standaard naar concept
                 .build();
         postRepository.save(post);
+        log.info("Post added successfully with title: {}", post.getTitle());
+
 
         // Uncomment als notificaties nodig zijn
         /*
@@ -134,13 +136,14 @@ public class PostService implements IPostService {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
         post.setStatus(PostStatus.PUBLISHED);
-        //post.setRejectionReason(null);
         postRepository.save(post);
+        log.info("Post with ID: {} published successfully", postId);
     }
     @Override
     public PostResponse getPostById(Long id) {
         Post post = postRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + id));
+        log.info("Post with ID: {} retrieved successfully", id);
         return mapToPostResponse(post);
     }
 
@@ -148,21 +151,19 @@ public class PostService implements IPostService {
     public void rejectPost(Long postId) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
-        //post.setRejectionReason(rejectReason);
         post.setStatus(PostStatus.PENDING);
         postRepository.save(post);
+        log.info("Post with ID: {} rejected successfully", postId);
     }
 
     public void updatePost(Long postId, PostRequest postRequest) {
         Post post = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + postId));
-
         post.setTitle(postRequest.getTitle());
         post.setContent(postRequest.getContent());
         post.setAuthor(postRequest.getAuthor());
         post.setStatus(PostStatus.DRAFT);
-
         postRepository.save(post);
+        log.info("Post with ID: {} updated successfully", postId);
     }
-
 }

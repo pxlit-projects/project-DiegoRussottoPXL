@@ -38,6 +38,7 @@ public class PostController {
 
     @GetMapping("/{id}/comments")
     public List<CommentResponse> getCommentsById(@PathVariable Long id){
+        log.info("Fetching comments for post with id: {}", id);
         return postService.getCommentsById(id);
     }
 
