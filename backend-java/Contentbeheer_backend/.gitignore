@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Project ###
+/config-service/src/main/resources/config/post-service.properties
+/config-service/src/main/resources/config/review-service.properties
