@@ -23,6 +23,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ReviewService implements IReviewService {
     private final ReviewRepository reviewRepository;
+    private final RabbitTemplate rabbitTemplate;
+
     private static final Logger log = LoggerFactory.getLogger(ReviewController.class);
     @Autowired
     ReviewInterface reviewInterface;
@@ -45,6 +47,8 @@ public class ReviewService implements IReviewService {
     public ResponseEntity<Void> publishPost(Long postId) {
         log.info("Calling Feign client to publish post with id: {}", postId);
         ResponseEntity<Void> response = reviewInterface.publishPost(postId);
+        sendNotificationToQueue("postApprovalQueue", postId);
+
         return response;
     }
     public ResponseEntity<Void> rejectPost(Long postId, String rejectReason) {
@@ -54,6 +58,7 @@ public class ReviewService implements IReviewService {
         reject.setPostId(postId);
         reject.setRejectReason(rejectReason);
         reviewRepository.save(reject);
+        sendNotificationToQueue("postRejectionQueue", postId);
         return response;
     }
     @Override
@@ -103,5 +108,9 @@ public class ReviewService implements IReviewService {
         ResponseEntity<Void> response = reviewInterface.resubmitPost(postId, postRequest);
         reviewRepository.deleteByPostId(postId);
         return response;
+    }
+    private void sendNotificationToQueue(String queueName, Long postId) {
+        rabbitTemplate.convertAndSend(queueName, postId);
+        log.info("Notification sent for post ID {} to queue {}.", postId, queueName);
     }
 }

@@ -40,6 +40,16 @@ services:
     volumes:
       - mysql-data-3:/var/lib/mysql
 
+  rabbitmq:
+    image: rabbitmq:management 
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
 volumes:
   mysql-data-1:
   mysql-data-2:
