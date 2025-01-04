@@ -49,20 +49,6 @@ export class DraftsComponent implements OnInit {
     });
   }
   
-  // rejectPost(postId: number): void {
-  //   this.reviewService.rejectPost(postId).subscribe({
-  //     next: () => {
-  //       console.log(`Post met ID ${postId} afgewezen.`);
-  //       this.fetchPosts(); // Vernieuw de postlijst na afwijzen
-  //     },
-  //     error: (error) => {
-  //       this.errorMessage = `Er is iets misgegaan bij het afwijzen van de post met ID ${postId}.`;
-  //       console.error(error);
-  //     }
-  //   });
-  // }
-  
-  
 // Toon het inputveld voor afwijzingsreden
 showRejectInput(postId: number): void {
   this.rejectedPostId = postId; // Stel het huidige post-ID in
@@ -88,6 +74,4 @@ submitRejection(postId: number): void {
       console.error(error);
     }
   });
-}
-
-}
+}}

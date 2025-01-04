@@ -4,17 +4,15 @@ import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  const roleService = inject(RoleService);  // Injecteer RoleService
-  const router = inject(Router);  // Injecteer Router om door te sturen
+  const roleService = inject(RoleService);  
+  const router = inject(Router);  
 
-  const role = roleService.getRole();  // Haal de rol op uit localStorage
+  const role = roleService.getRole();  
 
-  // Controleer of de rol 'redacteur' is
   if (role === 'redacteur') {
-    return true;  // Toegang toegestaan voor redacteurs
+    return true;  
   } else {
-    // Toegang geweigerd voor andere rollen, stuur naar de homepage of een andere pagina
     router.navigate(['/']);
-    return false;  // Weiger toegang
+    return false;  
   }
 };
