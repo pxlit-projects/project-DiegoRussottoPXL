@@ -1,0 +1,220 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > ReviewService</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">be.pxl.services.service</a>
+</div>
+
+<h1>Coverage Summary for Class: ReviewService (be.pxl.services.service)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ReviewService</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/62)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.service;
+&nbsp;
+&nbsp;import be.pxl.services.controller.ReviewController;
+&nbsp;import be.pxl.services.domain.Review;
+&nbsp;import be.pxl.services.domain.dto.PostRequest;
+&nbsp;import be.pxl.services.domain.dto.PostResponse;
+&nbsp;import be.pxl.services.domain.dto.RejectedPost;
+&nbsp;import be.pxl.services.feign.ReviewInterface;
+&nbsp;import be.pxl.services.repository.ReviewRepository;
+&nbsp;import lombok.RequiredArgsConstructor;
+&nbsp;import org.slf4j.Logger;
+&nbsp;import org.slf4j.LoggerFactory;
+&nbsp;import org.springframework.amqp.rabbit.core.RabbitTemplate;
+&nbsp;import org.springframework.beans.factory.annotation.Autowired;
+&nbsp;import org.springframework.http.HttpStatus;
+&nbsp;import org.springframework.http.ResponseEntity;
+&nbsp;import org.springframework.stereotype.Service;
+&nbsp;import org.springframework.transaction.annotation.Transactional;
+&nbsp;
+&nbsp;import java.util.List;
+&nbsp;
+&nbsp;@Service
+&nbsp;@RequiredArgsConstructor
+&nbsp;public class ReviewService implements IReviewService {
+&nbsp;    private final ReviewRepository reviewRepository;
+&nbsp;    private final RabbitTemplate rabbitTemplate;
+&nbsp;
+<b class="nc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(ReviewController.class);</b>
+&nbsp;    @Autowired
+&nbsp;    ReviewInterface reviewInterface;
+&nbsp;    public ResponseEntity&lt;List&lt;PostResponse&gt;&gt; getDrafts() {
+<b class="nc">&nbsp;        log.info(&quot;Calling Feign client to get drafts...&quot;);</b>
+<b class="nc">&nbsp;        List&lt;PostResponse&gt; drafts = reviewInterface.getDraftPosts().getBody();</b>
+<b class="nc">&nbsp;        log.info(&quot;Received drafts: &quot; + drafts);</b>
+<b class="nc">&nbsp;        List&lt;PostResponse&gt; draftedPosts = drafts.stream()</b>
+<b class="nc">&nbsp;                .map(draft -&gt; PostResponse.builder()</b>
+<b class="nc">&nbsp;                        .id(draft.getId())</b>
+<b class="nc">&nbsp;                        .title(draft.getTitle())</b>
+<b class="nc">&nbsp;                        .content(draft.getContent())</b>
+<b class="nc">&nbsp;                        .author(draft.getAuthor())</b>
+<b class="nc">&nbsp;                        .date(draft.getDate())</b>
+<b class="nc">&nbsp;                        .status(draft.getStatus())</b>
+<b class="nc">&nbsp;                        .build())</b>
+<b class="nc">&nbsp;                .toList();</b>
+<b class="nc">&nbsp;        return new ResponseEntity&lt;&gt;(draftedPosts, HttpStatus.CREATED);</b>
+&nbsp;    }
+&nbsp;    public ResponseEntity&lt;Void&gt; publishPost(Long postId) {
+<b class="nc">&nbsp;        log.info(&quot;Calling Feign client to publish post with id: {}&quot;, postId);</b>
+<b class="nc">&nbsp;        ResponseEntity&lt;Void&gt; response = reviewInterface.publishPost(postId);</b>
+<b class="nc">&nbsp;        sendNotificationToQueue(&quot;postApprovalQueue&quot;, postId);</b>
+&nbsp;
+<b class="nc">&nbsp;        return response;</b>
+&nbsp;    }
+&nbsp;    public ResponseEntity&lt;Void&gt; rejectPost(Long postId, String rejectReason) {
+<b class="nc">&nbsp;        log.info(&quot;Calling Feign client to reject post with id: {}&quot;, postId);</b>
+<b class="nc">&nbsp;        ResponseEntity&lt;Void&gt; response = reviewInterface.rejectPost(postId);</b>
+<b class="nc">&nbsp;        Review reject = new Review();</b>
+<b class="nc">&nbsp;        reject.setPostId(postId);</b>
+<b class="nc">&nbsp;        reject.setRejectReason(rejectReason);</b>
+<b class="nc">&nbsp;        reviewRepository.save(reject);</b>
+<b class="nc">&nbsp;        sendNotificationToQueue(&quot;postRejectionQueue&quot;, postId);</b>
+<b class="nc">&nbsp;        return response;</b>
+&nbsp;    }
+&nbsp;    @Override
+&nbsp;    public ResponseEntity&lt;List&lt;RejectedPost&gt;&gt; getRejectedPosts() {
+<b class="nc">&nbsp;        log.info(&quot;Fetching all rejected posts from the database...&quot;);</b>
+<b class="nc">&nbsp;        List&lt;Review&gt; rejectedReviews = reviewRepository.findAll();</b>
+&nbsp;
+<b class="nc">&nbsp;        if (rejectedReviews.isEmpty()) {</b>
+<b class="nc">&nbsp;            log.info(&quot;No rejected posts found in the database.&quot;);</b>
+<b class="nc">&nbsp;            return new ResponseEntity&lt;&gt;(List.of(), HttpStatus.OK);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        log.info(&quot;Found {} rejected reviews in the database. Mapping to RejectedPost objects...&quot;, rejectedReviews.size());</b>
+<b class="nc">&nbsp;        List&lt;RejectedPost&gt; rejectedPosts = rejectedReviews.stream()</b>
+<b class="nc">&nbsp;                .map(review -&gt; {</b>
+<b class="nc">&nbsp;                    log.info(&quot;Fetching post details for post ID: {}&quot;, review.getPostId());</b>
+<b class="nc">&nbsp;                    PostResponse postResponse = reviewInterface.getPostById(review.getPostId()).getBody();</b>
+&nbsp;
+<b class="nc">&nbsp;                    if (postResponse != null) {</b>
+<b class="nc">&nbsp;                        log.info(&quot;Post details found for post ID: {}. Adding rejection reason.&quot;, review.getPostId());</b>
+<b class="nc">&nbsp;                        return RejectedPost.builder()</b>
+<b class="nc">&nbsp;                                .id(postResponse.getId())</b>
+<b class="nc">&nbsp;                                .title(postResponse.getTitle())</b>
+<b class="nc">&nbsp;                                .content(postResponse.getContent())</b>
+<b class="nc">&nbsp;                                .author(postResponse.getAuthor())</b>
+<b class="nc">&nbsp;                                .date(postResponse.getDate())</b>
+<b class="nc">&nbsp;                                .status(postResponse.getStatus())</b>
+<b class="nc">&nbsp;                                .rejectionReason(review.getRejectReason())</b>
+<b class="nc">&nbsp;                                .build();</b>
+&nbsp;                    } else {
+<b class="nc">&nbsp;                        log.warn(&quot;Post details not found for post ID: {}. Adding rejection reason without post details.&quot;, review.getPostId());</b>
+<b class="nc">&nbsp;                        return RejectedPost.builder()</b>
+<b class="nc">&nbsp;                                .id(review.getPostId())</b>
+<b class="nc">&nbsp;                                .rejectionReason(review.getRejectReason())</b>
+<b class="nc">&nbsp;                                .build();</b>
+&nbsp;                    }
+&nbsp;                })
+<b class="nc">&nbsp;                .toList();</b>
+&nbsp;
+<b class="nc">&nbsp;        log.info(&quot;Successfully mapped rejected reviews to {} RejectedPost objects.&quot;, rejectedPosts.size());</b>
+<b class="nc">&nbsp;        return new ResponseEntity&lt;&gt;(rejectedPosts, HttpStatus.OK);</b>
+&nbsp;    }
+&nbsp;    @Override
+&nbsp;    @Transactional
+&nbsp;    public ResponseEntity&lt;Void&gt; resubmitPost(Long postId, PostRequest postRequest) {
+<b class="nc">&nbsp;        log.info(&quot;Calling Feign client to resubmit post with id: {}&quot;, postId);</b>
+<b class="nc">&nbsp;        ResponseEntity&lt;Void&gt; response = reviewInterface.resubmitPost(postId, postRequest);</b>
+<b class="nc">&nbsp;        reviewRepository.deleteByPostId(postId);</b>
+<b class="nc">&nbsp;        return response;</b>
+&nbsp;    }
+&nbsp;    private void sendNotificationToQueue(String queueName, Long postId) {
+<b class="nc">&nbsp;        rabbitTemplate.convertAndSend(queueName, postId);</b>
+<b class="nc">&nbsp;        log.info(&quot;Notification sent for post ID {} to queue {}.&quot;, postId, queueName);</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-01-04 14:01</div>
+</div>
+</body>
+</html>

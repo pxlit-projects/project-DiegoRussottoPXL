@@ -1,19 +1,69 @@
-2024-12-30T18:54:29.247+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Starting PostControllerTest using Java 17.0.13 with PID 4108 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
-2024-12-30T18:54:29.253+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-30T18:54:29.255+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - No active profile set, falling back to 1 default profile: "default"
-2024-12-30T18:54:36.324+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Started PostControllerTest in 10.537 seconds (process running for 13.596)
-2024-12-30T18:54:36.615+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching post with ID: 1
-2024-12-30T18:54:36.837+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching comments for post with id: 1
-2024-12-30T18:54:36.945+0100 INFO               [main]                         be.pxl.services.controller.PostController - Creating new post with title: New Post
-2024-12-30T18:54:36.967+0100 INFO               [main]                         be.pxl.services.controller.PostController - Rejecting post with id1
-2024-12-30T18:54:36.985+0100 INFO               [main]                         be.pxl.services.controller.PostController - Publishing post with ID: 1
-2024-12-30T18:54:37.011+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
-2024-12-30T18:54:37.064+0100 INFO               [main]                         be.pxl.services.controller.PostController - Updating post with ID: 1
-2024-12-30T18:54:37.082+0100 INFO               [main]                         be.pxl.services.controller.PostController - Resubmitting post with ID: 1 and new title: Updated Title, content: Updated Content
-2024-12-30T18:54:37.098+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
-2024-12-30T19:27:14.066+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - Starting PostRepositoryTest using Java 17.0.13 with PID 3156 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
-2024-12-30T19:27:14.070+0100 DEBUG              [main]                         be.pxl.services.repository.PostRepositoryTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-30T19:27:14.072+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - No active profile set, falling back to 1 default profile: "default"
-2024-12-30T19:32:56.115+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - Starting PostRepositoryTest using Java 17.0.13 with PID 16700 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
-2024-12-30T19:32:56.116+0100 DEBUG              [main]                         be.pxl.services.repository.PostRepositoryTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-30T19:32:56.117+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:13:45.893+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Starting PostControllerTest using Java 17.0.13 with PID 27308 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T13:13:45.898+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T13:13:45.898+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:13:50.063+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Started PostControllerTest in 6.045 seconds (process running for 7.966)
+2025-01-04T13:13:50.237+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching post with ID: 1
+2025-01-04T13:13:50.384+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching comments for post with id: 1
+2025-01-04T13:13:50.443+0100 INFO               [main]                         be.pxl.services.controller.PostController - Creating new post with title: New Post
+2025-01-04T13:13:50.456+0100 INFO               [main]                         be.pxl.services.controller.PostController - Rejecting post with id1
+2025-01-04T13:13:50.468+0100 INFO               [main]                         be.pxl.services.controller.PostController - Publishing post with ID: 1
+2025-01-04T13:13:50.489+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-04T13:13:50.501+0100 INFO               [main]                         be.pxl.services.controller.PostController - Updating post with ID: 1
+2025-01-04T13:13:50.513+0100 INFO               [main]                         be.pxl.services.controller.PostController - Resubmitting post with ID: 1 and new title: Updated Title, content: Updated Content
+2025-01-04T13:13:50.523+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-04T13:14:33.741+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Starting PostControllerTest using Java 17.0.13 with PID 17492 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T13:14:33.743+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T13:14:33.744+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:14:37.002+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Started PostControllerTest in 4.951 seconds (process running for 6.752)
+2025-01-04T13:14:37.147+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching post with ID: 1
+2025-01-04T13:14:37.244+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching comments for post with id: 1
+2025-01-04T13:14:37.298+0100 INFO               [main]                         be.pxl.services.controller.PostController - Creating new post with title: New Post
+2025-01-04T13:14:37.306+0100 INFO               [main]                         be.pxl.services.controller.PostController - Rejecting post with id1
+2025-01-04T13:14:37.316+0100 INFO               [main]                         be.pxl.services.controller.PostController - Publishing post with ID: 1
+2025-01-04T13:14:37.330+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-04T13:14:37.346+0100 INFO               [main]                         be.pxl.services.controller.PostController - Updating post with ID: 1
+2025-01-04T13:14:37.357+0100 INFO               [main]                         be.pxl.services.controller.PostController - Resubmitting post with ID: 1 and new title: Updated Title, content: Updated Content
+2025-01-04T13:14:37.378+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-04T13:18:31.150+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - Starting PostRepositoryTest using Java 17.0.13 with PID 28516 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T13:18:31.152+0100 DEBUG              [main]                         be.pxl.services.repository.PostRepositoryTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T13:18:31.153+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:25:49.076+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Starting EmailConfigTest using Java 17.0.13 with PID 21700 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T13:25:49.079+0100 DEBUG              [main]                         be.pxl.services.config.EmailConfigTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T13:25:49.080+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:25:49.488+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Started EmailConfigTest in 2.423 seconds (process running for 3.987)
+2025-01-04T13:28:24.597+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Starting EmailConfigTest using Java 17.0.13 with PID 6984 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T13:28:24.600+0100 DEBUG              [main]                         be.pxl.services.config.EmailConfigTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T13:28:24.601+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T13:28:25.008+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Started EmailConfigTest in 1.917 seconds (process running for 3.494)
+2025-01-04T14:00:18.302+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Starting PostControllerTest using Java 17.0.13 with PID 11324 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T14:00:18.306+0100 DEBUG              [main]                         be.pxl.services.controller.PostControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T14:00:18.307+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T14:00:22.484+0100 INFO               [main]                         be.pxl.services.controller.PostControllerTest - Started PostControllerTest in 7.036 seconds (process running for 9.87)
+2025-01-04T14:00:22.689+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching post with ID: 1
+2025-01-04T14:00:22.801+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching comments for post with id: 1
+2025-01-04T14:00:22.878+0100 INFO               [main]                         be.pxl.services.controller.PostController - Creating new post with title: New Post
+2025-01-04T14:00:22.889+0100 INFO               [main]                         be.pxl.services.controller.PostController - Rejecting post with id1
+2025-01-04T14:00:22.902+0100 INFO               [main]                         be.pxl.services.controller.PostController - Publishing post with ID: 1
+2025-01-04T14:00:22.917+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-04T14:00:22.933+0100 INFO               [main]                         be.pxl.services.controller.PostController - Updating post with ID: 1
+2025-01-04T14:00:22.945+0100 INFO               [main]                         be.pxl.services.controller.PostController - Resubmitting post with ID: 1 and new title: Updated Title, content: Updated Content
+2025-01-04T14:00:22.956+0100 INFO               [main]                         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-04T14:00:23.352+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Starting EmailConfigTest using Java 17.0.13 with PID 11324 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T14:00:23.352+0100 DEBUG              [main]                         be.pxl.services.config.EmailConfigTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T14:00:23.352+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T14:00:23.451+0100 INFO               [main]                         be.pxl.services.config.EmailConfigTest - Started EmailConfigTest in 0.437 seconds (process running for 10.837)
+2025-01-04T14:00:23.764+0100 INFO               [main]                         be.pxl.services.service.PostService - Filtered posts count: 1
+2025-01-04T14:00:23.764+0100 DEBUG              [main]                         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-04T14:00:23.770+0100 INFO               [main]                         be.pxl.services.service.PostService - Post with ID: 1 retrieved successfully
+2025-01-04T14:00:23.771+0100 DEBUG              [main]                         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-04T14:00:23.797+0100 INFO               [main]                         be.pxl.services.service.PostService - Post added successfully with title: New Post
+2025-01-04T14:00:23.802+0100 INFO               [main]                         be.pxl.services.service.PostService - Post with ID: 1 published successfully
+2025-01-04T14:00:23.806+0100 INFO               [main]                         be.pxl.services.service.PostService - Retrieved 2 posts
+2025-01-04T14:00:23.807+0100 DEBUG              [main]                         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-04T14:00:23.807+0100 DEBUG              [main]                         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-04T14:00:24.173+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - Starting PostRepositoryTest using Java 17.0.13 with PID 11324 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T14:00:24.173+0100 DEBUG              [main]                         be.pxl.services.repository.PostRepositoryTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T14:00:24.174+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T14:18:20.526+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - Starting PostRepositoryTest using Java 17.0.13 with PID 27980 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service)
+2025-01-04T14:18:20.530+0100 DEBUG              [main]                         be.pxl.services.repository.PostRepositoryTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T14:18:20.530+0100 INFO               [main]                         be.pxl.services.repository.PostRepositoryTest - No active profile set, falling back to 1 default profile: "default"

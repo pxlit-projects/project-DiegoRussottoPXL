@@ -1,14 +1,9 @@
-2024-12-30T19:55:33.512+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 18444 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
-2024-12-30T19:55:33.514+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-30T19:55:33.515+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
-2024-12-30T19:55:37.467+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.896 seconds (process running for 8.269)
-2024-12-30T19:55:37.700+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
-2024-12-30T19:55:37.814+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Publishing post with id: 1
-2024-12-30T19:55:37.844+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts
-2024-12-30T19:55:37.980+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Resubmitting post with id: 1
-2024-12-30T19:55:37.998+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all drafts
-2024-12-30T19:58:00.710+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 21128 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
-2024-12-30T19:58:00.712+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-12-30T19:58:00.715+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
-2024-12-30T19:58:04.451+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.658 seconds (process running for 7.607)
-2024-12-30T19:58:04.644+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
+2025-01-04T14:11:34.655+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 7680 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
+2025-01-04T14:11:34.661+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-04T14:11:34.662+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-04T14:11:38.280+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.259 seconds (process running for 6.907)
+2025-01-04T14:11:38.474+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
+2025-01-04T14:11:38.564+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Publishing post with id: 1
+2025-01-04T14:11:38.589+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts
+2025-01-04T14:11:38.674+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Resubmitting post with id: 1
+2025-01-04T14:11:38.684+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all drafts

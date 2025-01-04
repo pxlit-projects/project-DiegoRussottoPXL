@@ -19,7 +19,4 @@ public class PostResponse {
     private String author;
     private LocalDate date;
     private PostStatus status;
-
-
-
 }

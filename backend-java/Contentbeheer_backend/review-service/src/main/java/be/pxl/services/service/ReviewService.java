@@ -20,14 +20,26 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class ReviewService implements IReviewService {
+    //
     private final ReviewRepository reviewRepository;
     private final RabbitTemplate rabbitTemplate;
+    private final ReviewInterface reviewInterface;
 
     private static final Logger log = LoggerFactory.getLogger(ReviewController.class);
-    @Autowired
-    ReviewInterface reviewInterface;
+
+    public ReviewService(ReviewRepository reviewRepository, RabbitTemplate rabbitTemplate, ReviewInterface reviewInterface) {
+        this.reviewRepository = reviewRepository;
+        this.rabbitTemplate = rabbitTemplate;
+        this.reviewInterface = reviewInterface;
+    }
+    //
+//    private final ReviewRepository reviewRepository;
+//    private final RabbitTemplate rabbitTemplate;
+//
+//    private static final Logger log = LoggerFactory.getLogger(ReviewController.class);
+//    @Autowired
+//    ReviewInterface reviewInterface;
     public ResponseEntity<List<PostResponse>> getDrafts() {
         log.info("Calling Feign client to get drafts...");
         List<PostResponse> drafts = reviewInterface.getDraftPosts().getBody();
