@@ -1,30 +1,21 @@
-2025-01-04T14:11:34.655+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 7680 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
-2025-01-04T14:11:34.661+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2025-01-04T14:11:34.662+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-01-04T14:11:38.280+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.259 seconds (process running for 6.907)
-2025-01-04T14:11:38.474+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
-2025-01-04T14:11:38.564+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Publishing post with id: 1
-2025-01-04T14:11:38.589+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts
-2025-01-04T14:11:38.674+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Resubmitting post with id: 1
-2025-01-04T14:11:38.684+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all drafts
-2025-01-04T15:09:41.055+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 28644 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
-2025-01-04T15:09:41.058+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
-2025-01-04T15:09:41.059+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
-2025-01-04T15:09:43.698+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.574 seconds (process running for 11.384)
-2025-01-04T15:09:43.936+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
-2025-01-04T15:09:44.012+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Publishing post with id: 1
-2025-01-04T15:09:44.030+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts
-2025-01-04T15:09:44.158+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Resubmitting post with id: 1
-2025-01-04T15:09:44.172+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all drafts
-2025-01-04T15:09:44.930+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to reject post with id: 1
-2025-01-04T15:09:44.984+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Notification sent for post ID 1 to queue postRejectionQueue.
-2025-01-04T15:09:44.995+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to publish post with id: 1
-2025-01-04T15:09:44.996+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Notification sent for post ID 1 to queue postApprovalQueue.
-2025-01-04T15:09:45.006+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts from the database...
-2025-01-04T15:09:45.007+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Found 1 rejected reviews in the database. Mapping to RejectedPost objects...
-2025-01-04T15:09:45.008+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching post details for post ID: 1
-2025-01-04T15:09:45.008+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Post details found for post ID: 1. Adding rejection reason.
-2025-01-04T15:09:45.009+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Successfully mapped rejected reviews to 1 RejectedPost objects.
-2025-01-04T15:09:45.015+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to resubmit post with id: 1
-2025-01-04T15:09:45.023+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
-2025-01-04T15:09:45.035+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Received drafts: [PostResponse(id=1, title=Test Title, content=Test Content, author=Test Author, date=null, status=null)]
+2025-01-05T21:27:03.363+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Starting ReviewControllerTest using Java 17.0.13 with PID 8236 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service)
+2025-01-05T21:27:03.370+0100 DEBUG              [main]                         be.pxl.services.controller.ReviewControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:27:03.372+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:27:05.982+0100 INFO               [main]                         be.pxl.services.controller.ReviewControllerTest - Started ReviewControllerTest in 5.629 seconds (process running for 11.896)
+2025-01-05T21:27:06.175+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Rejecting post with id: 1
+2025-01-05T21:27:06.242+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Publishing post with id: 1
+2025-01-05T21:27:06.257+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts
+2025-01-05T21:27:06.340+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Resubmitting post with id: 1
+2025-01-05T21:27:06.347+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all drafts
+2025-01-05T21:27:07.115+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to reject post with id: 1
+2025-01-05T21:27:07.189+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Notification sent for post ID 1 to queue postRejectionQueue.
+2025-01-05T21:27:07.202+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to publish post with id: 1
+2025-01-05T21:27:07.203+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Notification sent for post ID 1 to queue postApprovalQueue.
+2025-01-05T21:27:07.216+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching all rejected posts from the database...
+2025-01-05T21:27:07.217+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Found 1 rejected reviews in the database. Mapping to RejectedPost objects...
+2025-01-05T21:27:07.218+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Fetching post details for post ID: 1
+2025-01-05T21:27:07.219+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Post details found for post ID: 1. Adding rejection reason.
+2025-01-05T21:27:07.220+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Successfully mapped rejected reviews to 1 RejectedPost objects.
+2025-01-05T21:27:07.228+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to resubmit post with id: 1
+2025-01-05T21:27:07.237+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
+2025-01-05T21:27:07.258+0100 INFO               [main]                         be.pxl.services.controller.ReviewController - Received drafts: [PostResponse(id=1, title=Test Title, content=Test Content, author=Test Author, date=null, status=null)]
