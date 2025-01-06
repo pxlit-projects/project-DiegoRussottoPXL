@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">CommentService</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/6)
+    (6/6)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/29)
+    (29/29)
   </span>
 </td>
 </tr>
@@ -96,51 +96,51 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;public class CommentService implements ICommentService {
 &nbsp;
 &nbsp;    private final CommentRepository commentRepository;
-<b class="nc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(CommentService.class);</b>
+<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(CommentService.class);</b>
 &nbsp;    @Override
 &nbsp;    public List&lt;CommentResponse&gt; getCommentsByPostId(Long postId) {
-<b class="nc">&nbsp;        return commentRepository.findByPostId(postId)</b>
-<b class="nc">&nbsp;                .stream()</b>
-<b class="nc">&nbsp;                .map(this::mapToCommentResponse)</b>
-<b class="nc">&nbsp;                .collect(Collectors.toList());</b>
+<b class="fc">&nbsp;        return commentRepository.findByPostId(postId)</b>
+<b class="fc">&nbsp;                .stream()</b>
+<b class="fc">&nbsp;                .map(this::mapToCommentResponse)</b>
+<b class="fc">&nbsp;                .collect(Collectors.toList());</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @Override
 &nbsp;    public CommentResponse addComment(Long postId, CommentRequest commentRequest) {
-<b class="nc">&nbsp;        Comment comment = Comment.builder()</b>
-<b class="nc">&nbsp;                .postId(postId)</b>
-<b class="nc">&nbsp;                .user(commentRequest.getAuthor())</b>
-<b class="nc">&nbsp;                .content(commentRequest.getContent())</b>
-<b class="nc">&nbsp;                .createdDate(LocalDate.now())</b>
-<b class="nc">&nbsp;                .build();</b>
-<b class="nc">&nbsp;        commentRepository.save(comment);</b>
-<b class="nc">&nbsp;        log.info(&quot;Succesfully posted comment on post with id: {}&quot;, postId);</b>
-<b class="nc">&nbsp;        return mapToCommentResponse(comment);</b>
+<b class="fc">&nbsp;        Comment comment = Comment.builder()</b>
+<b class="fc">&nbsp;                .postId(postId)</b>
+<b class="fc">&nbsp;                .user(commentRequest.getAuthor())</b>
+<b class="fc">&nbsp;                .content(commentRequest.getContent())</b>
+<b class="fc">&nbsp;                .createdDate(LocalDate.now())</b>
+<b class="fc">&nbsp;                .build();</b>
+<b class="fc">&nbsp;        commentRepository.save(comment);</b>
+<b class="fc">&nbsp;        log.info(&quot;Succesfully posted comment on post with id: {}&quot;, postId);</b>
+<b class="fc">&nbsp;        return mapToCommentResponse(comment);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @Override
 &nbsp;    public void updateComment(Long commentId, CommentRequest commentRequest) {
-<b class="nc">&nbsp;        Comment comment = commentRepository.findById(commentId)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Comment not found&quot;));</b>
-<b class="nc">&nbsp;        comment.setContent(commentRequest.getContent());</b>
-<b class="nc">&nbsp;        comment.setCreatedDate(LocalDate.now());</b>
-<b class="nc">&nbsp;        commentRepository.save(comment);</b>
-<b class="nc">&nbsp;        log.info(&quot;Succesfully updated comment with id: {}&quot;, commentId);</b>
+<b class="fc">&nbsp;        Comment comment = commentRepository.findById(commentId)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Comment not found&quot;));</b>
+<b class="fc">&nbsp;        comment.setContent(commentRequest.getContent());</b>
+<b class="fc">&nbsp;        comment.setCreatedDate(LocalDate.now());</b>
+<b class="fc">&nbsp;        commentRepository.save(comment);</b>
+<b class="fc">&nbsp;        log.info(&quot;Succesfully updated comment with id: {}&quot;, commentId);</b>
 &nbsp;    }
 &nbsp;    @Override
 &nbsp;    public void deleteComment(Long commentId) {
-<b class="nc">&nbsp;        commentRepository.deleteById(commentId);</b>
-<b class="nc">&nbsp;        log.info(&quot;Succesfully deleted comment with id: {}&quot;, commentId);</b>
+<b class="fc">&nbsp;        commentRepository.deleteById(commentId);</b>
+<b class="fc">&nbsp;        log.info(&quot;Succesfully deleted comment with id: {}&quot;, commentId);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    private CommentResponse mapToCommentResponse(Comment comment) {
-<b class="nc">&nbsp;        return CommentResponse.builder()</b>
-<b class="nc">&nbsp;                .id(comment.getId())</b>
-<b class="nc">&nbsp;                .postId(comment.getPostId())</b>
-<b class="nc">&nbsp;                .author(comment.getUser())</b>
-<b class="nc">&nbsp;                .content(comment.getContent())</b>
-<b class="nc">&nbsp;                .timestamp(comment.getCreatedDate())</b>
-<b class="nc">&nbsp;                .build();</b>
+<b class="fc">&nbsp;        return CommentResponse.builder()</b>
+<b class="fc">&nbsp;                .id(comment.getId())</b>
+<b class="fc">&nbsp;                .postId(comment.getPostId())</b>
+<b class="fc">&nbsp;                .author(comment.getUser())</b>
+<b class="fc">&nbsp;                .content(comment.getContent())</b>
+<b class="fc">&nbsp;                .timestamp(comment.getCreatedDate())</b>
+<b class="fc">&nbsp;                .build();</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -166,7 +166,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

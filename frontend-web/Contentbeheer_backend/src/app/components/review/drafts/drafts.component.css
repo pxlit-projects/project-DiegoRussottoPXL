@@ -91,3 +91,51 @@
 .reject-button:hover {
     background-color: #c82333; /* Donkerder rood bij hover */
 }
+/* Stijl voor het formulier voor bewerken */
+.edit-form {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f1f1f1; /* Lichte achtergrondkleur om het formulier te onderscheiden */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  resize: none;
+}
+
+.edit-form button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.edit-form button:nth-child(1) {
+  background-color: #007bff; /* Blauw voor opslaan */
+  color: white;
+}
+
+.edit-form button:nth-child(1):hover {
+  background-color: #0056b3; /* Donkerder blauw bij hover */
+}
+
+.edit-form button:nth-child(2) {
+  background-color: #6c757d; /* Grijs voor annuleren */
+  color: white;
+}
+
+.edit-form button:nth-child(2):hover {
+  background-color: #5a6268; /* Donkerder grijs bij hover */
+}

@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > MessagingServiceApplication</title>
+  <title>Coverage Report > PostServiceApplication</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,15 +22,12 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services</a>
 </div>
 
-<h1>Coverage Summary for Class: MessagingServiceApplication (be.pxl.services)</h1>
+<h1>Coverage Summary for Class: PostServiceApplication (be.pxl.services)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
-<th class="coverageStat 
-">
-  Class, %
-</th>
 <th class="coverageStat 
 ">
   Method, %
@@ -41,33 +38,46 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">MessagingServiceApplication</td>
+  <td class="name">PostServiceApplication</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    50%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    50%
   </span>
   <span class="absValue">
-    (0/2)
-  </span>
-</td>
-<td class="coverageStat">
-  <span class="percent">
-    0%
-  </span>
-  <span class="absValue">
-    (0/2)
+    (1/2)
   </span>
 </td>
 </tr>
-
+  <tr>
+    <td class="name">PostServiceApplication$$SpringCGLIB$$0</td>
+  </tr>
+<tr>
+  <td class="name"><strong>Total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    50%
+  </span>
+  <span class="absValue">
+    (1/2)
+  </span>
+</td>
+</tr>
 </table>
 
 <br/>
@@ -79,17 +89,22 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;import org.springframework.boot.SpringApplication;
 &nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
+&nbsp;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+&nbsp;import org.springframework.cloud.openfeign.EnableFeignClients;
 &nbsp;
 &nbsp;/**
-&nbsp; * Hello world!
+&nbsp; * PostServiceApplication.
 &nbsp; *
 &nbsp; */
 &nbsp;@SpringBootApplication
-<b class="nc">&nbsp;public class MessagingServiceApplication</b>
+&nbsp;@EnableDiscoveryClient
+&nbsp;@EnableFeignClients
+<b class="fc">&nbsp;public class PostServiceApplication</b>
 &nbsp;{
 &nbsp;    public static void main( String[] args )
 &nbsp;    {
-<b class="nc">&nbsp;        SpringApplication.run(MessagingServiceApplication.class, args);    }</b>
+<b class="nc">&nbsp;        SpringApplication.run(PostServiceApplication.class, args);</b>
+&nbsp;    }
 &nbsp;}
 </code>
 </pre>
@@ -114,7 +129,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

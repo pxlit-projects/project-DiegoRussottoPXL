@@ -14,8 +14,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export class DraftsComponent implements OnInit {
   posts: Post[] = [];
   errorMessage: string = '';
-  rejectedPostId: number | null = null; // Houd bij voor welke post de reden wordt ingevoerd
-  rejectReason: string = ''; // Houd de ingevoerde reden bij
+  rejectedPostId: number | null = null;
+  editingPostId: number | null = null;
+  rejectReason: string = ''; 
+  editedTitle = '';
+  editedContent = '';
 
 
   constructor(private reviewService: ReviewService) {}
@@ -74,4 +77,36 @@ submitRejection(postId: number): void {
       console.error(error);
     }
   });
-}}
+}
+showEditForm(postId: number) {
+  this.editingPostId = postId;
+  // Reset de afwijzingsstate
+  this.rejectedPostId = null;
+  const post = this.posts.find(p => p.id === postId);
+  if (post) {
+    this.editedTitle = post.title;
+    this.editedContent = post.content;
+  }
+}
+
+submitEdit(postId: number) {
+  const post = this.posts.find(p => p.id === postId);
+  if (post) {
+    post.title = this.editedTitle;
+    post.content = this.editedContent;
+    this.editingPostId = null;
+    this.reviewService.resubmitPost(post).subscribe({
+        next: () => {
+          alert('Post opnieuw ingediend!');
+        },
+        error: (err) => {
+          this.errorMessage = `Er is iets misgegaan bij het opnieuw indienen van de post: ${err}`;
+        }
+      });
+  }
+}
+
+cancelEdit() {
+  this.editingPostId = null;
+}
+}

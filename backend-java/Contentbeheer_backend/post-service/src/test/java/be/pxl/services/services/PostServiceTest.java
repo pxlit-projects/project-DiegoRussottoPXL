@@ -1,6 +1,5 @@
 package be.pxl.services.services;
 
-
 import be.pxl.services.domain.Post;
 import be.pxl.services.domain.PostStatus;
 import be.pxl.services.domain.dto.CommentResponse;
@@ -125,8 +124,6 @@ public class PostServiceTest {
         verify(postInterface, times(1)).getCommentsById(postId);
     }
 
-
-
     @Test
     public void testGetFilteredPosts() {
         List<Post> posts = Arrays.asList(
@@ -141,5 +138,53 @@ public class PostServiceTest {
         assertEquals(1, result.size());
         assertEquals("Author 1", result.get(0).getAuthor());
         verify(postRepository, times(1)).findAll();
+    }
+
+    @Test
+    public void testResubmitPost() {
+        Long postId = 1L;
+        PostRequest postRequest = new PostRequest(null, "Updated Title", "Updated Content", "Updated Author", LocalDate.now(), PostStatus.DRAFT);
+        Post post = Post.builder().id(postId).title("Old Title").content("Old Content").author("Old Author").date(LocalDate.now()).status(PostStatus.PENDING).build();
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+        when(postRepository.save(any(Post.class))).thenReturn(post);
+
+        postService.resubmitPost(postId, postRequest);
+
+        assertEquals("Updated Title", post.getTitle());
+        assertEquals(PostStatus.DRAFT, post.getStatus());
+        verify(postRepository, times(1)).findById(postId);
+        verify(postRepository, times(1)).save(any(Post.class));
+    }
+
+    @Test
+    public void testRejectPost() {
+        Long postId = 1L;
+        Post post = Post.builder().id(postId).status(PostStatus.PENDING).build();
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+
+        postService.rejectPost(postId);
+
+        assertEquals(PostStatus.PENDING, post.getStatus());
+        verify(postRepository, times(1)).save(post);
+    }
+
+    @Test
+    public void testUpdatePost() {
+        Long postId = 1L;
+        PostRequest postRequest = new PostRequest(null, "Updated Title", "Updated Content", "Updated Author", LocalDate.now(), PostStatus.DRAFT);
+        Post post = Post.builder().id(postId).title("Old Title").content("Old Content").author("Old Author").date(LocalDate.now()).status(PostStatus.PENDING).build();
+
+        when(postRepository.findById(postId)).thenReturn(Optional.of(post));
+        when(postRepository.save(any(Post.class))).thenReturn(post);
+
+        postService.updatePost(postId, postRequest);
+
+        assertEquals("Updated Title", post.getTitle());
+        assertEquals("Updated Author", post.getAuthor());
+        assertEquals(PostStatus.DRAFT, post.getStatus());
+        verify(postRepository, times(1)).findById(postId);
+        verify(postRepository, times(1)).save(any(Post.class));
     }
 }

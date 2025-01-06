@@ -1,0 +1,163 @@
+2025-01-05T21:08:16.324+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Starting ConfigServiceApplication using Java 17.0.13 with PID 21552 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\config-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:08:16.330+0100 DEBUG              [main]                         be.pxl.services.ConfigServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:08:16.331+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - The following 1 profile is active: "native"
+2025-01-05T21:08:19.040+0100 INFO               [main]                         be.pxl.services.ConfigServiceApplication - Started ConfigServiceApplication in 3.878 seconds (process running for 8.508)
+2025-01-05T21:08:33.005+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Starting DiscoveryServiceApplication using Java 17.0.13 with PID 19820 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\discovery-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:08:33.007+0100 DEBUG              [main]                         be.pxl.services.DiscoveryServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:08:33.008+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:08:38.137+0100 INFO               [main]                         be.pxl.services.DiscoveryServiceApplication - Started DiscoveryServiceApplication in 6.642 seconds (process running for 12.908)
+2025-01-05T21:08:40.575+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Starting GatewayServiceApplication using Java 17.0.13 with PID 13924 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\gateway-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:08:40.578+0100 DEBUG              [main]                         be.pxl.services.GatewayServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:08:40.579+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:08:44.862+0100 INFO               [main]                         be.pxl.services.GatewayServiceApplication - Started GatewayServiceApplication in 5.613 seconds (process running for 7.844)
+2025-01-05T21:08:58.454+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 7608 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:08:58.456+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:08:58.457+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:15:07.932+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Starting PostServiceApplication using Java 17.0.13 with PID 22704 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\post-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:15:07.933+0100 DEBUG              [main]                         be.pxl.services.PostServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:15:07.934+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:15:15.568+0100 INFO               [main]                         be.pxl.services.PostServiceApplication - Started PostServiceApplication in 9.431 seconds (process running for 10.394)
+2025-01-05T21:15:32.877+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Starting ReviewServiceApplication using Java 17.0.13 with PID 10944 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\review-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:15:32.878+0100 DEBUG              [main]                         be.pxl.services.ReviewServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:15:32.879+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:15:40.838+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Starting CommentServiceApplication using Java 17.0.13 with PID 25224 (C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service\target\classes started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend)
+2025-01-05T21:15:40.839+0100 DEBUG              [main]                         be.pxl.services.CommentServiceApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:15:40.840+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:15:41.069+0100 INFO               [main]                         be.pxl.services.ReviewServiceApplication - Started ReviewServiceApplication in 9.776 seconds (process running for 10.716)
+2025-01-05T21:15:46.771+0100 INFO               [main]                         be.pxl.services.CommentServiceApplication - Started CommentServiceApplication in 7.648 seconds (process running for 8.592)
+2025-01-05T21:17:32.617+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Creating new post with title: mpmp
+2025-01-05T21:17:32.771+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.service.PostService - Post added successfully with title: mpmp
+2025-01-05T21:17:33.790+0100 INFO               [http-nio-8093-exec-1]         be.pxl.services.controller.ReviewController - Fetching all drafts
+2025-01-05T21:17:33.791+0100 INFO               [http-nio-8093-exec-1]         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
+2025-01-05T21:17:33.975+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-05T21:17:34.362+0100 INFO               [http-nio-8093-exec-1]         be.pxl.services.controller.ReviewController - Received drafts: [PostResponse(id=152, title=mpmp, content=mppm, author=d, date=2025-01-05, status=DRAFT)]
+2025-01-05T21:17:52.696+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Creating new post with title: ,n
+2025-01-05T21:17:52.727+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Post added successfully with title: ,n
+2025-01-05T21:17:55.344+0100 INFO               [http-nio-8093-exec-2]         be.pxl.services.controller.ReviewController - Fetching all drafts
+2025-01-05T21:17:55.344+0100 INFO               [http-nio-8093-exec-2]         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
+2025-01-05T21:17:55.348+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-05T21:17:55.358+0100 INFO               [http-nio-8093-exec-2]         be.pxl.services.controller.ReviewController - Received drafts: [PostResponse(id=152, title=mpmp, content=mppm, author=d, date=2025-01-05, status=DRAFT), PostResponse(id=153, title=,n, content=n, author=d, date=2025-01-05, status=DRAFT)]
+2025-01-05T21:17:57.562+0100 INFO               [http-nio-8093-exec-3]         be.pxl.services.controller.ReviewController - Publishing post with id: 152
+2025-01-05T21:17:57.562+0100 INFO               [http-nio-8093-exec-3]         be.pxl.services.controller.ReviewController - Calling Feign client to publish post with id: 152
+2025-01-05T21:17:57.572+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Publishing post with ID: 152
+2025-01-05T21:17:57.665+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Post with ID: 152 published successfully
+2025-01-05T21:17:57.690+0100 INFO               [http-nio-8093-exec-3]         be.pxl.services.controller.ReviewController - Notification sent for post ID 152 to queue postApprovalQueue.
+2025-01-05T21:17:57.716+0100 INFO               [http-nio-8093-exec-5]         be.pxl.services.controller.ReviewController - Fetching all drafts
+2025-01-05T21:17:57.716+0100 INFO               [http-nio-8093-exec-5]         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
+2025-01-05T21:17:57.721+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-05T21:17:57.734+0100 INFO               [http-nio-8093-exec-5]         be.pxl.services.controller.ReviewController - Received drafts: [PostResponse(id=153, title=,n, content=n, author=d, date=2025-01-05, status=DRAFT)]
+2025-01-05T21:17:57.766+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.services.service.EmailService - Preparing email with subject: 'Blog Approved: mpmp' and body: 'Congratulations! Your blog titled "mpmp" has been approved and is ready for publication.'
+2025-01-05T21:17:59.623+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] be.pxl.services.service.EmailService - Email sent successfully to gamzeh8@gmail.com
+2025-01-05T21:18:03.499+0100 INFO               [http-nio-8093-exec-4]         be.pxl.services.controller.ReviewController - Rejecting post with id: 153
+2025-01-05T21:18:03.499+0100 INFO               [http-nio-8093-exec-4]         be.pxl.services.controller.ReviewController - Calling Feign client to reject post with id: 153
+2025-01-05T21:18:03.505+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Rejecting post with id153
+2025-01-05T21:18:03.535+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Post with ID: 153 rejected successfully
+2025-01-05T21:18:03.658+0100 INFO               [http-nio-8093-exec-4]         be.pxl.services.controller.ReviewController - Notification sent for post ID 153 to queue postRejectionQueue.
+2025-01-05T21:18:03.670+0100 INFO               [http-nio-8093-exec-6]         be.pxl.services.controller.ReviewController - Fetching all drafts
+2025-01-05T21:18:03.670+0100 INFO               [http-nio-8093-exec-6]         be.pxl.services.controller.ReviewController - Calling Feign client to get drafts...
+2025-01-05T21:18:03.672+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with status DRAFT
+2025-01-05T21:18:03.679+0100 INFO               [http-nio-8093-exec-6]         be.pxl.services.controller.ReviewController - Received drafts: []
+2025-01-05T21:18:03.682+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.services.service.EmailService - Preparing email with subject: 'Blog Rejected: ,n' and body: 'Unfortunately, your blog titled ",n" has been rejected. Please revise it before resubmitting.'
+2025-01-05T21:18:05.390+0100 INFO               [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] be.pxl.services.service.EmailService - Email sent successfully to gamzeh8@gmail.com
+2025-01-05T21:18:07.045+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Fetching all rejected posts
+2025-01-05T21:18:07.045+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Fetching all rejected posts from the database...
+2025-01-05T21:18:07.211+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Found 3 rejected reviews in the database. Mapping to RejectedPost objects...
+2025-01-05T21:18:07.211+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Fetching post details for post ID: 1
+2025-01-05T21:18:07.214+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching post with ID: 1
+2025-01-05T21:18:07.224+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Post with ID: 1 retrieved successfully
+2025-01-05T21:18:07.225+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:07.228+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Post details found for post ID: 1. Adding rejection reason.
+2025-01-05T21:18:07.230+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Fetching post details for post ID: 103
+2025-01-05T21:18:07.232+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching post with ID: 103
+2025-01-05T21:18:07.243+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.service.PostService - Post with ID: 103 retrieved successfully
+2025-01-05T21:18:07.243+0100 DEBUG              [http-nio-8091-exec-10]        be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:07.246+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Post details found for post ID: 103. Adding rejection reason.
+2025-01-05T21:18:07.246+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Fetching post details for post ID: 153
+2025-01-05T21:18:07.249+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.controller.PostController - Fetching post with ID: 153
+2025-01-05T21:18:07.260+0100 INFO               [http-nio-8091-exec-1]         be.pxl.services.service.PostService - Post with ID: 153 retrieved successfully
+2025-01-05T21:18:07.261+0100 DEBUG              [http-nio-8091-exec-1]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:18:07.263+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Post details found for post ID: 153. Adding rejection reason.
+2025-01-05T21:18:07.263+0100 INFO               [http-nio-8093-exec-7]         be.pxl.services.controller.ReviewController - Successfully mapped rejected reviews to 3 RejectedPost objects.
+2025-01-05T21:18:10.172+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:18:10.203+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:18:10.205+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:10.205+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:10.205+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:10.206+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:18:10.206+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:18:10.206+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:10.206+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:18:10.206+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:18:10.225+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:18:10.248+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:18:10.248+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:10.248+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:10.248+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:10.248+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:18:10.249+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:18:10.249+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:10.249+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:18:10.249+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:18:17.790+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.controller.PostController - Fetching posts with filters: author = f, content = null, date = null
+2025-01-05T21:18:17.811+0100 INFO               [http-nio-8091-exec-5]         be.pxl.services.service.PostService - Filtered posts count: 0
+2025-01-05T21:18:21.895+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:18:21.916+0100 INFO               [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:18:21.917+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:21.917+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:18:21.918+0100 DEBUG              [http-nio-8091-exec-6]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:18:26.197+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.controller.PostController - Fetching posts with filters: author = l, content = null, date = null
+2025-01-05T21:18:26.247+0100 INFO               [http-nio-8091-exec-4]         be.pxl.services.service.PostService - Filtered posts count: 2
+2025-01-05T21:18:26.248+0100 DEBUG              [http-nio-8091-exec-4]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:26.248+0100 DEBUG              [http-nio-8091-exec-4]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:30.969+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:18:30.990+0100 INFO               [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:18:30.991+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:30.991+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:30.991+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:30.991+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:18:30.991+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:18:30.992+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:30.992+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:18:30.992+0100 DEBUG              [http-nio-8091-exec-7]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:18:37.876+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = b, date = null
+2025-01-05T21:18:37.893+0100 INFO               [http-nio-8091-exec-8]         be.pxl.services.service.PostService - Filtered posts count: 1
+2025-01-05T21:18:37.893+0100 DEBUG              [http-nio-8091-exec-8]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:44.181+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:18:44.203+0100 INFO               [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:18:44.203+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:18:44.204+0100 DEBUG              [http-nio-8091-exec-9]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:19:01.032+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = 2025-01-03
+2025-01-05T21:19:01.058+0100 INFO               [http-nio-8091-exec-10]        be.pxl.services.service.PostService - Filtered posts count: 2
+2025-01-05T21:19:01.058+0100 DEBUG              [http-nio-8091-exec-10]        be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:19:01.058+0100 DEBUG              [http-nio-8091-exec-10]        be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:19:33.020+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:19:33.090+0100 INFO               [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:19:33.090+0100 DEBUG              [http-nio-8091-exec-2]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse
+2025-01-05T21:19:33.107+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.controller.PostController - Fetching posts with filters: author = null, content = null, date = null
+2025-01-05T21:19:33.124+0100 INFO               [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Filtered posts count: 8
+2025-01-05T21:19:33.124+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 1 to PostResponse
+2025-01-05T21:19:33.124+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 2 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 52 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 53 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 102 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 103 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 152 to PostResponse
+2025-01-05T21:19:33.125+0100 DEBUG              [http-nio-8091-exec-3]         be.pxl.services.service.PostService - Mapping post ID: 153 to PostResponse

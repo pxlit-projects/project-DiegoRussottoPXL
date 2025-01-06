@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > IPostService</title>
+  <title>Coverage Report > IReviewService</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services.service</a>
 </div>
 
-<h1>Coverage Summary for Class: IPostService (be.pxl.services.service)</h1>
+<h1>Coverage Summary for Class: IReviewService (be.pxl.services.service)</h1>
 
 <table class="coverageStats">
 
@@ -30,13 +30,13 @@ Current scope:     <a href="../../index.html">all classes</a>
   <th class="name">Class</th>
 </tr>
   <tr>
-    <td class="name">IPostService$MockitoMock$h5Vf9TbL</td>
+    <td class="name">IReviewService$MockitoMock$Hb2Rcq7Q</td>
   </tr>
   <tr>
-    <td class="name">IPostService$MockitoMock$h5Vf9TbL$auxiliary$8tfjfqTQ</td>
+    <td class="name">IReviewService$MockitoMock$Hb2Rcq7Q$auxiliary$bdz7pbxq</td>
   </tr>
   <tr>
-    <td class="name">IPostService$MockitoMock$h5Vf9TbL$auxiliary$uhtprog0</td>
+    <td class="name">IReviewService$MockitoMock$Hb2Rcq7Q$auxiliary$W9dxxShS</td>
   </tr>
 <tr>
   <td class="name"><strong>Total</strong></td>
@@ -50,27 +50,22 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.service;
 &nbsp;
-&nbsp;import be.pxl.services.domain.Post;
-&nbsp;import be.pxl.services.domain.PostStatus;
-&nbsp;import be.pxl.services.domain.dto.CommentResponse;
 &nbsp;import be.pxl.services.domain.dto.PostRequest;
 &nbsp;import be.pxl.services.domain.dto.PostResponse;
+&nbsp;import be.pxl.services.domain.dto.RejectedPost;
+&nbsp;import org.springframework.http.ResponseEntity;
 &nbsp;
 &nbsp;import java.util.List;
 &nbsp;
-&nbsp;public interface IPostService {
-&nbsp;    List&lt;CommentResponse&gt; getCommentsById(Long id);
-&nbsp;    List&lt;PostResponse&gt; getAllPosts();
-&nbsp;    List&lt;PostResponse&gt; getPostsByStatus(PostStatus status);
+&nbsp;public interface IReviewService {
+&nbsp;    ResponseEntity&lt;List&lt;PostResponse&gt;&gt; getDrafts();
+&nbsp;    ResponseEntity&lt;Void&gt; publishPost(Long postId);
+&nbsp;    ResponseEntity&lt;Void&gt; rejectPost(Long postId, String rejectReason);
+&nbsp;    ResponseEntity&lt;List&lt;RejectedPost&gt;&gt; getRejectedPosts();
+&nbsp;    ResponseEntity&lt;Void&gt; resubmitPost(Long postId, PostRequest postRequest);
 &nbsp;
-&nbsp;    void addPost(PostRequest postRequest);
-&nbsp;    void publishPost(Long id);
-&nbsp;    void rejectPost(Long id);
-&nbsp;    void updatePost(Long id, PostRequest postRequest);
-&nbsp;    void resubmitPost(Long id, PostRequest postRequest);
-&nbsp;    PostResponse getPostById(Long id);
 &nbsp;
-&nbsp;    List&lt;PostResponse&gt; getFilteredPosts(String author, String content, String date);
+&nbsp;
 &nbsp;}
 </code>
 </pre>
@@ -95,7 +90,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

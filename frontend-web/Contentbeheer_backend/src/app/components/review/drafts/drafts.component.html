@@ -14,6 +14,9 @@
           <button class="reject-button" (click)="showRejectInput(post.id)">
             Afwijzen
           </button>
+          <button class="edit-button" (click)="showEditForm(post.id)">
+            Wijzigen
+          </button>
         </div>
         <!-- Inputveld voor afwijzingsreden -->
         @if (rejectedPostId === post.id) {
@@ -23,6 +26,22 @@
               placeholder="Voer de reden in voor afwijzing..."
             ></textarea>
             <button (click)="submitRejection(post.id)">Bevestig Afwijzing</button>
+          </div>
+        }
+        <!-- Formulier voor bewerken -->
+        @if (editingPostId === post.id) {
+          <div class="edit-form">
+            <input
+              [(ngModel)]="editedTitle"
+              placeholder="Wijzig titel"
+              value="{{ post.title }}"
+            />
+            <textarea
+              [(ngModel)]="editedContent"
+              placeholder="Wijzig inhoud"
+            >{{ post.content }}</textarea>
+            <button (click)="submitEdit(post.id)">Opslaan</button>
+            <button (click)="cancelEdit()">Annuleren</button>
           </div>
         }
       </li>

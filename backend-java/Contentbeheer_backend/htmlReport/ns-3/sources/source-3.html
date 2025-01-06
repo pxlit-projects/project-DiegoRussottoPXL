@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > PostController</title>
+  <title>Coverage Report > ReviewController</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services.controller</a>
 </div>
 
-<h1>Coverage Summary for Class: PostController (be.pxl.services.controller)</h1>
+<h1>Coverage Summary for Class: ReviewController (be.pxl.services.controller)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -41,7 +41,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">PostController</td>
+  <td class="name">ReviewController</td>
 <td class="coverageStat">
   <span class="percent">
     100%
@@ -52,18 +52,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    90,9%
+    100%
   </span>
   <span class="absValue">
-    (10/11)
+    (6/6)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    90,5%
+    100%
   </span>
   <span class="absValue">
-    (19/21)
+    (11/11)
   </span>
 </td>
 </tr>
@@ -77,89 +77,50 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.controller;
 &nbsp;
-&nbsp;import be.pxl.services.domain.PostStatus;
-&nbsp;import be.pxl.services.domain.dto.CommentResponse;
 &nbsp;import be.pxl.services.domain.dto.PostRequest;
 &nbsp;import be.pxl.services.domain.dto.PostResponse;
-&nbsp;import be.pxl.services.service.IPostService;
+&nbsp;import be.pxl.services.domain.dto.RejectedPost;
+&nbsp;import be.pxl.services.service.IReviewService;
 &nbsp;import lombok.RequiredArgsConstructor;
 &nbsp;import org.slf4j.Logger;
 &nbsp;import org.slf4j.LoggerFactory;
-&nbsp;import org.springframework.http.HttpStatus;
 &nbsp;import org.springframework.http.ResponseEntity;
 &nbsp;import org.springframework.web.bind.annotation.*;
 &nbsp;
 &nbsp;import java.util.List;
 &nbsp;
 &nbsp;@RestController
-&nbsp;@RequestMapping(&quot;/api/post&quot;)
+&nbsp;@RequestMapping(&quot;/api/review&quot;)
 &nbsp;@RequiredArgsConstructor
-&nbsp;public class PostController {
-<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(PostController.class);</b>
-&nbsp;
-&nbsp;    private final IPostService postService;
-&nbsp;    @GetMapping(&quot;/{id}&quot;)
-&nbsp;    public ResponseEntity&lt;PostResponse&gt; getPostById(@PathVariable Long id) {
-<b class="fc">&nbsp;        log.info(&quot;Fetching post with ID: {}&quot;, id);</b>
-<b class="fc">&nbsp;        return new ResponseEntity&lt;&gt;(postService.getPostById(id), HttpStatus.OK);</b>
-&nbsp;    }
-&nbsp;
-&nbsp;    @GetMapping
-&nbsp;    public ResponseEntity&lt;List&lt;PostResponse&gt;&gt; getAllPosts(
-&nbsp;            @RequestParam(required = false) String author,
-&nbsp;            @RequestParam(required = false) String content,
-&nbsp;            @RequestParam(required = false) String date) {
-<b class="fc">&nbsp;        log.info(&quot;Fetching posts with filters: author = {}, content = {}, date = {}&quot;, author, content, date);</b>
-<b class="fc">&nbsp;        return new ResponseEntity&lt;&gt;(postService.getFilteredPosts(author, content, date), HttpStatus.OK);</b>
-&nbsp;    }
-&nbsp;
-&nbsp;    @GetMapping(&quot;/{id}/comments&quot;)
-&nbsp;    public List&lt;CommentResponse&gt; getCommentsById(@PathVariable Long id){
-<b class="fc">&nbsp;        log.info(&quot;Fetching comments for post with id: {}&quot;, id);</b>
-<b class="fc">&nbsp;        return postService.getCommentsById(id);</b>
-&nbsp;    }
-&nbsp;
-&nbsp;
+&nbsp;public class ReviewController {
+&nbsp;    private final IReviewService reviewService;
+<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(ReviewController.class);</b>
 &nbsp;    @GetMapping(&quot;/drafts&quot;)
 &nbsp;    public ResponseEntity&lt;List&lt;PostResponse&gt;&gt; getDraftPosts() {
-<b class="fc">&nbsp;        log.info(&quot;Fetching posts with status DRAFT&quot;);</b>
-<b class="fc">&nbsp;        return new ResponseEntity&lt;&gt;(postService.getPostsByStatus(PostStatus.DRAFT), HttpStatus.OK);</b>
+<b class="fc">&nbsp;        log.info(&quot;Fetching all drafts&quot;);</b>
+<b class="fc">&nbsp;        return reviewService.getDrafts();</b>
 &nbsp;    }
-&nbsp;
+&nbsp;    @PutMapping(&quot;/post/{id}/publish&quot;)
+&nbsp;    public ResponseEntity&lt;Void&gt; publishPost(@PathVariable Long id) {
+<b class="fc">&nbsp;        log.info(&quot;Publishing post with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        return reviewService.publishPost(id);</b>
+&nbsp;    }
+&nbsp;    @PutMapping(&quot;/post/{id}/reject&quot;)
+&nbsp;    public ResponseEntity&lt;Void&gt; rejectPost(@PathVariable Long id,  @RequestBody String rejectReason) {
+<b class="fc">&nbsp;        log.info(&quot;Rejecting post with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        return reviewService.rejectPost(id, rejectReason);</b>
+&nbsp;    }
 &nbsp;    @GetMapping(&quot;/rejected&quot;)
-&nbsp;    public ResponseEntity&lt;List&lt;PostResponse&gt;&gt; getRejectedPosts() {
-<b class="nc">&nbsp;        log.info(&quot;Fetching posts with status REJECTED&quot;);</b>
-<b class="nc">&nbsp;        return new ResponseEntity&lt;&gt;(postService.getPostsByStatus(PostStatus.PENDING), HttpStatus.OK);</b>
+&nbsp;    public ResponseEntity&lt;List&lt;RejectedPost&gt;&gt; getRejectedPosts() {
+<b class="fc">&nbsp;        log.info(&quot;Fetching all rejected posts&quot;);</b>
+<b class="fc">&nbsp;        return reviewService.getRejectedPosts();</b>
 &nbsp;    }
-&nbsp;    @PutMapping(&quot;/{id}/resubmit&quot;)
-&nbsp;    public void resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
-<b class="fc">&nbsp;        log.info(&quot;Resubmitting post with ID: {} and new title: {}, content: {}&quot;, id, postRequest.getTitle(), postRequest.getContent());</b>
-<b class="fc">&nbsp;        postService.resubmitPost(id, postRequest);</b>
+&nbsp;    @PutMapping(&quot;/post/{id}/resubmit&quot;)
+&nbsp;    public ResponseEntity&lt;Void&gt; resubmitPost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
+<b class="fc">&nbsp;        log.info(&quot;Resubmitting post with id: {}&quot;, id);</b>
+<b class="fc">&nbsp;        return reviewService.resubmitPost(id, postRequest);</b>
 &nbsp;    }
 &nbsp;
-&nbsp;
-&nbsp;
-&nbsp;    @PostMapping
-&nbsp;    @ResponseStatus(HttpStatus.CREATED)
-&nbsp;    public void addPost(@RequestBody PostRequest postRequest) {
-<b class="fc">&nbsp;        log.info(&quot;Creating new post with title: {}&quot;, postRequest.getTitle());</b>
-<b class="fc">&nbsp;        postService.addPost(postRequest);</b>
-&nbsp;    }
-&nbsp;    @PutMapping(&quot;/{id}/publish&quot;)
-&nbsp;    public void publishPost(@PathVariable Long id) {
-<b class="fc">&nbsp;        log.info(&quot;Publishing post with ID: {}&quot;, id);</b>
-<b class="fc">&nbsp;        postService.publishPost(id);</b>
-&nbsp;    }
-&nbsp;    @PutMapping(&quot;/{id}/reject&quot;)
-&nbsp;    public void rejectPost(@PathVariable Long id){
-<b class="fc">&nbsp;        log.info(&quot;Rejecting post with id&quot; + id);</b>
-<b class="fc">&nbsp;        postService.rejectPost(id);</b>
-&nbsp;    }
-&nbsp;    @PutMapping(&quot;/{id}&quot;)
-&nbsp;    public void updatePost(@PathVariable Long id, @RequestBody PostRequest postRequest) {
-<b class="fc">&nbsp;        log.info(&quot;Updating post with ID: {}&quot;, id);</b>
-<b class="fc">&nbsp;        postService.updatePost(id, postRequest);</b>
-&nbsp;    }
 &nbsp;}
 </code>
 </pre>
@@ -184,7 +145,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

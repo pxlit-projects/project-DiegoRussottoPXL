@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > NotificationServiceApplication</title>
+  <title>Coverage Report > ReviewServiceApplication</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,7 +22,7 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services</a>
 </div>
 
-<h1>Coverage Summary for Class: NotificationServiceApplication (be.pxl.services)</h1>
+<h1>Coverage Summary for Class: ReviewServiceApplication (be.pxl.services)</h1>
 
 <table class="coverageStats">
 <tr>
@@ -41,7 +41,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 </th>
 </tr>
 <tr>
-  <td class="name">NotificationServiceApplication</td>
+  <td class="name">ReviewServiceApplication</td>
 <td class="coverageStat">
   <span class="percent">
     0%
@@ -80,18 +80,21 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;import org.springframework.boot.SpringApplication;
 &nbsp;import org.springframework.boot.autoconfigure.SpringBootApplication;
 &nbsp;import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+&nbsp;import org.springframework.cloud.openfeign.EnableFeignClients;
+&nbsp;import org.springframework.cloud.openfeign.FeignClient;
 &nbsp;
 &nbsp;/**
-&nbsp; * Hello world!
+&nbsp; * ReviewServiceApplication.
 &nbsp; *
 &nbsp; */
 &nbsp;@SpringBootApplication
 &nbsp;@EnableDiscoveryClient
-<b class="nc">&nbsp;public class NotificationServiceApplication</b>
+&nbsp;@EnableFeignClients
+<b class="nc">&nbsp;public class ReviewServiceApplication</b>
 &nbsp;{
 &nbsp;    public static void main( String[] args )
 &nbsp;    {
-<b class="nc">&nbsp;        SpringApplication.run(NotificationServiceApplication.class, args);</b>
+<b class="nc">&nbsp;        SpringApplication.run(ReviewServiceApplication.class, args);</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -117,7 +120,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

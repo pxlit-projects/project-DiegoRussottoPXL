@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > Notification</title>
+  <title>Coverage Report > Comment</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,14 +22,14 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services.domain</a>
 </div>
 
-<h1>Coverage Summary for Class: Notification (be.pxl.services.domain)</h1>
+<h1>Coverage Summary for Class: Comment (be.pxl.services.domain)</h1>
 
 <table class="coverageStats">
 <tr>
   <th class="name">Class</th>
 </tr>
 <tr>
-  <td class="name">Notification</td>
+  <td class="name">Comment</td>
 </tr>
 
 </table>
@@ -41,18 +41,28 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.domain;
 &nbsp;
+&nbsp;import jakarta.persistence.*;
 &nbsp;import lombok.AllArgsConstructor;
 &nbsp;import lombok.Builder;
 &nbsp;import lombok.Data;
 &nbsp;import lombok.NoArgsConstructor;
 &nbsp;
+&nbsp;import java.time.LocalDate;
+&nbsp;
+&nbsp;@Entity
+&nbsp;@Table(name=&quot;comment&quot;)
 &nbsp;@Data
 &nbsp;@Builder
 &nbsp;@AllArgsConstructor
 &nbsp;@NoArgsConstructor
-&nbsp;public class Notification {
-&nbsp;    private String message;
-&nbsp;    private String sender;
+&nbsp;public class Comment {
+&nbsp;    @Id
+&nbsp;    @GeneratedValue(strategy = GenerationType.AUTO)
+&nbsp;    private Long id;
+&nbsp;    private Long postId;
+&nbsp;    private String user;
+&nbsp;    private String content;
+&nbsp;    private LocalDate createdDate;
 &nbsp;}
 </code>
 </pre>
@@ -77,7 +87,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>

@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">CommentController</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/5)
+    (5/5)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/9)
+    (9/9)
   </span>
 </td>
 </tr>
@@ -93,32 +93,32 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;@RequestMapping(&quot;/api/comments&quot;)
 &nbsp;@RequiredArgsConstructor
 &nbsp;public class CommentController {
-<b class="nc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(CommentController.class);</b>
+<b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(CommentController.class);</b>
 &nbsp;    private final ICommentService commentService;
 &nbsp;    @GetMapping(&quot;/{postId}&quot;)
 &nbsp;    public ResponseEntity&lt;List&lt;CommentResponse&gt;&gt; getComments(@PathVariable Long postId) {
-<b class="nc">&nbsp;        log.info(&quot;Fetching comments for post with id: {}&quot;, postId);</b>
-<b class="nc">&nbsp;        return new ResponseEntity&lt;&gt;(commentService.getCommentsByPostId(postId), HttpStatus.OK);</b>
+<b class="fc">&nbsp;        log.info(&quot;Fetching comments for post with id: {}&quot;, postId);</b>
+<b class="fc">&nbsp;        return new ResponseEntity&lt;&gt;(commentService.getCommentsByPostId(postId), HttpStatus.OK);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @PostMapping(&quot;/{postId}&quot;)
 &nbsp;    @ResponseStatus(HttpStatus.CREATED)
 &nbsp;    public CommentResponse addComment(@PathVariable Long postId, @RequestBody CommentRequest commentRequest) {
-<b class="nc">&nbsp;        log.info(&quot;Adding comment for post with id: {}&quot;, postId);</b>
-<b class="nc">&nbsp;        return commentService.addComment(postId, commentRequest);</b>
+<b class="fc">&nbsp;        log.info(&quot;Adding comment for post with id: {}&quot;, postId);</b>
+<b class="fc">&nbsp;        return commentService.addComment(postId, commentRequest);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @PutMapping(&quot;/{commentId}&quot;)
 &nbsp;    public void updateComment(@PathVariable Long commentId, @RequestBody CommentRequest commentRequest) {
-<b class="nc">&nbsp;        log.info(&quot;Updating comment with id: {}&quot;, commentId);</b>
-<b class="nc">&nbsp;        commentService.updateComment(commentId, commentRequest);</b>
+<b class="fc">&nbsp;        log.info(&quot;Updating comment with id: {}&quot;, commentId);</b>
+<b class="fc">&nbsp;        commentService.updateComment(commentId, commentRequest);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    @DeleteMapping(&quot;/{commentId}&quot;)
 &nbsp;    @ResponseStatus(HttpStatus.NO_CONTENT)
 &nbsp;    public void deleteComment(@PathVariable Long commentId) {
-<b class="nc">&nbsp;        log.info(&quot;Deleting comment with id: {}&quot;, commentId);</b>
-<b class="nc">&nbsp;        commentService.deleteComment(commentId);</b>
+<b class="fc">&nbsp;        log.info(&quot;Deleting comment with id: {}&quot;, commentId);</b>
+<b class="fc">&nbsp;        commentService.deleteComment(commentId);</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -144,7 +144,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-04 14:01</div>
+    <div style="float:right;">generated on 2025-01-05 22:13</div>
 </div>
 </body>
 </html>
