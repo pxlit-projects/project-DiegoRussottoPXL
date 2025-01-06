@@ -11,8 +11,6 @@ export class RoleService {
   constructor() {}
 
   setRole(role: string): void {
-    console.log('Setting role to:', role);  // Logging toegevoegen voor debugging
-    
     localStorage.setItem('role', role);
     this.roleSubject.next(role);
   }

@@ -29,6 +29,7 @@ export class HomepageComponent {
     // Sla gebruikersnaam en rol op in localStorage
     localStorage.setItem('username', this.username);
     localStorage.setItem('role', this.selectedRole);
+    this.roleService.setRole(this.selectedRole);
 
     console.log(`Gebruikersnaam: ${this.username}, Rol: ${this.selectedRole}`);
     alert(`Welkom, ${this.username}! Je bent nu ingelogd als ${this.selectedRole}.`);

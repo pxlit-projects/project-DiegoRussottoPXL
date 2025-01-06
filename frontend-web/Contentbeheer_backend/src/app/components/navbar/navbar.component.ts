@@ -15,10 +15,7 @@ export class NavbarComponent implements OnInit {
   constructor(private roleService: RoleService) {}
 
   ngOnInit(): void {
-    // Abonneer je op rolveranderingen vanuit de service
     this.roleService.role$.subscribe(role => {
-      console.log('Role changed in NavbarComponent:', role);  // Logging toegevoegen voor debugging
-
       this.isRedacteur = role === 'redacteur';
     });
   }
