@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > ReviewRepository</title>
+  <title>Coverage Report > PostRequest</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -19,28 +19,19 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">be.pxl.services.repository</a>
+    <a href="../index.html">be.pxl.services.domain.dto</a>
 </div>
 
-<h1>Coverage Summary for Class: ReviewRepository (be.pxl.services.repository)</h1>
+<h1>Coverage Summary for Class: PostRequest (be.pxl.services.domain.dto)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
 </tr>
-  <tr>
-    <td class="name">ReviewRepository$MockitoMock$Kj8SlZI5</td>
-  </tr>
-  <tr>
-    <td class="name">ReviewRepository$MockitoMock$Kj8SlZI5$auxiliary$ef135Ms6</td>
-  </tr>
-  <tr>
-    <td class="name">ReviewRepository$MockitoMock$Kj8SlZI5$auxiliary$zH9NLOve</td>
-  </tr>
 <tr>
-  <td class="name"><strong>Total</strong></td>
+  <td class="name">PostRequest</td>
 </tr>
+
 </table>
 
 <br/>
@@ -48,13 +39,28 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.repository;
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.domain.dto;
 &nbsp;
-&nbsp;import be.pxl.services.domain.Review;
-&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+&nbsp;import be.pxl.services.domain.PostStatus;
+&nbsp;import lombok.AllArgsConstructor;
+&nbsp;import lombok.Builder;
+&nbsp;import lombok.Data;
+&nbsp;import lombok.NoArgsConstructor;
 &nbsp;
-&nbsp;public interface ReviewRepository extends JpaRepository&lt;Review, Long&gt; {
-&nbsp;    void deleteByPostId(Long postId);
+&nbsp;import java.time.LocalDate;
+&nbsp;
+&nbsp;@Data
+&nbsp;@Builder
+&nbsp;@NoArgsConstructor
+&nbsp;@AllArgsConstructor
+&nbsp;public class PostRequest {
+&nbsp;    private Long id;
+&nbsp;    private String title;
+&nbsp;    private String content;
+&nbsp;    private String author;
+&nbsp;    private LocalDate date;
+&nbsp;    private PostStatus status;
+&nbsp;
 &nbsp;
 &nbsp;}
 </code>
@@ -80,7 +86,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-05 22:13</div>
+    <div style="float:right;">generated on 2025-01-09 11:24</div>
 </div>
 </body>
 </html>

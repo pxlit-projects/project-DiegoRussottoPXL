@@ -1,6 +1,6 @@
 /* Algemeen formulierstijl */
 :host {
-  margin-top: auto;
+  /* margin-top: auto; */
   width: 50rem;
 }
 

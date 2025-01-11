@@ -1,0 +1,19 @@
+2025-01-05T21:22:22.267+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Starting CommentClientTest using Java 17.0.13 with PID 22100 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service)
+2025-01-05T21:22:22.273+0100 DEBUG              [main]                         be.pxl.services.feign.CommentClientTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:22:22.274+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:22:32.304+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Started CommentClientTest in 11.48 seconds (process running for 21.546)
+2025-01-05T21:22:32.892+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully posted comment on post with id: 1
+2025-01-05T21:22:32.939+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully updated comment with id: 1
+2025-01-05T21:22:32.944+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully deleted comment with id: 1
+2025-01-05T21:28:16.686+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Starting CommentClientTest using Java 17.0.13 with PID 16276 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service)
+2025-01-05T21:28:16.688+0100 DEBUG              [main]                         be.pxl.services.feign.CommentClientTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T21:28:16.689+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T21:28:19.978+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully posted comment on post with id: 1
+2025-01-05T21:28:20.026+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully updated comment with id: 1
+2025-01-05T21:28:20.033+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully deleted comment with id: 1
+2025-01-05T22:12:00.333+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Starting CommentClientTest using Java 17.0.13 with PID 30484 (started by 12000904 in C:\Users\12000904\Documents\semester 1\Java Fullstack\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service)
+2025-01-05T22:12:00.337+0100 DEBUG              [main]                         be.pxl.services.feign.CommentClientTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-05T22:12:00.338+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-05T22:12:03.553+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully posted comment on post with id: 1
+2025-01-05T22:12:03.592+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully updated comment with id: 1
+2025-01-05T22:12:03.598+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully deleted comment with id: 1

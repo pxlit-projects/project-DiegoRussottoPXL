@@ -52,18 +52,18 @@ Current scope:     <a href="../../index.html">all classes</a>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    61,5%
+    84,6%
   </span>
   <span class="absValue">
-    (8/13)
+    (11/13)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    50%
+    75,6%
   </span>
   <span class="absValue">
-    (41/82)
+    (62/82)
   </span>
 </td>
 </tr>
@@ -100,9 +100,6 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;public class PostService implements IPostService {
 &nbsp;    private final PostRepository postRepository;
 <b class="fc">&nbsp;    private static final Logger log = LoggerFactory.getLogger(PostService.class);</b>
-&nbsp;
-&nbsp;    //private final NotificationClient notificationClient;
-&nbsp;
 &nbsp;    @Autowired
 &nbsp;    PostInterface postInterface;
 &nbsp;
@@ -162,14 +159,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;    }
 &nbsp;    @Override
 &nbsp;    public void resubmitPost(Long id, PostRequest postRequest) {
-<b class="nc">&nbsp;        Post post = postRepository.findById(id)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Post with ID &quot; + id + &quot; not found&quot;));</b>
-<b class="nc">&nbsp;        post.setTitle(postRequest.getTitle());</b>
-<b class="nc">&nbsp;        post.setContent(postRequest.getContent());</b>
-<b class="nc">&nbsp;        post.setDate(LocalDate.now());</b>
-<b class="nc">&nbsp;        post.setStatus(PostStatus.DRAFT);</b>
-<b class="nc">&nbsp;        postRepository.save(post);</b>
-<b class="nc">&nbsp;        log.info(&quot;Post with ID: {} resubmitted successfully&quot;, id);</b>
+<b class="fc">&nbsp;        Post post = postRepository.findById(id)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new IllegalArgumentException(&quot;Post with ID &quot; + id + &quot; not found&quot;));</b>
+<b class="fc">&nbsp;        post.setTitle(postRequest.getTitle());</b>
+<b class="fc">&nbsp;        post.setContent(postRequest.getContent());</b>
+<b class="fc">&nbsp;        post.setDate(LocalDate.now());</b>
+<b class="fc">&nbsp;        post.setStatus(PostStatus.DRAFT);</b>
+<b class="fc">&nbsp;        postRepository.save(post);</b>
+<b class="fc">&nbsp;        log.info(&quot;Post with ID: {} resubmitted successfully&quot;, id);</b>
 &nbsp;    }
 &nbsp;    private PostResponse mapToPostResponse(Post post) {
 <b class="fc">&nbsp;        log.debug(&quot;Mapping post ID: {} to PostResponse&quot;, post.getId());</b>
@@ -223,22 +220,22 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;
 &nbsp;    public void rejectPost(Long postId) {
-<b class="nc">&nbsp;        Post post = postRepository.findById(postId)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new RuntimeException(&quot;Post not found with id: &quot; + postId));</b>
-<b class="nc">&nbsp;        post.setStatus(PostStatus.PENDING);</b>
-<b class="nc">&nbsp;        postRepository.save(post);</b>
-<b class="nc">&nbsp;        log.info(&quot;Post with ID: {} rejected successfully&quot;, postId);</b>
+<b class="fc">&nbsp;        Post post = postRepository.findById(postId)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new RuntimeException(&quot;Post not found with id: &quot; + postId));</b>
+<b class="fc">&nbsp;        post.setStatus(PostStatus.PENDING);</b>
+<b class="fc">&nbsp;        postRepository.save(post);</b>
+<b class="fc">&nbsp;        log.info(&quot;Post with ID: {} rejected successfully&quot;, postId);</b>
 &nbsp;    }
 &nbsp;
 &nbsp;    public void updatePost(Long postId, PostRequest postRequest) {
-<b class="nc">&nbsp;        Post post = postRepository.findById(postId)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new RuntimeException(&quot;Post not found with id: &quot; + postId));</b>
-<b class="nc">&nbsp;        post.setTitle(postRequest.getTitle());</b>
-<b class="nc">&nbsp;        post.setContent(postRequest.getContent());</b>
-<b class="nc">&nbsp;        post.setAuthor(postRequest.getAuthor());</b>
-<b class="nc">&nbsp;        post.setStatus(PostStatus.DRAFT);</b>
-<b class="nc">&nbsp;        postRepository.save(post);</b>
-<b class="nc">&nbsp;        log.info(&quot;Post with ID: {} updated successfully&quot;, postId);</b>
+<b class="fc">&nbsp;        Post post = postRepository.findById(postId)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new RuntimeException(&quot;Post not found with id: &quot; + postId));</b>
+<b class="fc">&nbsp;        post.setTitle(postRequest.getTitle());</b>
+<b class="fc">&nbsp;        post.setContent(postRequest.getContent());</b>
+<b class="fc">&nbsp;        post.setAuthor(postRequest.getAuthor());</b>
+<b class="fc">&nbsp;        post.setStatus(PostStatus.DRAFT);</b>
+<b class="fc">&nbsp;        postRepository.save(post);</b>
+<b class="fc">&nbsp;        log.info(&quot;Post with ID: {} updated successfully&quot;, postId);</b>
 &nbsp;    }
 &nbsp;}
 </code>
@@ -264,7 +261,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-05 22:13</div>
+    <div style="float:right;">generated on 2025-01-09 11:24</div>
 </div>
 </body>
 </html>

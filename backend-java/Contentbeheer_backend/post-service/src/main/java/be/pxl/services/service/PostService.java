@@ -23,9 +23,6 @@ import java.util.stream.Collectors;
 public class PostService implements IPostService {
     private final PostRepository postRepository;
     private static final Logger log = LoggerFactory.getLogger(PostService.class);
-
-    //private final NotificationClient notificationClient;
-
     @Autowired
     PostInterface postInterface;
 

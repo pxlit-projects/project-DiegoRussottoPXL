@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > PostRepository</title>
+  <title>Coverage Report > CommentRequest</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -19,28 +19,19 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">be.pxl.services.repository</a>
+    <a href="../index.html">be.pxl.services.domain.dto</a>
 </div>
 
-<h1>Coverage Summary for Class: PostRepository (be.pxl.services.repository)</h1>
+<h1>Coverage Summary for Class: CommentRequest (be.pxl.services.domain.dto)</h1>
 
 <table class="coverageStats">
-
 <tr>
   <th class="name">Class</th>
 </tr>
-  <tr>
-    <td class="name">PostRepository$MockitoMock$UmGhVZ9N</td>
-  </tr>
-  <tr>
-    <td class="name">PostRepository$MockitoMock$UmGhVZ9N$auxiliary$ewEvRZcm</td>
-  </tr>
-  <tr>
-    <td class="name">PostRepository$MockitoMock$UmGhVZ9N$auxiliary$gorSlmmH</td>
-  </tr>
 <tr>
-  <td class="name"><strong>Total</strong></td>
+  <td class="name">CommentRequest</td>
 </tr>
+
 </table>
 
 <br/>
@@ -48,19 +39,24 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.repository;
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.domain.dto;
 &nbsp;
-&nbsp;import be.pxl.services.domain.Post;
-&nbsp;import be.pxl.services.domain.PostStatus;
-&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
+&nbsp;import lombok.AllArgsConstructor;
+&nbsp;import lombok.Builder;
+&nbsp;import lombok.Data;
+&nbsp;import lombok.NoArgsConstructor;
 &nbsp;
-&nbsp;import java.util.List;
-&nbsp;import java.util.Optional;
+&nbsp;import java.time.LocalDate;
 &nbsp;
-&nbsp;public interface PostRepository extends JpaRepository&lt;Post, Long&gt; {
-&nbsp;    List&lt;Post&gt; findByStatus(PostStatus status);
-&nbsp;    Optional&lt;Post&gt; findById(Long id);
-&nbsp;
+&nbsp;@Data
+&nbsp;@Builder
+&nbsp;@NoArgsConstructor
+&nbsp;@AllArgsConstructor
+&nbsp;public class CommentRequest {
+&nbsp;    private Long postId;
+&nbsp;    private String author;
+&nbsp;    private String content;
+&nbsp;    private LocalDate timestamp;
 &nbsp;}
 </code>
 </pre>
@@ -85,7 +81,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-05 22:13</div>
+    <div style="float:right;">generated on 2025-01-09 11:24</div>
 </div>
 </body>
 </html>

@@ -45,11 +45,6 @@
           <button (click)="toggleComments(post.id)" [ngClass]="{ 'hide-comments': selectedPostCommentsId === post.id }">
             {{ selectedPostCommentsId === post.id ? 'Verberg comments' : 'Comments bekijken' }}
           </button>
-          @if (post.status === 'DRAFT') {
-            <div>
-              <button (click)="publishPost(post.id)">Publiceer Post</button>
-            </div>
-          }
           @if (userRole !== 'gebruiker' && post.author === currentUser) {
             <div>
               <button (click)="editPost(post)">Bewerk</button>
