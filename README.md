@@ -1,7 +1,6 @@
 # Fullstack Java Project
 
-## Firstname Lastname (Class)
-Change the name and Class in the title above
+## Diego Russotto (3AONC)
 
 ## Folder structure
 
@@ -17,4 +16,30 @@ Each folder contains its own specific `.gitignore` file.
 
 ## How to setup and run this application
 
-:heavy_check_mark:_(COMMENT) Add setup instructions and provide some direction to run the whole  application: frontend to backend._
+### Backend Setup
+
+**Local Setup**
+    To run the backend locally, first start the databases by running the `docker-compose.yml`.
+    Then, manually start the services in the following order:
+    - `config-service`
+    - `discovery-service`
+    - `gateway-service`
+    - Then, start the other services as needed.
+
+### Frontend Setup
+
+**Local Setup**
+1. Navigate to the `frontend-web/Contentbeheer_backend` directory.
+2. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the Angular development server:
+   ```bash
+   ng serve
+   ```
+   The frontend will be available at `http://localhost:4200`
+
+**Docker Ready**
+1. Uncomment the frontend section in the `docker-compose.yml` file.
+2. Run the `docker-compose.yml` file.
