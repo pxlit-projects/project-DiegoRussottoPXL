@@ -18,7 +18,7 @@ Each folder contains its own specific `.gitignore` file.
 
 ### Backend Setup
 
-**Local Setup**
+**Local Setup**  
 To run the backend locally, first start the databases by running the `docker-compose.yml`.
     Then, manually start the services in the following order:
     - `config-service`
