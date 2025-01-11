@@ -28,7 +28,7 @@ To run the backend locally, first start the databases by running the `docker-com
 
 ### Frontend Setup
 
-**Local Setup**
+**Local Setup**  
 1. Navigate to the `frontend-web/Contentbeheer_backend` directory.
 2. Install the necessary dependencies:
    ```bash
