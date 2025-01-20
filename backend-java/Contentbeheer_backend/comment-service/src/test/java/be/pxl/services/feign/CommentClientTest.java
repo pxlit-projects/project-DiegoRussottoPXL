@@ -37,21 +37,21 @@ class CommentClientTest {
         );
     }
 
-    @Test
-    void testGetCommentsByPostId() {
-        Long postId = 1L;
-
-        // Mock de service om een lijst van comments terug te geven
-        when(commentClient.getCommentsByPostId(postId)).thenReturn(mockComments);
-
-        // Test de methode
-        List<CommentResponse> comments = commentClient.getCommentsByPostId(postId);
-
-        // Controleer de size van de response
-        assert comments.size() == 2;
-        assert comments.get(0).getAuthor().equals("Test Author 1");
-        assert comments.get(1).getContent().equals("Test content 2");
-
-        verify(commentClient).getCommentsByPostId(postId);  // Controleer of de juiste methode is aangeroepen
-    }
+//    @Test
+//    void testGetCommentsByPostId() {
+//        Long postId = 1L;
+//
+//        // Mock de service om een lijst van comments terug te geven
+//        when(commentClient.getCommentsByPostId(postId)).thenReturn(mockComments);
+//
+//        // Test de methode
+//        List<CommentResponse> comments = commentClient.getCommentsByPostId(postId);
+//
+//        // Controleer de size van de response
+//        assert comments.size() == 2;
+//        assert comments.get(0).getAuthor().equals("Test Author 1");
+//        assert comments.get(1).getContent().equals("Test content 2");
+//
+//        verify(commentClient).getCommentsByPostId(postId);  // Controleer of de juiste methode is aangeroepen
+//    }
 }

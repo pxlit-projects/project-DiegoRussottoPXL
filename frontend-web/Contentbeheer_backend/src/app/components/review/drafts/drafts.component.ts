@@ -97,7 +97,6 @@ submitEdit(postId: number) {
     this.editingPostId = null;
     this.reviewService.resubmitPost(post).subscribe({
         next: () => {
-          alert('Post opnieuw ingediend!');
         },
         error: (err) => {
           this.errorMessage = `Er is iets misgegaan bij het opnieuw indienen van de post: ${err}`;

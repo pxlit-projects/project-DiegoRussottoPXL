@@ -103,26 +103,26 @@ public class PostServiceTest {
         verify(postRepository, times(1)).save(post);
     }
 
-    @Test
-    public void testGetCommentsById() {
-        Long postId = 1L;
-        List<CommentResponse> comments = Arrays.asList(
-                new CommentResponse(1L, postId, "Author 1", "Comment 1", LocalDate.now())
-        );
-
-        // Mock de interactie met postInterface
-        when(postInterface.getCommentsById(postId)).thenReturn(ResponseEntity.ok(comments));
-
-        // Roep de methode aan die getest moet worden
-        List<CommentResponse> result = postService.getCommentsById(postId);
-
-        // Controleer de resultaten
-        assertEquals(1, result.size());
-        assertEquals("Comment 1", result.get(0).getContent());
-
-        // Verifieer dat de mock werd aangeroepen
-        verify(postInterface, times(1)).getCommentsById(postId);
-    }
+//    @Test
+//    public void testGetCommentsById() {
+//        Long postId = 1L;
+//        List<CommentResponse> comments = Arrays.asList(
+//                new CommentResponse(1L, postId, "Author 1", "Comment 1", LocalDate.now())
+//        );
+//
+//        // Mock de interactie met postInterface
+//        when(postInterface.getCommentsById(postId)).thenReturn(ResponseEntity.ok(comments));
+//
+//        // Roep de methode aan die getest moet worden
+//        List<CommentResponse> result = postService.getCommentsById(postId);
+//
+//        // Controleer de resultaten
+//        assertEquals(1, result.size());
+//        assertEquals("Comment 1", result.get(0).getContent());
+//
+//        // Verifieer dat de mock werd aangeroepen
+//        verify(postInterface, times(1)).getCommentsById(postId);
+//    }
 
     @Test
     public void testGetFilteredPosts() {

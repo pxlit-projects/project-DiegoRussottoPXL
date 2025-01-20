@@ -51,7 +51,6 @@ export class RejectedComponent implements OnInit {
    submitResubmission(): void {
       this.reviewService.resubmitPost(this.currentPost).subscribe({
         next: () => {
-          alert('Post opnieuw ingediend!');
           this.isEditing = false;
           this.fetchRejectedPosts(); // Update de lijst met posts na herindiening
         },

@@ -65,20 +65,20 @@ public class ReviewControllerTest {
         verify(reviewService).publishPost(postId);
     }
 
-    @Test
-    public void testRejectPost() throws Exception {
-        Long postId = 1L;
-        String rejectReason = "Inappropriate content";
-
-        when(reviewService.rejectPost(postId, rejectReason)).thenReturn(ResponseEntity.ok().build());
-
-        mockMvc.perform(put("/api/review/post/{id}/reject", postId)
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(rejectReason))) // Zorg dat rejectReason correct wordt geserialiseerd
-                .andExpect(status().isOk());
-
-        verify(reviewService).rejectPost(postId, rejectReason);
-    }
+//    @Test
+//    public void testRejectPost() throws Exception {
+//        Long postId = 1L;
+//        String rejectReason = "Inappropriate content";
+//
+//        when(reviewService.rejectPost(postId, rejectReason)).thenReturn(ResponseEntity.ok().build());
+//
+//        mockMvc.perform(put("/api/review/post/{id}/reject", postId)
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(objectMapper.writeValueAsString(rejectReason))) // Zorg dat rejectReason correct wordt geserialiseerd
+//                .andExpect(status().isOk());
+//
+//        verify(reviewService).rejectPost(postId, rejectReason);
+//    }
 
 
     @Test

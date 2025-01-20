@@ -32,6 +32,5 @@ export class HomepageComponent {
     this.roleService.setRole(this.selectedRole);
 
     console.log(`Gebruikersnaam: ${this.username}, Rol: ${this.selectedRole}`);
-    alert(`Welkom, ${this.username}! Je bent nu ingelogd als ${this.selectedRole}.`);
   }
 }

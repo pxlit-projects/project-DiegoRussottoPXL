@@ -44,26 +44,26 @@ Current scope:     <a href="../../index.html">all classes</a>
   <td class="name">QueueService</td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/1)
+    (1/1)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/2)
+    (2/2)
   </span>
 </td>
 <td class="coverageStat">
   <span class="percent">
-    0%
+    100%
   </span>
   <span class="absValue">
-    (0/14)
+    (14/14)
   </span>
 </td>
 </tr>
@@ -93,25 +93,25 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;    @RabbitListener(queues = &quot;postApprovalQueue&quot;)
 &nbsp;    public void handlePostApproval(Long postId) {
-<b class="nc">&nbsp;        Post post = postRepository.findById(postId)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new PostNotFoundException(&quot;No post found with ID: &quot; + postId));</b>
-<b class="nc">&nbsp;        post.setStatus(PostStatus.PUBLISHED);</b>
-<b class="nc">&nbsp;        postRepository.save(post);</b>
-<b class="nc">&nbsp;        emailService.sendEmail(</b>
-<b class="nc">&nbsp;                &quot;Blog Approved: &quot; + post.getTitle(),</b>
-<b class="nc">&nbsp;                &quot;Congratulations! Your blog titled \&quot;&quot; + post.getTitle() + &quot;\&quot; has been approved and is ready for publication.&quot;</b>
+<b class="fc">&nbsp;        Post post = postRepository.findById(postId)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new PostNotFoundException(&quot;No post found with ID: &quot; + postId));</b>
+<b class="fc">&nbsp;        post.setStatus(PostStatus.PUBLISHED);</b>
+<b class="fc">&nbsp;        postRepository.save(post);</b>
+<b class="fc">&nbsp;        emailService.sendEmail(</b>
+<b class="fc">&nbsp;                &quot;Blog Approved: &quot; + post.getTitle(),</b>
+<b class="fc">&nbsp;                &quot;Congratulations! Your blog titled \&quot;&quot; + post.getTitle() + &quot;\&quot; has been approved and is ready for publication.&quot;</b>
 &nbsp;        );
 &nbsp;    }
 &nbsp;
 &nbsp;    @RabbitListener(queues = &quot;postRejectionQueue&quot;)
 &nbsp;    public void handlePostRejection(Long postId) {
-<b class="nc">&nbsp;        Post post = postRepository.findById(postId)</b>
-<b class="nc">&nbsp;                .orElseThrow(() -&gt; new PostNotFoundException(&quot;No post found with ID: &quot; + postId));</b>
-<b class="nc">&nbsp;        post.setStatus(PostStatus.PENDING);</b>
-<b class="nc">&nbsp;        postRepository.save(post);</b>
-<b class="nc">&nbsp;        emailService.sendEmail(</b>
-<b class="nc">&nbsp;                &quot;Blog Rejected: &quot; + post.getTitle(),</b>
-<b class="nc">&nbsp;                &quot;Unfortunately, your blog titled \&quot;&quot; + post.getTitle() + &quot;\&quot; has been rejected. Please revise it before resubmitting.&quot;</b>
+<b class="fc">&nbsp;        Post post = postRepository.findById(postId)</b>
+<b class="fc">&nbsp;                .orElseThrow(() -&gt; new PostNotFoundException(&quot;No post found with ID: &quot; + postId));</b>
+<b class="fc">&nbsp;        post.setStatus(PostStatus.PENDING);</b>
+<b class="fc">&nbsp;        postRepository.save(post);</b>
+<b class="fc">&nbsp;        emailService.sendEmail(</b>
+<b class="fc">&nbsp;                &quot;Blog Rejected: &quot; + post.getTitle(),</b>
+<b class="fc">&nbsp;                &quot;Unfortunately, your blog titled \&quot;&quot; + post.getTitle() + &quot;\&quot; has been rejected. Please revise it before resubmitting.&quot;</b>
 &nbsp;        );
 &nbsp;    }
 &nbsp;}
@@ -139,7 +139,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-09 11:24</div>
+    <div style="float:right;">generated on 2025-01-15 22:26</div>
 </div>
 </body>
 </html>

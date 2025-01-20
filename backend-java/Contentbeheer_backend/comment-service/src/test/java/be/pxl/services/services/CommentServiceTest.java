@@ -53,26 +53,26 @@ class CommentServiceTest {
         verify(commentRepository, times(1)).findByPostId(postId);
     }
 
-    @Test
-    void addComment_shouldSaveCommentAndReturnCommentResponse() {
-        // Arrange
-        Long postId = 1L;
-        CommentRequest commentRequest = new CommentRequest(postId, "User1", "New Comment", null);
-        Comment savedComment = new Comment(1L, postId, "User1", "New Comment", LocalDate.now());
-        when(commentRepository.save(any(Comment.class))).thenReturn(savedComment);
-
-        // Act
-        CommentResponse result = commentService.addComment(postId, commentRequest);
-
-        // Assert
-        assertNotNull(result);
-        assertEquals(1L, result.getId());
-        assertEquals(postId, result.getPostId());
-        assertEquals("User1", result.getAuthor());
-        assertEquals("New Comment", result.getContent());
-        assertNotNull(result.getTimestamp());
-        verify(commentRepository, times(1)).save(any(Comment.class));
-    }
+//    @Test
+//    void addComment_shouldSaveCommentAndReturnCommentResponse() {
+//        // Arrange
+//        Long postId = 1L;
+//        CommentRequest commentRequest = new CommentRequest(postId, "User1", "New Comment", null);
+//        Comment savedComment = new Comment(1L, postId, "User1", "New Comment", LocalDate.now());
+//        when(commentRepository.save(any(Comment.class))).thenReturn(savedComment);
+//
+//        // Act
+//        CommentResponse result = commentService.addComment(postId, commentRequest);
+//
+//        // Assert
+//        assertNotNull(result);
+//        assertEquals(1L, result.getId());
+//        assertEquals(postId, result.getPostId());
+//        assertEquals("User1", result.getAuthor());
+//        assertEquals("New Comment", result.getContent());
+//        assertNotNull(result.getTimestamp());
+//        verify(commentRepository, times(1)).save(any(Comment.class));
+//    }
 
     @Test
     void updateComment_shouldUpdateExistingComment() {

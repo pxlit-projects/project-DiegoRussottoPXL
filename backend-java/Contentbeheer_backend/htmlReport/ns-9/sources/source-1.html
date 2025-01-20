@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > CommentRequest</title>
+  <title>Coverage Report > ReviewRepository</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -19,19 +19,28 @@
 <div class="breadCrumbs">
 Current scope:     <a href="../../index.html">all classes</a>
     <span class="separator">|</span>
-    <a href="../index.html">be.pxl.services.domain.dto</a>
+    <a href="../index.html">be.pxl.services.repository</a>
 </div>
 
-<h1>Coverage Summary for Class: CommentRequest (be.pxl.services.domain.dto)</h1>
+<h1>Coverage Summary for Class: ReviewRepository (be.pxl.services.repository)</h1>
 
 <table class="coverageStats">
+
 <tr>
   <th class="name">Class</th>
 </tr>
+  <tr>
+    <td class="name">ReviewRepository$MockitoMock$XHNV8uAV</td>
+  </tr>
+  <tr>
+    <td class="name">ReviewRepository$MockitoMock$XHNV8uAV$auxiliary$vViPKjPh</td>
+  </tr>
+  <tr>
+    <td class="name">ReviewRepository$MockitoMock$XHNV8uAV$auxiliary$xv6F163e</td>
+  </tr>
 <tr>
-  <td class="name">CommentRequest</td>
+  <td class="name"><strong>Total</strong></td>
 </tr>
-
 </table>
 
 <br/>
@@ -39,24 +48,14 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 
 <pre>
-<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.domain.dto;
+<code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.repository;
 &nbsp;
-&nbsp;import lombok.AllArgsConstructor;
-&nbsp;import lombok.Builder;
-&nbsp;import lombok.Data;
-&nbsp;import lombok.NoArgsConstructor;
+&nbsp;import be.pxl.services.domain.Review;
+&nbsp;import org.springframework.data.jpa.repository.JpaRepository;
 &nbsp;
-&nbsp;import java.time.LocalDate;
+&nbsp;public interface ReviewRepository extends JpaRepository&lt;Review, Long&gt; {
+&nbsp;    void deleteByPostId(Long postId);
 &nbsp;
-&nbsp;@Data
-&nbsp;@Builder
-&nbsp;@NoArgsConstructor
-&nbsp;@AllArgsConstructor
-&nbsp;public class CommentRequest {
-&nbsp;    private Long postId;
-&nbsp;    private String author;
-&nbsp;    private String content;
-&nbsp;    private LocalDate timestamp;
 &nbsp;}
 </code>
 </pre>
@@ -81,7 +80,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-09 11:24</div>
+    <div style="float:right;">generated on 2025-01-15 22:26</div>
 </div>
 </body>
 </html>

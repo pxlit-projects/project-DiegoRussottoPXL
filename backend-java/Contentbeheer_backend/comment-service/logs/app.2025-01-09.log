@@ -1,0 +1,13 @@
+2025-01-09T09:03:05.786+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Starting CommentClientTest using Java 22.0.2 with PID 13588 (started by 12000904 in C:\Users\12000904\Bureaublad\seh\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service)
+2025-01-09T09:03:05.799+0100 DEBUG              [main]                         be.pxl.services.feign.CommentClientTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T09:03:05.800+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T09:03:08.512+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully posted comment on post with id: 1
+2025-01-09T09:03:08.563+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully updated comment with id: 1
+2025-01-09T09:03:08.571+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully deleted comment with id: 1
+2025-01-09T11:22:28.521+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Starting CommentClientTest using Java 22.0.2 with PID 11760 (started by 12000904 in C:\Users\12000904\Bureaublad\seh\project-DiegoRussottoPXL\backend-java\Contentbeheer_backend\comment-service)
+2025-01-09T11:22:28.524+0100 DEBUG              [main]                         be.pxl.services.feign.CommentClientTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-01-09T11:22:28.526+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - No active profile set, falling back to 1 default profile: "default"
+2025-01-09T11:22:39.940+0100 INFO               [main]                         be.pxl.services.feign.CommentClientTest - Started CommentClientTest in 13.706 seconds (process running for 22.075)
+2025-01-09T11:22:40.446+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully posted comment on post with id: 1
+2025-01-09T11:22:40.482+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully updated comment with id: 1
+2025-01-09T11:22:40.487+0100 INFO               [main]                         be.pxl.services.services.CommentService - Succesfully deleted comment with id: 1

@@ -5,7 +5,7 @@
 <html id="htmlId">
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
-  <title>Coverage Report > RejectedPost</title>
+  <title>Coverage Report > CommentRequest</title>
   <style type="text/css">
     @import "../../css/coverage.css";
     @import "../../css/idea.min.css";
@@ -22,14 +22,14 @@ Current scope:     <a href="../../index.html">all classes</a>
     <a href="../index.html">be.pxl.services.domain.dto</a>
 </div>
 
-<h1>Coverage Summary for Class: RejectedPost (be.pxl.services.domain.dto)</h1>
+<h1>Coverage Summary for Class: CommentRequest (be.pxl.services.domain.dto)</h1>
 
 <table class="coverageStats">
 <tr>
   <th class="name">Class</th>
 </tr>
 <tr>
-  <td class="name">RejectedPost</td>
+  <td class="name">CommentRequest</td>
 </tr>
 
 </table>
@@ -41,8 +41,6 @@ Current scope:     <a href="../../index.html">all classes</a>
 <pre>
 <code class="sourceCode" id="sourceCode">&nbsp;package be.pxl.services.domain.dto;
 &nbsp;
-&nbsp;import be.pxl.services.domain.PostStatus;
-&nbsp;import jakarta.persistence.Embeddable;
 &nbsp;import lombok.AllArgsConstructor;
 &nbsp;import lombok.Builder;
 &nbsp;import lombok.Data;
@@ -50,19 +48,15 @@ Current scope:     <a href="../../index.html">all classes</a>
 &nbsp;
 &nbsp;import java.time.LocalDate;
 &nbsp;
-&nbsp;@Embeddable
 &nbsp;@Data
+&nbsp;@Builder
 &nbsp;@NoArgsConstructor
 &nbsp;@AllArgsConstructor
-&nbsp;@Builder
-&nbsp;public class RejectedPost {
-&nbsp;    private Long id;
-&nbsp;    private String title;
-&nbsp;    private String content;
+&nbsp;public class CommentRequest {
+&nbsp;    private Long postId;
 &nbsp;    private String author;
-&nbsp;    private LocalDate date;
-&nbsp;    private PostStatus status;
-&nbsp;    private String rejectionReason;
+&nbsp;    private String content;
+&nbsp;    private LocalDate timestamp;
 &nbsp;}
 </code>
 </pre>
@@ -87,7 +81,7 @@ Current scope:     <a href="../../index.html">all classes</a>
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2025-01-09 09:05</div>
+    <div style="float:right;">generated on 2025-01-15 22:26</div>
 </div>
 </body>
 </html>
